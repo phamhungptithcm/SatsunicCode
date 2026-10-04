@@ -1,0 +1,124 @@
+{
+  "config": {
+    "argv": [
+      "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/node/bin/node",
+      "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/community.spec.ts",
+      "--grep",
+      "real UI",
+      "--config",
+      ".ai/local/community-profile-final-browser.config.ts"
+    ],
+    "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/.ai/local/community-profile-final-browser.config.ts",
+    "rootDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/community-profile-final-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "community.spec.ts",
+      "file": "community.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "community real UI \u2192 company suggestion \u2192 moderation \u2192 review \u2192 compensation \u2192 withdraw",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43440,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T18:53:55.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cf8406558519b2971af-c2ed0d7c11c7512dcadf",
+          "file": "community.spec.ts",
+          "line": 289,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T18:53:52.736Z",
+    "duration": 47075.96,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

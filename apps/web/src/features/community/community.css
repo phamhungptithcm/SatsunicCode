@@ -61,8 +61,8 @@
   margin: 0;
 }
 .community-hero-icon {
-  width: 160px;
-  height: 150px;
+  width: 112px;
+  height: 112px;
   display: grid;
   place-items: center;
   color: var(--community-blue);
@@ -81,15 +81,15 @@
 .community-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 22px;
+  gap: 16px;
   align-items: start;
 }
 .community-panel {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 24px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 16px;
 }
 .community-panel-title {
   display: flex;
@@ -103,7 +103,7 @@
   gap: 10px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 .community-search {
   position: relative;
@@ -194,25 +194,25 @@
 }
 .community-company-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 .community-company-card {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 22px;
+  gap: 12px;
+  padding: 16px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none;
   transition:
     border-color 0.16s,
-    transform 0.16s;
+    box-shadow 0.16s;
 }
 .community-company-card:hover {
   border-color: #a8b8fc;
-  transform: translateY(-2px);
+  box-shadow: 0 4px 14px #163cff08;
   text-decoration: none;
 }
 .community-company-card > div {
@@ -577,14 +577,16 @@
   --community-soft: #eef1ff;
   --community-blue: #163cff;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 0;
-  width: min(600px, calc(100vw - 32px));
+  width: min(560px, calc(100vw - 32px));
   max-height: calc(100dvh - 40px);
   scroll-padding-block: 100px 84px;
   color: var(--ink);
   background: var(--surface);
-  box-shadow: 0 20px 100px #111c3529;
+  box-shadow:
+    0 4px 16px #111c3508,
+    0 20px 64px #111c351f;
 }
 .dark .community-dialog {
   --ink: #eef2ff;
@@ -606,7 +608,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 18px 26px;
+  padding: 14px 22px;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -614,17 +616,17 @@
   border-bottom: 1px solid var(--line);
 }
 .community-dialog-head h2 {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: -0.5px;
   line-height: 1.35;
   margin: 0;
 }
 .community-form {
-  padding: 22px 26px 0;
+  padding: 18px 22px 0;
 }
 .community-form fieldset {
   border: 0;
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   padding: 0;
   min-width: 0;
 }
@@ -635,7 +637,7 @@
   font-size: 12px;
   font-weight: 600;
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 .community-form legend > span {
   display: grid;
@@ -656,7 +658,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -684,8 +686,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  padding: 17px 0;
+  gap: 10px;
+  padding: 14px 0;
   margin-top: 20px;
   border-top: 1px solid var(--line);
   position: sticky;
@@ -1048,12 +1050,12 @@
   color: var(--ink);
 }
 .community-dialog:has(.community-stepper) {
-  height: min(700px, calc(100dvh - 40px));
+  height: min(600px, calc(100dvh - 40px));
 }
 .community-form:has(.community-stepper) {
   display: flex;
   flex-direction: column;
-  min-height: calc(100% - 81px);
+  min-height: calc(100% - 73px);
 }
 .community-form:has(.community-stepper) > :not(.community-form-footer) {
   flex-shrink: 0;
@@ -1192,4 +1194,43 @@
   color: var(--ink);
   font: inherit;
   cursor: pointer;
+}
+
+/* Home/Roadmap shapes and density, scoped to community surfaces. */
+.community-panel,
+.community-company-card {
+  box-shadow: 0 2px 5px #111c3504;
+}
+.community-form legend > span {
+  display: none;
+}
+.community-form-footer button {
+  border-radius: 12px;
+}
+.community-dialog input:not([type="checkbox"]):not([type="file"]),
+.community-dialog select,
+.community-dialog textarea,
+.community-toolbar .community-combobox input {
+  border-radius: 12px;
+  box-shadow: 0 2px 5px #111c3504;
+}
+.community-dialog .primary {
+  box-shadow: 0 4px 12px #163cff18;
+}
+.community-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--community-soft);
+  color: var(--community-blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .community-company-card {
+    padding: 14px;
+  }
+  .community-panel {
+    padding: 18px;
+  }
 }

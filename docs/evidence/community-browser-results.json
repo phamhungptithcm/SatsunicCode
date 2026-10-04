@@ -4,11 +4,14 @@
       "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/node/bin/node",
       "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/.bin/playwright",
       "test",
+      "tests/e2e/community.spec.ts",
+      "tests/e2e/progress.spec.ts",
+      "tests/e2e/shared-layout.spec.ts",
+      "tests/e2e/workspace-session.spec.ts",
       "--config",
-      "docs/evidence/community-playwright.config.ts",
-      "community.spec.ts"
+      ".ai/local/community-profile-browser.config.ts"
     ],
-    "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/docs/evidence/community-playwright.config.ts",
+    "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/.ai/local/community-profile-browser.config.ts",
     "rootDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
     "failOnFlakyTests": false,
     "forbidOnly": false,
@@ -38,7 +41,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 120000
       }
     ],
     "quiet": false,
@@ -50,7 +53,7 @@
       [
         "json",
         {
-          "outputFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/docs/evidence/community-browser-results.json"
+          "outputFile": "docs/evidence/community-browser-results.json"
         }
       ]
     ],
@@ -64,12 +67,7 @@
     "updateSourceMethod": "patch",
     "version": "1.63.0",
     "workers": 1,
-    "webServer": {
-      "cwd": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode",
-      "command": "VITE_FIREBASE_ENV=emulator npm run dev -w apps/web -- --port 5183",
-      "url": "http://127.0.0.1:5183",
-      "reuseExistingServer": true
-    }
+    "webServer": null
   },
   "suites": [
     {
@@ -94,12 +92,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 29775,
+                  "duration": 30584,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T18:12:11.505Z",
+                  "startTime": "2026-10-04T19:16:27.452Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -109,7 +107,7 @@
           ],
           "id": "6cf8406558519b2971af-c2ed0d7c11c7512dcadf",
           "file": "community.spec.ts",
-          "line": 284,
+          "line": 289,
           "column": 1
         },
         {
@@ -118,7 +116,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -128,12 +126,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4253,
+                  "duration": 2903,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T18:12:41.647Z",
+                  "startTime": "2026-10-04T19:16:58.330Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -143,7 +141,133 @@
           ],
           "id": "6cf8406558519b2971af-850545002f2840e20cd5",
           "file": "community.spec.ts",
-          "line": 504,
+          "line": 544,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "progress.spec.ts",
+      "file": "progress.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "self-reported progress persists and resumes real lesson, keyboard/mobile/locale",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T19:17:01.244Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ca3a771848969cb77bf6-507818d1a8051c1b91cf",
+          "file": "progress.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "shared-layout.spec.ts",
+      "file": "shared-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "shared chrome on pages, excluded only on code workspace; roadmap copy removed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1604,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T19:17:05.731Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb7fec572d479bccd5f-2fcbe3a73876d49a57cd",
+          "file": "shared-layout.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workspace-session.spec.ts",
+      "file": "workspace-session.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "workspace shares the application account across navigation, refresh and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T19:17:07.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43c30918daa7809ee0c8-4e6f8d1d20b0dce57e8e",
+          "file": "workspace-session.spec.ts",
+          "line": 3,
           "column": 1
         }
       ]
@@ -151,9 +275,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T18:12:10.887Z",
-    "duration": 35121.338,
-    "expected": 2,
+    "startTime": "2026-10-04T19:16:27.003Z",
+    "duration": 43907.709,
+    "expected": 5,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

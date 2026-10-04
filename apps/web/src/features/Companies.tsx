@@ -136,14 +136,16 @@ export default function Companies() {
                       ),
                 )}
               </h2>
-              <p>
-                {t(
-                  text(
-                    "Bạn có thể đề xuất công ty để được duyệt.",
-                    "Suggest a company for review.",
-                  ),
-                )}
-              </p>
+              {isEmulator && (
+                <p>
+                  {t(
+                    text(
+                      "Tạo hồ sơ công ty để gửi duyệt.",
+                      "Create a company profile for review.",
+                    ),
+                  )}
+                </p>
+              )}
             </div>
           )}
           <div className="community-company-list">
@@ -198,7 +200,12 @@ export default function Companies() {
             <ol className="community-steps">
               <li>
                 {t(
-                  text("Tìm hoặc đề xuất công ty", "Find or suggest a company"),
+                  isEmulator
+                    ? text(
+                        "Tìm hoặc tạo hồ sơ công ty",
+                        "Find or create a company profile",
+                      )
+                    : text("Tìm và chọn công ty", "Find and select a company"),
                 )}
               </li>
               <li>

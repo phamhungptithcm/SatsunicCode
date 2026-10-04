@@ -4,7 +4,7 @@
       "vi": false,
       "width": 360,
       "dark": false,
-      "height": 44,
+      "height": 43.999969482421875,
       "keyboardSelection": true,
       "exactMatchSuppressesCreate": true
     },
@@ -36,7 +36,7 @@
       "vi": false,
       "width": 768,
       "dark": false,
-      "height": 44.000030517578125,
+      "height": 44,
       "keyboardSelection": true,
       "exactMatchSuppressesCreate": true
     },
@@ -100,7 +100,7 @@
       "vi": true,
       "width": 768,
       "dark": false,
-      "height": 44.000030517578125,
+      "height": 44,
       "keyboardSelection": true,
       "exactMatchSuppressesCreate": true
     },
@@ -108,7 +108,7 @@
       "vi": true,
       "width": 768,
       "dark": true,
-      "height": 44,
+      "height": 44.000030517578125,
       "keyboardSelection": true,
       "exactMatchSuppressesCreate": true
     },

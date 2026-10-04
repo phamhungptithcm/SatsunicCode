@@ -51,3 +51,5 @@ UI continuation authorization: human requested “input, button bị lệch … 
 Reviewed delta approval: user selected “Duyệt triển khai danh mục production” for docs/plans/community-directory-balance.md (11 sourced companies, create-only production import and public directory rules). New logo/contact creation flow plan docs/plans/community-company-create-flow.md pending approval.
 
 Reviewed profile delta approval: user selected “Duyệt triển khai flow mới” for docs/plans/community-company-create-flow.md. New autocomplete/profile/logo/contact flow, private upload + moderator publication and scoped tests authorized. Production billing/API/App Check activation remains separate and unapproved.
+
+Compact shape continuation — 2026-10-04: human directly requested “làm gọn đẹp tinh tết và theo style shape hay css giống roadmap và home page đã làm”. Concrete CSS-only plan docs/plans/community-shape-refinement.md uses verified existing Home/Roadmap shapes, tokens, density; existing approved community UI and Hosting/main publication scope persists. No backend/data/dependency activation delta.

@@ -8,4 +8,3 @@
       Tests  6 passed (6)
    Start at  13:44:50
    Duration  39.22s (tests 98%, import 2%)
-

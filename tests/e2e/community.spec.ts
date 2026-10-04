@@ -329,11 +329,13 @@ test("community real UI → company suggestion → moderation → review → com
   const websiteField = d.getByLabel("Website · Optional");
   await websiteField.focus();
   await expect(websiteField).toBeInViewport();
-  const fieldBounds = await websiteField.boundingBox(),
-    footerBounds = await d.locator(".community-form-footer").boundingBox();
-  expect(fieldBounds!.y + fieldBounds!.height).toBeLessThanOrEqual(
-    footerBounds!.y + 1,
-  );
+  await expect
+    .poll(async () => {
+      const fieldBounds = await websiteField.boundingBox(),
+        footerBounds = await d.locator(".community-form-footer").boundingBox();
+      return fieldBounds!.y + fieldBounds!.height <= footerBounds!.y + 1;
+    })
+    .toBe(true);
   await d.getByRole("button", { name: "Preview", exact: true }).click();
   await captureStep(page, "company", "confirm");
   await d.getByRole("checkbox").check();

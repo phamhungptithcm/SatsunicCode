@@ -71,7 +71,7 @@ dist/assets/Forms-SyUw2sI-.js                      91.52 kB │ gzip:  24.46 kB
 dist/assets/index-CzsTtJ4t.js                     996.56 kB │ gzip: 281.60 kB
 dist/assets/toggleHighContrast-D2xogHDo.js      3,624.99 kB │ gzip: 924.32 kB
 
-[plugin builtin:vite-reporter] 
+[plugin builtin:vite-reporter]
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
@@ -80,4 +80,3 @@ dist/assets/toggleHighContrast-D2xogHDo.js      3,624.99 kB │ gzip: 924.32 kB
 
 > @satsuniccode/functions@0.1.0 build
 > tsc -p tsconfig.json
-

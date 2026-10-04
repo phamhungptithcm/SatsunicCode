@@ -1,0 +1,49 @@
+{
+  "base": "https://satsuniccode.web.app",
+  "anonymousReadOnly": true,
+  "checkedAt": "2026-10-04T19:00:39.998Z",
+  "cases": [
+    {
+      "locale": "en",
+      "width": 390,
+      "companies": 11,
+      "searchHeight": 44,
+      "keyboardSelected": "FPT Software",
+      "sourceVerified": true,
+      "privateCreateCapabilityDisabled": true,
+      "noOverflow": true
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "companies": 11,
+      "searchHeight": 44,
+      "keyboardSelected": "FPT Software",
+      "sourceVerified": true,
+      "privateCreateCapabilityDisabled": true,
+      "noOverflow": true
+    },
+    {
+      "locale": "vi",
+      "width": 390,
+      "companies": 11,
+      "searchHeight": 44,
+      "keyboardSelected": "FPT Software",
+      "sourceVerified": true,
+      "privateCreateCapabilityDisabled": true,
+      "noOverflow": true
+    },
+    {
+      "locale": "vi",
+      "width": 1280,
+      "companies": 11,
+      "searchHeight": 44,
+      "keyboardSelected": "FPT Software",
+      "sourceVerified": true,
+      "privateCreateCapabilityDisabled": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "localhostRequests": []
+}

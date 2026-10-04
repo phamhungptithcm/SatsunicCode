@@ -1,0 +1,3 @@
+Active field visible after resize 390
+Active field visible after resize 1280
+Focus, resize and close guards passed.

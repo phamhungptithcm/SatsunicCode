@@ -35,3 +35,7 @@ An existing selection opens its detail page. New creation is offered only after 
 | Delight | PASSED | Connected slim stepper, short directional movement, opaque text, focus restoration, stable loading and reduced-motion fallback. |
 
 Accessibility and locale evidence is Chromium on localhost, not screen-reader hardware, device IME, Safari or Firefox. New public media/client CORS and real Google/App Check identity remain NOT TESTED on production. Exact validation results and screenshot references are in community-directory-profile-review.md; failed iterations are retained there. Token usage/cost unavailable. Memory candidates: None.
+
+## Compact shape continuation
+
+Home/Roadmap source shapes verified: 14px shells, 12px controls, thin neutral borders, royal-blue actions, 16px layout gap. Purpose/Agency/Responsibility/Familiarity/Flexibility/Simplicity/Craft/Delight remain verified by the current inventory and responsive in-context screenshots. Redundant legend numbers removed visually while connected stepper remains. Stable 600px viewport-bounded dialog, 44px targets, 16px mobile input text, keyboard/reduced-motion preserved. Active native fields remain above sticky footer on focus and resize (390/1280 direct reproducer); five current browser workflows pass. Production wording now promises only available directory selection. No draft-save action or new backend behavior.

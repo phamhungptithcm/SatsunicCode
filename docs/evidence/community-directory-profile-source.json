@@ -3,7 +3,7 @@
   "files": [
     {
       "path": "apps/web/src/features/Companies.tsx",
-      "sha256": "d55e1f74ca4cc05db4ab754670544210c59f91724f6b05dcec26a6623f706e4d"
+      "sha256": "551476d8137a191384f27ae3acac3f69197e399efb2ea23e95de30f2a787fea3"
     },
     {
       "path": "apps/web/src/features/CompanyDetail.tsx",
@@ -35,11 +35,11 @@
     },
     {
       "path": "apps/web/src/features/community/shared.tsx",
-      "sha256": "f33dcb1887c4ffe3212fd3a7609ceb285671fa0409cf261eb3e5dda11af867bb"
+      "sha256": "36fb3b12c9a0898c47b2ad7cd6c17acd1fbc84fdfc7a9c0940a863afcdca0d7d"
     },
     {
       "path": "apps/web/src/features/community/community.css",
-      "sha256": "2ab41b64f35500eb9122c89177679d1d399681eb124d4d3084b788fbe0445d36"
+      "sha256": "5cfa30b05de1ebe2b6dc494e8e3c80a60c26d91a104b2efb3aeab104b6c78747"
     },
     {
       "path": "apps/web/src/firebase.ts",

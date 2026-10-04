@@ -62,10 +62,54 @@ export function Dialog({
   children: ReactNode;
 }) {
   const ref = useRef<HTMLDialogElement>(null),
+    frame = useRef<number | null>(null),
     { t } = useLanguage();
+  function revealControl() {
+    if (frame.current !== null) cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => {
+      frame.current = null;
+      const dialog = ref.current,
+        control = document.activeElement;
+      if (
+        !dialog?.open ||
+        !(control instanceof HTMLElement) ||
+        !dialog.contains(control) ||
+        !control.matches("input,select,textarea")
+      )
+        return;
+      const bounds = control.getBoundingClientRect(),
+        head = dialog
+          .querySelector(".community-dialog-head")
+          ?.getBoundingClientRect(),
+        footer = dialog
+          .querySelector(".community-form-footer")
+          ?.getBoundingClientRect();
+      if (footer && bounds.bottom > footer.top - 10)
+        dialog.scrollTop += bounds.bottom - footer.top + 10;
+      else if (head && bounds.top < head.bottom + 10)
+        dialog.scrollTop -= head.bottom - bounds.top + 10;
+    });
+  }
   useEffect(() => {
     if (open && !ref.current?.open) ref.current?.showModal();
     else if (!open && ref.current?.open) ref.current.close();
+  }, [open]);
+  useEffect(() => {
+    if (!open) return;
+    window.addEventListener("resize", revealControl);
+    window.visualViewport?.addEventListener("resize", revealControl);
+    const observer = new ResizeObserver(revealControl),
+      form = ref.current?.querySelector("form");
+    if (form) observer.observe(form);
+    return () => {
+      window.removeEventListener("resize", revealControl);
+      window.visualViewport?.removeEventListener("resize", revealControl);
+      observer.disconnect();
+      if (frame.current !== null) {
+        cancelAnimationFrame(frame.current);
+        frame.current = null;
+      }
+    };
   }, [open]);
   return (
     <dialog
@@ -76,6 +120,7 @@ export function Dialog({
         e.preventDefault();
         onClose();
       }}
+      onFocusCapture={revealControl}
       onClose={onClose}
     >
       <div className="community-dialog-head">

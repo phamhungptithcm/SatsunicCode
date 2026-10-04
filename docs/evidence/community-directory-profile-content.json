@@ -68,79 +68,85 @@
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 141,
-      "vi": "Bạn có thể đề xuất công ty để được duyệt.",
-      "en": "Suggest a company for review."
+      "line": 142,
+      "vi": "Tạo hồ sơ công ty để gửi duyệt.",
+      "en": "Create a company profile for review."
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 162,
+      "line": 164,
       "vi": "Việt Nam",
       "en": "Vietnam"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 163,
+      "line": 165,
       "vi": "Hoa Kỳ",
       "en": "United States"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 168,
+      "line": 170,
       "vi": "Thông tin từ nguồn chính thức",
       "en": "Official company information"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 172,
+      "line": 174,
       "vi": "Thông tin từ đề xuất cộng đồng",
       "en": "Community-suggested information"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 188,
+      "line": 190,
       "vi": "Tải thêm công ty",
       "en": "Load more companies"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 195,
+      "line": 197,
       "vi": "GÓC NHÌN CỦA BẠN",
       "en": "YOUR EXPERIENCE"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 197,
+      "line": 199,
       "vi": "Một đóng góp hữu ích",
       "en": "A useful contribution"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 201,
-      "vi": "Tìm hoặc đề xuất công ty",
-      "en": "Find or suggest a company"
+      "line": 204,
+      "vi": "Tìm hoặc tạo hồ sơ công ty",
+      "en": "Find or create a company profile"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 206,
+      "line": 208,
+      "vi": "Tìm và chọn công ty",
+      "en": "Find and select a company"
+    },
+    {
+      "file": "apps/web/src/features/Companies.tsx",
+      "line": 213,
       "vi": "Viết trải nghiệm của bạn",
       "en": "Write about your experience"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 214,
+      "line": 221,
       "vi": "Xem trước rồi gửi duyệt",
       "en": "Preview and submit for moderation"
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 225,
+      "line": 232,
       "vi": "Không đưa tên cá nhân hoặc thông tin mật vào bài. Nội dung vẫn có thể nhận diện bạn.",
       "en": "Avoid personal names and confidential details. Your content may still identify you."
     },
     {
       "file": "apps/web/src/features/Companies.tsx",
-      "line": 235,
+      "line": 242,
       "vi": "Đóng góp của tôi",
       "en": "My contributions"
     },
@@ -896,211 +902,211 @@
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 274,
+      "line": 272,
       "vi": "Đã gửi hồ sơ công ty, đang chờ duyệt.",
       "en": "Company profile sent and awaiting moderation."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 295,
+      "line": 293,
       "vi": "Tạo hồ sơ công ty",
       "en": "Create company profile"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 309,
+      "line": 307,
       "vi": "Công ty",
       "en": "Company"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 310,
+      "line": 308,
       "vi": "Thông tin",
       "en": "Details"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 311,
+      "line": 309,
       "vi": "Xem lại",
       "en": "Review"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 317,
+      "line": 315,
       "vi": "Thông tin công ty",
       "en": "Company information"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 322,
+      "line": 320,
       "vi": "Tên công ty",
       "en": "Company name"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 333,
+      "line": 331,
       "vi": "Ngành",
       "en": "Industry"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 343,
+      "line": 341,
       "vi": "Quốc gia hoạt động",
       "en": "Operating country"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 348,
+      "line": 346,
       "vi": "Việt Nam",
       "en": "Vietnam"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 350,
+      "line": 348,
       "vi": "Hoa Kỳ",
       "en": "United States"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 360,
+      "line": 358,
       "vi": "Logo và liên hệ doanh nghiệp",
       "en": "Logo and business contact"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 367,
+      "line": 365,
       "vi": "Logo công ty",
       "en": "Company logo"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 372,
+      "line": 370,
       "vi": "Logo xem trước",
       "en": "Logo preview"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 384,
+      "line": 382,
       "vi": "PNG, JPEG hoặc WebP · Tối đa 2 MB. Chỉ tải logo bạn có quyền sử dụng.",
       "en": "PNG, JPEG or WebP · Up to 2 MB. Upload a logo you have permission to use."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 392,
+      "line": 390,
       "vi": "Địa chỉ trụ sở chính",
       "en": "Headquarters address"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 404,
+      "line": 402,
       "vi": "Điện thoại doanh nghiệp",
       "en": "Business phone"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 417,
+      "line": 415,
       "vi": "Website · Không bắt buộc",
       "en": "Website · Optional"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 431,
+      "line": 429,
       "vi": "Dùng địa chỉ và số điện thoại công khai của doanh nghiệp, không nhập thông tin cá nhân.",
       "en": "Use the company’s public address and phone number. Do not enter personal contact information."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 442,
+      "line": 440,
       "vi": "Kiểm tra hồ sơ trước khi gửi",
       "en": "Review before submitting"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 452,
+      "line": 450,
       "vi": "Logo xem trước",
       "en": "Logo preview"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 460,
+      "line": 458,
       "vi": "Việt Nam",
       "en": "Vietnam"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 461,
+      "line": 459,
       "vi": "Hoa Kỳ",
       "en": "United States"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 466,
+      "line": 464,
       "vi": "Trụ sở chính",
       "en": "Headquarters"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 468,
+      "line": 466,
       "vi": "Điện thoại",
       "en": "Phone"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 479,
+      "line": 477,
       "vi": "Hồ sơ và logo chỉ xuất hiện công khai sau khi được duyệt.",
       "en": "The profile and logo appear publicly only after moderation."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 495,
+      "line": 493,
       "vi": "Thông tin này chính xác, công khai và tôi có quyền sử dụng logo.",
       "en": "This information is accurate and public, and I have permission to use the logo."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 505,
+      "line": 503,
       "vi": "Công ty đã có trong danh mục. Chọn công ty từ ô tìm kiếm.",
       "en": "This company is already listed. Select it from the search field."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 515,
+      "line": 513,
       "vi": "Kiểm tra tên, ngành, logo, địa chỉ và điện thoại. Website cần bắt đầu bằng https://.",
       "en": "Check the name, industry, logo, address and phone. Website must start with https://."
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 530,
+      "line": 528,
       "vi": "Quay lại",
       "en": "Back"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 531,
+      "line": 529,
       "vi": "Để sau",
       "en": "Later"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 538,
+      "line": 536,
       "vi": "Đang xử lý…",
       "en": "Processing…"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 540,
+      "line": 538,
       "vi": "Gửi duyệt",
       "en": "Send for review"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 542,
+      "line": 540,
       "vi": "Xem trước",
       "en": "Preview"
     },
     {
       "file": "apps/web/src/features/community/CompanyProfile.tsx",
-      "line": 543,
+      "line": 541,
       "vi": "Tiếp tục",
       "en": "Continue"
     },
@@ -1136,121 +1142,121 @@
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 87,
+      "line": 132,
       "vi": "Đóng form",
       "en": "Close form"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 88,
+      "line": 133,
       "vi": "Đóng form",
       "en": "Close form"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 125,
+      "line": 170,
       "vi": "Thử lại",
       "en": "Try again"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 174,
+      "line": 219,
       "vi": "Đã lưu thay đổi.",
       "en": "Changes saved."
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 196,
+      "line": 241,
       "vi": "Bản nháp",
       "en": "Draft"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 197,
+      "line": 242,
       "vi": "Đang chờ duyệt",
       "en": "Pending review"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 198,
+      "line": 243,
       "vi": "Đã duyệt",
       "en": "Published"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 199,
+      "line": 244,
       "vi": "Không được duyệt",
       "en": "Rejected"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 200,
+      "line": 245,
       "vi": "Cần chỉnh sửa",
       "en": "Changes requested"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 201,
+      "line": 246,
       "vi": "Đã rút",
       "en": "Withdrawn"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 202,
+      "line": 247,
       "vi": "Đang xem xét lại",
       "en": "Appeal pending"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 226,
+      "line": 271,
       "vi": "Nguồn chính thức",
       "en": "Official source"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 231,
+      "line": 276,
       "vi": "Thông tin từ nguồn chính thức",
       "en": "Official company information"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 239,
+      "line": 284,
       "vi": "Thông tin từ đề xuất cộng đồng",
       "en": "Community-suggested information"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 250,
+      "line": 295,
       "vi": "Dịch vụ phần mềm",
       "en": "Software services"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 251,
+      "line": 296,
       "vi": "Nền tảng số",
       "en": "Digital platforms"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 252,
+      "line": 297,
       "vi": "Phần mềm doanh nghiệp",
       "en": "Business software"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 253,
+      "line": 298,
       "vi": "Phát triển phần mềm",
       "en": "Software engineering"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 254,
+      "line": 299,
       "vi": "Chuyển đổi số",
       "en": "Digital transformation"
     },
     {
       "file": "apps/web/src/features/community/shared.tsx",
-      "line": 255,
+      "line": 300,
       "vi": "Công nghệ tài chính",
       "en": "Financial technology"
     },

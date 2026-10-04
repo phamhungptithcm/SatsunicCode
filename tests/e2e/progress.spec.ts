@@ -57,6 +57,9 @@ test("self-reported progress persists and resumes real lesson, keyboard/mobile/l
   await page
     .getByLabel("Trạng thái tự ghi nhận · Arrays & Hashing")
     .selectOption("NOT_STARTED");
+  await expect(
+    page.getByRole("status").filter({ hasText: "Đã lưu thay đổi." }),
+  ).toBeVisible();
   await page.reload();
   await expect(
     page.getByLabel("Trạng thái tự ghi nhận · Arrays & Hashing"),

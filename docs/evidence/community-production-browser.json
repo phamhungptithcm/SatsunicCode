@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-04T16:27:13.467Z",
+  "url": "https://satsuniccode.web.app",
+  "readOnly": true,
+  "authenticatedWorkflow": "NOT_TESTED",
+  "checks": [
+    {
+      "route": "/",
+      "heading": "Choose your path.\nBuild your skills.\nPrepare for interviews.",
+      "mobileOverflow": false,
+      "visibleAlerts": []
+    },
+    {
+      "route": "/roadmaps/dsa",
+      "heading": "DSA Roadmap",
+      "mobileOverflow": false,
+      "visibleAlerts": []
+    },
+    {
+      "route": "/companies",
+      "heading": "Know the company.\nFind your fit.",
+      "mobileOverflow": false,
+      "visibleAlerts": [
+        "Your account does not have permission for this action.Try again"
+      ]
+    },
+    {
+      "route": "/salaries",
+      "heading": "Understand compensation.\nCompare like with like.",
+      "mobileOverflow": false,
+      "visibleAlerts": []
+    },
+    {
+      "route": "/progress",
+      "heading": "Keep learning.\nOne step at a time.",
+      "mobileOverflow": false,
+      "visibleAlerts": []
+    }
+  ],
+  "pageErrors": [],
+  "localhostRequests": []
+}

@@ -5,7 +5,8 @@
       "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/.bin/playwright",
       "test",
       "--config",
-      "playwright.deployed.config.ts"
+      "playwright.deployed.config.ts",
+      "tests/deployed/ui-release.spec.ts"
     ],
     "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/playwright.deployed.config.ts",
     "rootDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/deployed",
@@ -67,13 +68,13 @@
   },
   "suites": [
     {
-      "title": "hosting.spec.ts",
-      "file": "hosting.spec.ts",
+      "title": "ui-release.spec.ts",
+      "file": "ui-release.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "read-only compiled deployment roadmap and original workspace",
+          "title": "production UI checkpoint read-only",
           "ok": true,
           "tags": [],
           "tests": [
@@ -88,12 +89,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3598,
+                  "duration": 3179,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T02:41:17.714Z",
+                  "startTime": "2026-10-04T05:22:44.974Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -101,8 +102,8 @@
               "status": "expected"
             }
           ],
-          "id": "5dae9499dc1239277717-94651f50c965261e5495",
-          "file": "hosting.spec.ts",
+          "id": "3ab709abaa38c98adced-a66a5cd4e7733ef11869",
+          "file": "ui-release.spec.ts",
           "line": 3,
           "column": 1
         }
@@ -111,8 +112,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T02:41:17.240Z",
-    "duration": 4261.428,
+    "startTime": "2026-10-04T05:22:44.426Z",
+    "duration": 4056.509,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

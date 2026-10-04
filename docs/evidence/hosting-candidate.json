@@ -2,24 +2,24 @@
   "projectId": "satsuniccode",
   "artifacts": [
     {
-      "path": "assets/Account-CRmttn8I.js",
-      "sha256": "dc1bd48fa5da085c85b3473e6e0c60043b8b99d963517ae5ee7debbdf4196d2b"
+      "path": "assets/Account-CiSlI0UX.js",
+      "sha256": "de94398807218b68f04460c422df87bf56932aafbea52b9f1f2e35bd34c7701a"
     },
     {
-      "path": "assets/CodeEditor-Dm0dWdk_.js",
-      "sha256": "4b9bbaf7c61dc907d3e7ee9c3bf5c53e10adb84597b2f300f9701139f12ae4ca"
+      "path": "assets/CodeEditor-BLnEkuEp.js",
+      "sha256": "a2ab7def0cb924c6bb9dbb2e053269c2f37f39dece98165c0f7e4a595bda441f"
     },
     {
-      "path": "assets/Lesson-C4FT8Sqy.js",
-      "sha256": "e6035d407aa2c72f6e9bcaeb88cf81b26b9e979746405a6dcda4b902cd7bfc46"
+      "path": "assets/Lesson-CHkEFCPU.js",
+      "sha256": "aa6f98d6130f0d5d1f8bbce9300456098eb76aa1272cee5c595fe2cb48be10a5"
     },
     {
-      "path": "assets/Practice-Bx8ust7c.js",
-      "sha256": "71801ede3abcab0a769c720ed98d91706ca11c6f315786746db78d92a79610d9"
+      "path": "assets/Practice-BNCG-LSg.js",
+      "sha256": "ff7c2edf159de7b3ef2cf5ddd4865ffa0cfa3d4a85960083b8f2f79dadd26619"
     },
     {
-      "path": "assets/Progress-BJzkgi-2.js",
-      "sha256": "018991f107734a747a01bb865e4059d761b35c13114a866b197037525bc3f975"
+      "path": "assets/Progress-seAwRPlG.js",
+      "sha256": "dc842b2a89eed2683afa42e761d4badaf61fa799db8139affc1143e7af9f3c59"
     },
     {
       "path": "assets/codicon-ngg6Pgfi.ttf",
@@ -30,12 +30,12 @@
       "sha256": "a91c6f81ee4563fe1b6af2827b37a527a5befbec076d852c089dfce0795eb2d4"
     },
     {
-      "path": "assets/index-BpzFjRo7.css",
-      "sha256": "213718b984c48d270e4abade75aee19a4f01287b9fa12325f782a1dfcdc5c4dc"
+      "path": "assets/index-CsxlrD9j.css",
+      "sha256": "03c03991961fba383cd2a5beb4bd09ce74cab70457949dace121024e86c638a7"
     },
     {
-      "path": "assets/index-mvD4K0ed.js",
-      "sha256": "449ca6ca6f879d0a8e437f0b8a906081b3ff3f018f94376f40aac9dd86244264"
+      "path": "assets/index-akVOBUB9.js",
+      "sha256": "b259d5e87f32b221232b34e38f5482471e0d5ee3a0896c5edf6d9e77b94c5a2e"
     },
     {
       "path": "assets/java-BEtHBSE6.js",
@@ -66,12 +66,12 @@
       "sha256": "14f1e02a189da16b2f22bf4e6d21f6ba23926df5a785d0f91ea8817919d951ae"
     },
     {
-      "path": "assets/tsMode-CyR0jP6O.js",
-      "sha256": "c75e68541d5b2f47de33041125c6ebb51f80bc8d1e96d911ad26fa394d6f4db9"
+      "path": "assets/tsMode-B34dlGCZ.js",
+      "sha256": "c7422d2b700a1c7c65dfd1d1daa5577950865c4523545d910c5095530b77ab0e"
     },
     {
       "path": "index.html",
-      "sha256": "5f900a8c52b8e0917edfc8be2810c525d11adf09e23f978f1b120decbdff3b6e"
+      "sha256": "c71e48d9789974591ad60678ea162c5e3a03af70dac802fe6c806bdfe2654fc9"
     },
     {
       "path": "satsunic-mark.svg",

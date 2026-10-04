@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "httpStatus": 403
+  },
+  "billing": {
+    "billingEnabled": false
+  },
+  "metadata": {
+    "documents": 450,
+    "hasNextPage": false
+  },
+  "rules": {
+    "httpStatus": 403
+  }
+}

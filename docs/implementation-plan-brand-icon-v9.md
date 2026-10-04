@@ -1,0 +1,2 @@
+# BRAND-V9
+Human explicitly requests consistent Satsunic icon and SVG tab icon. Approved scope brand glyph/favicon only, no deployment. Verified source Satsunic-SEO-Extension/assets/icons/mark.svg (royal-blue rounded mark, white S glyph); replace invented SiteChrome mark with exact shared SVG asset and link favicon. No dependencies/data/auth change. Validate source byte match, build and actual browser asset/image response. Current intelligence remains DEGRADED, bounded source evidence.

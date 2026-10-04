@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_id": "ROADMAP-GESTURES-V8",
+  "status": "BLOCKED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "BLOCKED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    },
+    "production_readiness": {
+      "status": "BLOCKED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Scoped local evidence in test-evidence.md; physical trackpad/native Safari and rollout pending.",
+      "evidence_refs": [
+        "docs/evidence/graph-gestures-v8-candidate.json",
+        "docs/test-evidence.md",
+        "docs/product-content-review.md"
+      ]
+    }
+  },
+  "findings": [],
+  "residual_risks": [
+    "Physical trackpad and native Safari gesture adapter not tested."
+  ],
+  "limitations": [
+    "Ledger CLI unavailable; file evidence only.",
+    "Overall product remains NOT_READY; no rollout from this task."
+  ]
+}

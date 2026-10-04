@@ -1,0 +1,7 @@
+{
+  "apps/web/src/hooks/useGraphViewport.ts": "2707415af31ccf4569954bc6e41826941a36dd5ecc97a098fd3e506beef64c2b",
+  "apps/web/src/features/DsaRoadmap.tsx": "669467ce2a510d9c62a4e0d16ebc7fe073803ed96275f38a720660551ec9c48a",
+  "apps/web/src/styles.css": "dd27ea65a6daf5caf74e0cb0a262630cd1ec1403cd95c99aac18874ef424f858",
+  "tests/e2e/graph-gestures.spec.ts": "3f193289e18e00fb30e5d752b17e8b459b8dab219852106203abcd66f0ab0b5f",
+  "tests/unit/graph-viewport.test.ts": "51a5ae72c6c72d380050348217d04398eddeaec78f68afbb5f85d5f6c7ca5af7"
+}

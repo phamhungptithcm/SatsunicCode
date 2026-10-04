@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function owner(uid) { return request.auth != null && request.auth.uid == uid; }
+  match /catalog/{version} { allow read: if resource.data.publicationState == 'PUBLISHED'; allow write: if false; }
+  match /dsaReferences/{slug} { allow read: if resource.data.contentState == "REFERENCE_ONLY"; allow write: if false; }
+  match /users/{uid} {
+   allow read: if owner(uid); allow write: if false;
+   match /bookmarks/{slug} {
+    allow read: if owner(uid);
+    allow create, update: if owner(uid) && request.resource.data.keys().hasOnly(['problemSlug','starred','changedBy','changedDate','schemaVersion'])
+      && request.resource.data.problemSlug == slug
+      && exists(/databases/$(database)/documents/dsaReferences/$(slug))
+      && request.resource.data.starred is bool && request.resource.data.changedBy == uid
+      && request.resource.data.changedDate == request.time && request.resource.data.schemaVersion == 1;
+    allow delete: if owner(uid);
+   }
+   match /enrollments/{id} { allow read: if owner(uid); allow write: if false; }
+   match /progress/{id} { allow read: if owner(uid); allow write: if false; }
+   match /submissions/{id} { allow read: if owner(uid); allow write: if false; }
+   match /drafts/{id} {
+    allow read: if owner(uid);
+    function valid() {
+     return request.resource.data.keys().hasOnly(['source','language','challengeRevision','context','revision','createdBy','createdDate','changedBy','changedDate','schemaVersion'])
+      && request.resource.data.source is string && request.resource.data.source.size() <= 100000
+      && request.resource.data.language in ['javascript','typescript','python','java']
+      && request.resource.data.challengeRevision in ['peak-requests-v1','duplicate-check-v1']
+      && request.resource.data.context == 'learning'
+      && id == request.resource.data.challengeRevision + '-' + request.resource.data.language + '-learning'
+      && request.resource.data.schemaVersion == 1
+      && request.resource.data.createdBy == uid && request.resource.data.changedBy == uid
+      && request.resource.data.changedDate == request.time;
+    }
+    allow create: if owner(uid) && valid() && request.resource.data.createdDate == request.time && request.resource.data.revision == 0;
+    allow update: if owner(uid) && valid() && request.resource.data.createdDate == resource.data.createdDate
+      && request.resource.data.revision == resource.data.revision + 1;
+    allow delete: if owner(uid);
+   }
+  }
+  match /{document=**} { allow read, write: if false; }
+ }
+}

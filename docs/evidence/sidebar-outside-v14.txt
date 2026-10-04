@@ -1,0 +1,10 @@
+[WebServer] (node:2478) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:2514) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/sidebar-outside.spec.ts:2:1 › DSA sidebar closes on backdrop click and preserves inside click (2.4s)
+
+  1 passed (4.1s)

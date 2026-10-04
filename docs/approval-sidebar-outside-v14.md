@@ -1,0 +1,1 @@
+Plan SIDEBAR-OUTSIDE-V14: exact human instruction authorizes closing DSA topic sidebar on outside click. Smallest change: native dialog click bounding-rect check, preserve inside interactions, URL close(), Escape/focus; no layout/provider changes. Validation actual browser backdrop click and inside click. Intelligence DEGRADED bounded source.

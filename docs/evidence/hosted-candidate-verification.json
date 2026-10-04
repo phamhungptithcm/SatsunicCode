@@ -1,0 +1,104 @@
+{
+  "base": "https://satsuniccode.web.app",
+  "artifactCount": 19,
+  "candidateMatches": true,
+  "publicReferenceHttp": 200,
+  "privateUserHttp": 403,
+  "checks": [
+    {
+      "path": "assets/Account-CRmttn8I.js",
+      "sha256": "dc1bd48fa5da085c85b3473e6e0c60043b8b99d963517ae5ee7debbdf4196d2b",
+      "matches": true
+    },
+    {
+      "path": "assets/CodeEditor-Dm0dWdk_.js",
+      "sha256": "4b9bbaf7c61dc907d3e7ee9c3bf5c53e10adb84597b2f300f9701139f12ae4ca",
+      "matches": true
+    },
+    {
+      "path": "assets/Lesson-C4FT8Sqy.js",
+      "sha256": "e6035d407aa2c72f6e9bcaeb88cf81b26b9e979746405a6dcda4b902cd7bfc46",
+      "matches": true
+    },
+    {
+      "path": "assets/Practice-Bx8ust7c.js",
+      "sha256": "71801ede3abcab0a769c720ed98d91706ca11c6f315786746db78d92a79610d9",
+      "matches": true
+    },
+    {
+      "path": "assets/Progress-BJzkgi-2.js",
+      "sha256": "018991f107734a747a01bb865e4059d761b35c13114a866b197037525bc3f975",
+      "matches": true
+    },
+    {
+      "path": "assets/codicon-ngg6Pgfi.ttf",
+      "sha256": "9d25513c861704be650eacef8c4588aceabdc8b668857747b5e42b299e926918",
+      "matches": true
+    },
+    {
+      "path": "assets/editor.worker-O-CH8JUO.js",
+      "sha256": "a91c6f81ee4563fe1b6af2827b37a527a5befbec076d852c089dfce0795eb2d4",
+      "matches": true
+    },
+    {
+      "path": "assets/index-BpzFjRo7.css",
+      "sha256": "213718b984c48d270e4abade75aee19a4f01287b9fa12325f782a1dfcdc5c4dc",
+      "matches": true
+    },
+    {
+      "path": "assets/index-mvD4K0ed.js",
+      "sha256": "449ca6ca6f879d0a8e437f0b8a906081b3ff3f018f94376f40aac9dd86244264",
+      "matches": true
+    },
+    {
+      "path": "assets/java-BEtHBSE6.js",
+      "sha256": "77d3a91eeaf54e004f8ec321e6208afecebe2435232146b41f68135373800953",
+      "matches": true
+    },
+    {
+      "path": "assets/jsx-runtime-BNakU3Ej.js",
+      "sha256": "600d80338ace22d4dcc97a2788698c189811a8b54dad8cea58dfd8e7e4f35d34",
+      "matches": true
+    },
+    {
+      "path": "assets/python-D8oqgKdH.js",
+      "sha256": "7ac41bcb5133aa7fe066c86c190a5092580536196ca454ee700c50255518b70d",
+      "matches": true
+    },
+    {
+      "path": "assets/rolldown-runtime-hePW80VL.js",
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+      "matches": true
+    },
+    {
+      "path": "assets/toggleHighContrast-D2xogHDo.js",
+      "sha256": "bce9b71131cd3c05306aa68c3b73116dfa341573b27d66921128a5284e6e7e2d",
+      "matches": true
+    },
+    {
+      "path": "assets/toggleHighContrast-v5rfKcVs.css",
+      "sha256": "08c65e2568527b40cdd0bc3278febbdb2e274a7f77be03d78c9aea8fa4d0d9b5",
+      "matches": true
+    },
+    {
+      "path": "assets/ts.worker-CmEKzkmF.js",
+      "sha256": "14f1e02a189da16b2f22bf4e6d21f6ba23926df5a785d0f91ea8817919d951ae",
+      "matches": true
+    },
+    {
+      "path": "assets/tsMode-CyR0jP6O.js",
+      "sha256": "c75e68541d5b2f47de33041125c6ebb51f80bc8d1e96d911ad26fa394d6f4db9",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "sha256": "5f900a8c52b8e0917edfc8be2810c525d11adf09e23f978f1b120decbdff3b6e",
+      "matches": true
+    },
+    {
+      "path": "satsunic-mark.svg",
+      "sha256": "fefeb60cfb898b73e4fd090e7f850b59bd650535b2cf6093f56e347cc65c6811",
+      "matches": true
+    }
+  ]
+}

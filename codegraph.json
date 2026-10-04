@@ -1,0 +1,12 @@
+{
+  "exclude": [
+    ".ai-agent-kit/**",
+    ".agents/**",
+    ".codegraph/**",
+    ".cocoindex_code/**",
+    "**/.env",
+    "**/.env.*",
+    "**/*.pem",
+    "**/*.key"
+  ]
+}

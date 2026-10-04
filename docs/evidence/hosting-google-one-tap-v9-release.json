@@ -1,0 +1,22 @@
+{
+  "channels": [
+    {
+      "name": "projects/satsuniccode/sites/satsuniccode/channels/live",
+      "url": "https://satsuniccode.web.app",
+      "version": "projects/satsuniccode/sites/satsuniccode/versions/111ec9bc1f127456",
+      "releaseTime": "2026-10-04T02:40:52.975Z",
+      "status": "FINALIZED"
+    },
+    {
+      "name": "projects/satsuniccode/sites/satsuniccode/channels/dsa-preview",
+      "url": "https://satsuniccode--dsa-preview-t5c4we75.web.app",
+      "version": "projects/satsuniccode/sites/satsuniccode/versions/3ea823ede59499f4",
+      "releaseTime": "2026-10-04T01:48:56.305Z",
+      "status": "FINALIZED"
+    }
+  ],
+  "billing": {
+    "http": 200,
+    "billingEnabled": false
+  }
+}

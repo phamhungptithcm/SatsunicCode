@@ -1,0 +1,44 @@
+
+Running 8 tests using 1 worker
+
+(node:70721) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/learning.spec.ts:24:1 › homepage track destinations, composer draft/minimize, locale and responsive keyboard (2.0s)
+  ✘  2 tests/e2e/learning.spec.ts:81:1 › Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation (1.0m)
+(node:71586) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/e2e/learning.spec.ts:136:1 › DSA full reference graph, topic drawer, sets and workspace tabs (4.3s)
+  ✓  4 tests/e2e/learning.spec.ts:207:1 › all target viewports and bundled Monaco editor fallback (3.7s)
+  ✓  5 tests/e2e/learning.spec.ts:239:1 › clean navigation, footer credit and Google-only availability (1.6s)
+  ✓  6 tests/e2e/learning.spec.ts:293:1 › track switcher: six real destinations and native keyboard (1.2s)
+  ✓  7 tests/e2e/learning.spec.ts:332:1 › English default and persistent language without mixed route labels (1.0s)
+  ✓  8 tests/e2e/learning.spec.ts:364:1 › owner bookmark persists after Firebase ack and stays isolated across users (1.2s)
+
+
+  1) tests/e2e/learning.spec.ts:81:1 › Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Theo học DSA' })
+
+
+      87 |   await expect(page.getByRole("button", { name: "Tài khoản Google", exact: true })).toBeVisible();
+      88 |   await page.goto("/roadmaps/dsa");
+    > 89 |   await page.getByRole("button", { name: "Theo học DSA" }).click();
+         |                                                            ^
+      90 |   await expect(page.getByRole("status")).toContainText("Đã lưu lộ trình DSA");
+      91 |   await page.getByRole("button", { name: "Theo học DSA" }).click();
+      92 |   await expect(page.getByRole("status")).toContainText("Đã lưu lộ trình DSA");
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:89:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/learning-Synthetic-emulato-bffc8--independent-user-isolation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/learning-Synthetic-emulato-bffc8--independent-user-isolation/error-context.md
+
+  1 failed
+    tests/e2e/learning.spec.ts:81:1 › Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation 
+  7 passed (1.3m)

@@ -1,0 +1,45 @@
+import { test, expect } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+test("workspace shares the application account across navigation, refresh and logout", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("satsuniccode.locale", "en");
+    localStorage.setItem("satsuniccode.editor", "textarea");
+  });
+  await page.goto("/");
+  await page.evaluate(async () => {
+    const fixture = await import(/* @vite-ignore */ String("/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts"));
+    await fixture.createSyntheticIdentity(`workspace-session-${Date.now()}@example.test`);
+    await fixture.setSyntheticProfile("Workspace Learner");
+  });
+  await page.goto("/roadmaps/dsa");
+  await expect(page.getByRole("button", { name: /Workspace Learner/ })).toBeVisible();
+  await page.goto("/practice/contains-duplicate");
+  const account = page.getByRole("button", { name: /Workspace Learner/ });
+  await expect(account).toBeVisible();
+  await expect(page.getByRole("button", { name: "Sign in with Google", exact: true })).toHaveCount(0);
+  await page.reload();
+  await expect(account).toBeVisible();
+  await account.focus();
+  await page.keyboard.press("ArrowDown");
+  await expect(page.getByRole("menuitem", { name: "My profile", exact: true })).toBeFocused();
+  await page.keyboard.press("Escape");
+  await expect(account).toBeFocused();
+  await account.click();
+  await page.getByRole("menuitem", { name: "My profile", exact: true }).click();
+  await expect(page).toHaveURL(/account$/);
+  await page.goto("/practice/contains-duplicate");
+  await page.setViewportSize({ width: 390, height: 844 });
+  await account.click();
+  const menuBounds = await page.getByRole("menu").boundingBox();
+  expect(menuBounds).not.toBeNull();
+  expect(menuBounds!.x).toBeGreaterThanOrEqual(0);
+  expect(menuBounds!.x + menuBounds!.width).toBeLessThanOrEqual(390);
+  expect((await new AxeBuilder({ page }).include(".workspace-topbar").analyze()).violations).toEqual([]);
+  await page.screenshot({ path: "docs/evidence/workspace-shared-account.png", fullPage: true });
+  await page.getByRole("menuitem", { name: "Sign out", exact: true }).click();
+  await expect(account).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Sign in with Google", exact: true })).toBeVisible();
+  await page.reload();
+  await expect(account).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Sign in with Google", exact: true })).toBeVisible();
+});

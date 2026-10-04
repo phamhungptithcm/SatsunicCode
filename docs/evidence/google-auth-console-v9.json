@@ -1,0 +1,26 @@
+{
+  "project": "satsuniccode",
+  "date": "2026-10-03 America/Chicago",
+  "verification": "actual Firebase/Google Cloud Console UI",
+  "authenticationInitialized": true,
+  "enabledProviders": [
+    "google.com"
+  ],
+  "authorizedDomains": [
+    "localhost",
+    "satsuniccode.firebaseapp.com",
+    "satsuniccode.web.app"
+  ],
+  "oauthJavaScriptOrigins": [
+    "http://localhost",
+    "http://localhost:5000",
+    "https://satsuniccode.firebaseapp.com",
+    "https://satsuniccode.web.app"
+  ],
+  "oauthAudience": "External",
+  "oauthPublishingStatus": "In production",
+  "billingEnabled": false,
+  "clientSecretAccessed": false,
+  "liveLogin": "NOT_TESTED_SUCCESSFULLY: actual local GIS prompt rejected with FedCM NetworkError",
+  "deployment": "NOT_PERFORMED_V9"
+}

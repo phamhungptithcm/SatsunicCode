@@ -1,0 +1,14 @@
+{
+  "google": {
+    "http": 403,
+    "status": "PERMISSION_DENIED"
+  },
+  "config": {
+    "http": 403,
+    "status": "PERMISSION_DENIED"
+  },
+  "billing": {
+    "http": 200,
+    "billingEnabled": false
+  }
+}

@@ -1,0 +1,3 @@
+# Full DSA home preview
+
+Explicit human request: show complete existing DSA roadmap with no actions and Satsunic blue box shadows. Use existing DsaRoadmapPreview (same dsaGraph and topicLabels as DsaRoadmap) instead of three-node RoadmapCanvas on Homepage. Preserve all canonical edges/coordinates. Scope only homepage import/render and scoped node shadow. No interactive links/buttons, provider, database, or DSA page changes. Current source verifies static SVG role img and localized desc. Optional intelligence remains DEGRADED. Low risk; typecheck and structural assertions. Approval: current direct user request identifies exact requested result.

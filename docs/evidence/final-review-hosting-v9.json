@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "task_id": "GOOGLE-ONE-TAP-V9-HOSTING",
+  "status": "BLOCKED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "BLOCKED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    },
+    "production_readiness": {
+      "status": "BLOCKED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md",
+        "docs/evidence/hosted-candidate-verification.json",
+        "docs/evidence/hosting-google-one-tap-v9-release.json",
+        "docs/evidence/deployed-browser-results.json"
+      ]
+    }
+  },
+  "findings": [],
+  "residual_risks": [
+    "Live OAuth retrieval failed FedCM NetworkError in in-app local browser.",
+    "Existing dependency audit issues and overall product backlog remain."
+  ],
+  "limitations": [
+    "Hosting deployed/19 artifact hashes/read-only browser verified.",
+    "Actual Google sign-in failed FedCM token retrieval in in-app browser; user session/logout not verified.",
+    "Overall product/dependency backlog remains NOT_READY; runtime ledger CLI unavailable."
+  ]
+}

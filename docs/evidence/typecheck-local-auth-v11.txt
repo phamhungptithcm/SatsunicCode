@@ -1,0 +1,8 @@
+
+> satsuniccode@0.1.0 typecheck
+> tsc --noEmit && npm run typecheck -w functions
+
+
+> @satsuniccode/functions@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+

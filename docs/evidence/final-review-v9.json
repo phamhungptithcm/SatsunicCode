@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "task_id": "GOOGLE-ONE-TAP-V9",
+  "status": "BLOCKED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "BLOCKED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    },
+    "production_readiness": {
+      "status": "BLOCKED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Scoped source/unit/browser and real provider setup evidence; live credential exchange/deployment pending.",
+      "evidence_refs": [
+        "docs/test-evidence.md",
+        "docs/evidence/google-auth-console-v9.json",
+        "docs/evidence/verify-local-v9.txt",
+        "docs/product-content-review.md"
+      ]
+    }
+  },
+  "findings": [],
+  "residual_risks": [
+    "Live OAuth retrieval failed FedCM NetworkError in in-app local browser.",
+    "Existing dependency audit issues and overall product backlog remain."
+  ],
+  "limitations": [
+    "Auth admin API403; Console UI verified settings.",
+    "No production rollout; real Google sign-in/sign-out/account switch not passed.",
+    "Runtime ledger CLI unavailable; file evidence only."
+  ]
+}

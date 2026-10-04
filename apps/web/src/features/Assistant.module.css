@@ -1,0 +1,393 @@
+.idle {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(960px, calc(100% - 40px));
+  z-index: 60;
+}
+.composer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px 10px 26px;
+  min-height: 74px;
+  border: 2px solid #6378ff;
+  border-radius: 40px;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 4px #163cff0c,
+    0 12px 36px #111c3512;
+  transition:
+    border-color 160ms,
+    box-shadow 160ms;
+}
+.composer:focus-within {
+  border-color: #163cff;
+  box-shadow:
+    0 0 0 4px #163cff20,
+    0 12px 36px #111c3512;
+}
+.composer textarea {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 18px;
+  padding: 8px 0;
+  resize: none;
+  max-height: 120px;
+  field-sizing: content;
+  border-radius: 0;
+}
+.composer textarea:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.composer textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.composer button,
+.launcher {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  transition:
+    transform 140ms,
+    background-color 140ms;
+}
+.composer .send,
+.launcher {
+  background: #163cff;
+  color: white;
+}
+.composer .send:hover:not(:disabled),
+.launcher:hover {
+  background: #1030df;
+}
+.composer .send:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.composer .close {
+  background: var(--page);
+  color: var(--ink);
+}
+.composer button:active:not(:disabled),
+.launcher:active {
+  transform: scale(0.94);
+}
+.composer button:focus-visible,
+.launcher:focus-visible {
+  outline: 2px solid #6378ff;
+  outline-offset: 4px;
+}
+.launcher {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  right: 24px;
+  z-index: 60;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 6px 24px #163cff30;
+  animation: emerge 180ms ease-out;
+}
+.dialog {
+  padding: 0;
+  margin: 0 auto;
+  inset: auto 0 max(20px, env(safe-area-inset-bottom));
+  width: min(960px, calc(100% - 40px));
+  max-width: none;
+  height: min(760px, calc(100dvh - 40px));
+  max-height: none;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--surface);
+  color: var(--ink);
+  overflow: hidden;
+  box-shadow: 0 24px 80px #111c3529;
+}
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  animation: reveal 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.dialog[data-closing] {
+  animation: collapse 220ms ease-in forwards;
+}
+.dialog::backdrop {
+  background: #111c3510;
+  backdrop-filter: blur(4px);
+  animation: fade 260ms ease;
+}
+.dialog[data-closing]::backdrop {
+  animation: fade 220ms ease reverse forwards;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 30px;
+  border-bottom: 1px solid var(--line);
+}
+.header strong {
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+.header strong span {
+  color: #6378ff;
+}
+.header > span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.conversation {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 30px;
+}
+.empty,
+.status {
+  color: var(--muted);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.status {
+  color: var(--ink);
+}
+.bottom {
+  padding: 16px 18px 20px;
+}
+@keyframes reveal {
+  from {
+    clip-path: inset(calc(100% - 96px) 0 0 round 38px);
+    opacity: 0.6;
+    transform: translateY(10px);
+  }
+  to {
+    clip-path: inset(0 round 28px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes collapse {
+  to {
+    clip-path: inset(calc(100% - 96px) 0 0 round 38px);
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@keyframes emerge {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .idle {
+    width: calc(100% - 28px);
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+  .composer {
+    padding: 7px 9px 7px 18px;
+    gap: 8px;
+    min-height: 64px;
+  }
+  .composer textarea {
+    font-size: 16px;
+  }
+  .composer button {
+    width: 44px;
+    height: 44px;
+  }
+  .dialog {
+    width: calc(100% - 28px);
+    height: calc(100dvh - 32px);
+    bottom: max(16px, env(safe-area-inset-bottom));
+    border-radius: 24px;
+  }
+  .header {
+    padding: 20px;
+  }
+  .conversation {
+    padding: 22px;
+  }
+  .bottom {
+    padding: 12px;
+  }
+  .header > span {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dialog[open],
+  .dialog[data-closing],
+  .dialog::backdrop,
+  .dialog[data-closing]::backdrop,
+  .launcher {
+    animation: none;
+  }
+  .composer,
+  .composer button,
+  .launcher {
+    transition: none;
+  }
+  .composer button:active:not(:disabled),
+  .launcher:active {
+    transform: none;
+  }
+}
+/* The portal sits outside .app, so it owns its theme tokens. */
+.idle,
+.dialog,
+.launcher {
+  --ink: #111c35;
+  --muted: #55627a;
+  --line: #dbe0eb;
+  --surface: #fff;
+  --page: #f8f9fc;
+}
+:global(body[data-theme="dark"]) .idle,
+:global(body[data-theme="dark"]) .dialog,
+:global(body[data-theme="dark"]) .launcher {
+  --ink: #edf1ff;
+  --muted: #b4bfd6;
+  --line: #36445f;
+  --surface: #1a2640;
+  --page: #111a2c;
+}
+/* HunpeoLabs motion parity: panel geometry is measured by WAAPI. */
+.dialog {
+  height: min(920px, calc(100dvh - 40px));
+}
+.dialog[open],
+.dialog[data-closing] {
+  animation: none;
+}
+.dialog::backdrop {
+  animation: fade 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.dialog[data-closing]::backdrop {
+  animation: fade 320ms ease reverse forwards;
+}
+.idle {
+  animation: composerEnter 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.idle[data-hiding] {
+  pointer-events: none;
+}
+.launcher {
+  animation: none;
+  box-shadow:
+    0 6px 18px #163cff33,
+    inset 0 1px 0 #ffffff33;
+}
+.launcher[data-emerging] {
+  animation: emerge 180ms ease 140ms both;
+  pointer-events: none;
+}
+.hint {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  display: flex;
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  color: #6378ff;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(4px, -50%);
+  pointer-events: none;
+  transition:
+    opacity 180ms,
+    transform 180ms;
+  box-shadow: 0 6px 20px #111c350d;
+}
+.launcher[data-hint] .hint,
+.launcher:hover .hint,
+.launcher:focus-visible .hint {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+.launcher[data-hint] .hint > span {
+  animation: letterEnter 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.launcher[data-hint] {
+  animation: attentionNudge 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes composerEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes letterEnter {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes attentionNudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-3px);
+  }
+  65% {
+    transform: translateY(-1px);
+  }
+}
+@media (max-width: 600px) {
+  .dialog {
+    height: min(760px, calc(100dvh - 32px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .idle,
+  .launcher[data-emerging],
+  .launcher[data-hint],
+  .launcher[data-hint] .hint > span,
+  .dialog::backdrop,
+  .dialog[data-closing]::backdrop {
+    animation: none;
+  }
+  .hint {
+    transition: none;
+  }
+}

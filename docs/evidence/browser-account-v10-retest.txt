@@ -1,0 +1,199 @@
+
+Running 2 tests using 1 worker
+
+(node:70338) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/account-v10.spec.ts:3:1 › guest entry has no Sign in page/button; preferences reuse existing shell (1.1s)
+  ✘  2 tests/e2e/account-v10.spec.ts:31:1 › synthetic emulator profile/menu, owned saved data and logout clearing; not Google OAuth (2.9s)
+
+
+  1) tests/e2e/account-v10.spec.ts:31:1 › synthetic emulator profile/menu, owned saved data and logout clearing; not Google OAuth 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 163
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#b7bbc3",
+    +               "contrastRatio": 1.72,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#eef2ff",
+    +               "fontSize": "11.3pt (15px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 1.72 (foreground color: #eef2ff, background color: #b7bbc3, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<header class=\"site-header clean-header\">",
+    +                 "target": Array [
+    +                   "header",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 1.72 (foreground color: #eef2ff, background color: #b7bbc3, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span>Satsunic<span class=\"blue\">Code</span></span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "a[aria-label=\"SatsunicCode — homepage\"] > span:nth-child(2)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#b7bbc3",
+    +               "contrastRatio": 1.07,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#9eb0ff",
+    +               "fontSize": "11.3pt (15px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 1.07 (foreground color: #9eb0ff, background color: #b7bbc3, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<header class=\"site-header clean-header\">",
+    +                 "target": Array [
+    +                   "header",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 1.07 (foreground color: #9eb0ff, background color: #b7bbc3, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"blue\">Code</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "a[aria-label=\"SatsunicCode — homepage\"] > span:nth-child(2) > .blue",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#b7bbc3",
+    +               "contrastRatio": 1.72,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#eef2ff",
+    +               "fontSize": "9.0pt (12px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 1.72 (foreground color: #eef2ff, background color: #b7bbc3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<header class=\"site-header clean-header\">",
+    +                 "target": Array [
+    +                   "header",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 1.72 (foreground color: #eef2ff, background color: #b7bbc3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button aria-label=\"Change language\">VI</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-label=\"Change language\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#b7bbc3",
+    +               "contrastRatio": 1.72,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#eef2ff",
+    +               "fontSize": "9.0pt (12px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 1.72 (foreground color: #eef2ff, background color: #b7bbc3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<header class=\"site-header clean-header\">",
+    +                 "target": Array [
+    +                   "header",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 1.72 (foreground color: #eef2ff, background color: #b7bbc3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"account-name\">Emulator Learner</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".account-name",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    + ]
+
+      75 |   await page.getByRole("button", { name: "Toggle light/dark theme", exact: true }).click();
+      76 |   await account.click();
+    > 77 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+         |                                                                 ^
+      78 |   expect(
+      79 |     await page.evaluate(
+      80 |       () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/account-v10.spec.ts:77:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/account-v10-synthetic-emul-77ef4-t-clearing-not-Google-OAuth/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/account-v10-synthetic-emul-77ef4-t-clearing-not-Google-OAuth/error-context.md
+
+  1 failed
+    tests/e2e/account-v10.spec.ts:31:1 › synthetic emulator profile/menu, owned saved data and logout clearing; not Google OAuth 
+  1 passed (4.7s)

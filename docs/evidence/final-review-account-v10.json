@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "task_id": "ACCOUNT-V10",
+  "status": "BLOCKED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "PASSED",
+      "summary": "Existing Shell, header and footer reused; account content only, guest CTA removed, global One Tap initialization.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "UID-scoped queries and existing Rules; HTTPS Google avatar allowlist, no new secrets or production data writes.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Typecheck and 25 unit tests pass; subscriptions cancel and UID changes clear data.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Empty/loading/error states, pending-write exclusion, logout suppression and failed auth restoration fail closed. Real OAuth success not verified.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Safe localized errors; no inferred authentication, saved state or verdict.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "50 recent entries only; browser-local settings; private NeetCode account screens not observed.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    },
+    "production_readiness": {
+      "status": "BLOCKED",
+      "summary": "V10 local only; real Google session/logout not verified, browser may suppress One Tap. Full product and dependency audit remain NOT_READY.",
+      "evidence_refs": [
+        "docs/evidence/verify-local-v10.txt",
+        "docs/evidence/browser-account-v10-retest2.txt",
+        "docs/evidence/browser-learning-v10-retest.txt",
+        "docs/evidence/account-v10-menu.png"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "cycle": 1,
+      "finding": "Dark active tab contrast and bare SDK fixture import",
+      "status": "FIXED",
+      "verification": "Initial account browser tests passed after correction."
+    },
+    {
+      "cycle": 2,
+      "finding": "Incorrect Light test locator; accessibility measured during theme transition",
+      "status": "FIXED",
+      "verification": "2 account browser tests pass with actual accessible name and reduced-motion stable theme."
+    },
+    {
+      "cycle": 3,
+      "finding": "Legacy regression assertions target retired account text/actions",
+      "status": "PARTIALLY_FIXED",
+      "verification": "Account 2PASS; learning regression 7PASS1FAIL. Remaining enrollment test waits for Theo h\u1ecdc DSA on graph route; current graph route does not expose enrollment action. Out-of-scope existing integration gap retained."
+    }
+  ],
+  "residual_risks": [
+    "Real Google OAuth/session/logout not proven",
+    "Production remains V9",
+    "Existing dependency audit and wider product requirements unresolved",
+    "Existing DSA graph route lacks enrollment entry point; learning regression remains failing."
+  ],
+  "limitations": [
+    "Runtime review CLI unavailable; file-based record only",
+    "Token usage and cost unavailable"
+  ]
+}

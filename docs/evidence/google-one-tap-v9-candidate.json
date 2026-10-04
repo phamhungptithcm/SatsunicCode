@@ -1,0 +1,32 @@
+{
+  "source": {
+    "apps/web/src/google-one-tap.ts": "4a4f82d3febaf97f3c2acad9dbe145d443595f21fc21414a72afa21cf1d2d558",
+    "apps/web/src/features/Account.tsx": "df2cb3150ad9c756c4b854e7a0ade8a55c6d1a5838cf91362052ab6e4a98feb7",
+    "apps/web/src/firebase.ts": "80a3c1752003d1b7d510ad566228de6bdb63a6c51a44870de1831ed2c066419d",
+    "tests/unit/google-one-tap.test.ts": "b3f16322112d16ee8f22a1175027756161b32ae2eb2aebbf691a54a54beeaa63",
+    "tests/e2e/google-one-tap-configured.spec.ts": "6009948a83357aee0b810fb1543649f4ef89e0bf969608ded663dfde13f46793",
+    "tests/e2e/learning.spec.ts": "b4de45c5dd528c0fc7f9c10ba74ead026c4db6ba8d02e0e0b0987d5f27fce985"
+  },
+  "artifacts": {
+    "index.html": "e53d31460e6313624117c6f5b2ebdd2dd4a9f4acdc17f35501553eab60fdc774",
+    "satsunic-mark.svg": "fefeb60cfb898b73e4fd090e7f850b59bd650535b2cf6093f56e347cc65c6811",
+    "assets/CodeEditor-8PIJPUWb.js": "9ac285f035c4273653ec5836a86fbf700a953e4f031cb61f6bb69e1d41f673ef",
+    "assets/python-D8oqgKdH.js": "7ac41bcb5133aa7fe066c86c190a5092580536196ca454ee700c50255518b70d",
+    "assets/toggleHighContrast-D2xogHDo.js": "bce9b71131cd3c05306aa68c3b73116dfa341573b27d66921128a5284e6e7e2d",
+    "assets/Lesson-Bh0E9RmM.js": "34d05f2f285374da192f77e3c596a18d9f95b331a4fb6c351a7a07ed13bffca0",
+    "assets/ts.worker-CmEKzkmF.js": "14f1e02a189da16b2f22bf4e6d21f6ba23926df5a785d0f91ea8817919d951ae",
+    "assets/Progress-PcYuCy5I.js": "8ad69d51e1d385bb028243314cd08faef135132211d9f6fbc98ccae73cac7ce2",
+    "assets/index-DQXPqkZl.js": "d6cce1d679738186306166520e0453e6f62a5a8093262a27a7cd72984e3bfe77",
+    "assets/Account-CENI5458.js": "7dc90f1dc5ac3ba115cd80b33809a86b2e73e1bfc85748c725d8c79de2da1e57",
+    "assets/index-BfdTBZ7P.css": "71507f47869d2109f67a04f98ff245a7be738076e7fdcefb82dc60c49dafca4c",
+    "assets/codicon-ngg6Pgfi.ttf": "9d25513c861704be650eacef8c4588aceabdc8b668857747b5e42b299e926918",
+    "assets/tsMode-BADuOQ3s.js": "b45ea19451ca42c207d7a1262f14a8a1a86da8b5ab8e44e49be17181426b3b28",
+    "assets/jsx-runtime-BNakU3Ej.js": "600d80338ace22d4dcc97a2788698c189811a8b54dad8cea58dfd8e7e4f35d34",
+    "assets/rolldown-runtime-hePW80VL.js": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+    "assets/toggleHighContrast-v5rfKcVs.css": "08c65e2568527b40cdd0bc3278febbdb2e274a7f77be03d78c9aea8fa4d0d9b5",
+    "assets/Practice-gQgTX2un.js": "9db47e23cbb9926086716a3c403fcef95acb05f1eb279d97fc730937befe852d",
+    "assets/java-BEtHBSE6.js": "77d3a91eeaf54e004f8ec321e6208afecebe2435232146b41f68135373800953",
+    "assets/editor.worker-O-CH8JUO.js": "a91c6f81ee4563fe1b6af2827b37a527a5befbec076d852c089dfce0795eb2d4"
+  },
+  "environment": "production Firebase local preview; NOT DEPLOYED"
+}

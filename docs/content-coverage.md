@@ -1,0 +1,9 @@
+# Content coverage
+
+Current local original preview: DSA 3 nodes, 1 shared lesson, 1 shared challenge. This reuse is an explicitly limited first slice, not three unique assignments or a complete DSA path. Author reference solution (JavaScript/TypeScript trusted pure code) checks public examples and independently generated fixtures; intentional boundary/deduplication wrong variants are detected. No learner submission executed, no hidden-run exposure or provider reference tests claimed.
+
+Five other tracks: descriptions only; no lesson/challenge/capstone. No content specialist review completed. All content status CONTENT_REVIEW_REQUIRED. No synthetic reviews/salary or business success metrics.
+
+Release minimum still required: six complete roadmaps ≥10 real nodes each; DSA ≥30 distinct tested original problems; each other track ≥10 specialist assignments; six capstones/rubrics and verified walkthroughs; original DSA/debugging/system-design templates; reviewed VI/EN content provenance and mutation coverage for enabled runtimes. Translation of UI/preview text is not counted as extra content.
+
+v6:450 metadata records from official NeetCode MIT repository,150/75 memberships checked by executable unit tests, source sha256/provenance/license under content/reference.18-topic graph topology traced from actual public roadmap and attached screenshots. Names/set flags/difficulty are referenced, not owned statements. All450 metadata IDs have read-only reference workspace routes; only contains-duplicate and existing peak-requests have independently authored preview statement/examples. Private author references tested without submitted-code evaluation, no Accepted state.449 metadata problems remain without complete authored statement/test suite; peak is additional original. NeetCode current250/coreSkills/all reconciliation unfinished; don't label metadata count site100%.

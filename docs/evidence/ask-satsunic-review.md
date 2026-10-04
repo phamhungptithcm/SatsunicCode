@@ -1,0 +1,16 @@
+# ASK-SATSUNIC-005 review
+
+Approved scope: docs/plans/ask-satsunic-hunpeolabs-adaptation.md, direct human approval 2026-10-04. Current source uses scoped CSS and native dialog, pointer down/up backdrop guard, IME composition handling, focus restoration, bounded transitions and reduced motion. Request generation prevents stale or unmounted results changing UI; Firebase callable itself cannot be aborted and remains unchanged. No database/provider/dependency changes.
+
+Product inventory (VI/EN): existing Ask placeholder/question label and send retained; hide/open/collapse icon accessible names and titles; learning assistant heading; development/unavailable message retains draft and accurately says no history saved; Connecting pending. Success content unavailable by backend contract. Unauthorized/offline use truthful unavailable state. No destructive confirmation applicable. Purpose: ask learning questions; Agency: explicit send/hide/collapse; Responsibility: no fake answers or storage claim; Familiarity: capsule/chat icons; Flexibility: VI/EN/mobile/dark/keyboard/reduced motion; Simplicity: compact actions and one composer; Craft: outer focus border and portal-owned tokens; Delight: finite panel reveal, no periodic attention timer. Native web dialog conventions, Apple-specific expression not used.
+
+Review cycle 1: visual screenshot identified transparent panel due tokens inherited only inside .app while portal lives in body. Fixed with local theme tokens and regression assertion. Cycle 2: desktop/mobile browser assertions passed; screenshot reviewed with opaque surface. Typecheck passed. Further dark/IME/backdrop checks recorded in test output. No live provider evidence, deploy or production certification. Formal gate remains limited by DEGRADED stale indexes and unavailable current commit/runtime receipt.
+
+Token/cost unavailable. Memory candidates None. No PR/Jira/memory updates.
+
+Final verification: all 3 Playwright tests passed (1440/390, dark, axe, reduced motion, IME and backdrop drag guard). IME test initially expected text without browser-inserted newline; corrected to assert the exact captured draft survives collapse. Fresh review cycle 3: source matches scope and no remaining local findings. Final typecheck and web build passed. Live provider, cancellation at transport, real OAuth and production remain NOT TESTED.
+
+## HunpeoLabs motion parity refinement
+Explicit user request extends scope to exact motion mechanism: measured capsule mask, 360ms opening/320ms closing, current-frame reversal, native scroll lock, 320ms capsule-to-launcher shrink with 140ms overlap, 5s first/22s subsequent hint with 2.8s duration and letter/nudge animation. Hint inactive in reduced motion and background tabs; all timers/animations cleaned up on unmount. Backend unchanged. Review discovered duplicate banner landmark in panel title; replaced semantic page header with title div. Added duration/overlap/hint browser assertions.
+
+Fresh final local cycle: all 4 browser tests passed including measured 360ms motion and overlap/hint. Typecheck passed. Web build passed before title-div accessibility-only correction; final source is validated by browser and compiler. No remaining local review findings; formal production limits unchanged.

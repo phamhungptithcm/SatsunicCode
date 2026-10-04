@@ -1,0 +1,146 @@
+
+Running 11 tests using 1 worker
+
+(node:69303) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/account-v10.spec.ts:3:1 › guest entry has no Sign in page/button; preferences reuse existing shell (1.6s)
+  ✘   2 tests/e2e/account-v10.spec.ts:31:1 › synthetic emulator profile/menu, owned saved data and logout clearing; not Google OAuth (1.0m)
+(node:70066) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 tests/e2e/google-one-tap-configured.spec.ts:3:1 › configured production build loads real GIS on allowed localhost origin; no OAuth success claim (1.4s)
+  ✘   4 tests/e2e/learning.spec.ts:24:1 › homepage track destinations, composer draft/minimize, locale and responsive keyboard (15.8s)
+(node:70269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 tests/e2e/learning.spec.ts:81:1 › Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation (15.4s)
+(node:70427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 tests/e2e/learning.spec.ts:136:1 › DSA full reference graph, topic drawer, sets and workspace tabs (5.0s)
+(node:70440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/e2e/learning.spec.ts:207:1 › all target viewports and bundled Monaco editor fallback (3.8s)
+  ✓   8 tests/e2e/learning.spec.ts:239:1 › clean navigation, footer credit and Google-only availability (1.6s)
+  ✓   9 tests/e2e/learning.spec.ts:293:1 › track switcher: six real destinations and native keyboard (1.4s)
+  ✓  10 tests/e2e/learning.spec.ts:332:1 › English default and persistent language without mixed route labels (1.0s)
+  ✓  11 tests/e2e/learning.spec.ts:364:1 › owner bookmark persists after Firebase ack and stays isolated across users (2.0s)
+
+
+  1) tests/e2e/account-v10.spec.ts:31:1 › synthetic emulator profile/menu, owned saved data and logout clearing; not Google OAuth 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Light', exact: true })
+
+
+      73 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+      74 |   await page.setViewportSize({ width: 390, height: 844 });
+    > 75 |   await page.getByRole("button", { name: "Toggle light/dark theme", exact: true }).click();
+         |                                                                  ^
+      76 |   await account.click();
+      77 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+      78 |   expect(
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/account-v10.spec.ts:75:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/account-v10-synthetic-emul-77ef4-t-clearing-not-Google-OAuth/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/account-v10-synthetic-emul-77ef4-t-clearing-not-Google-OAuth/error-context.md
+
+  2) tests/e2e/learning.spec.ts:24:1 › homepage track destinations, composer draft/minimize, locale and responsive keyboard 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('status')
+    Expected substring: "chưa kết nối Gemini"
+    Received string:    "Ask Satsunic đang phát triển. Câu hỏi vẫn được giữ; chưa có câu trả lời hoặc lịch sử được lưu."
+    Timeout: 15000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('status') with timeout 15000ms
+      - waiting for getByRole('status')
+        34 × locator resolved to <p role="status">Ask Satsunic đang phát triển. Câu hỏi vẫn được gi…</p>
+           - unexpected value "Ask Satsunic đang phát triển. Câu hỏi vẫn được giữ; chưa có câu trả lời hoặc lịch sử được lưu."
+
+
+      48 |   );
+      49 |   await page.getByRole("button", { name: "Gửi câu hỏi" }).click();
+    > 50 |   await expect(page.getByRole("status")).toContainText("chưa kết nối Gemini");
+         |                                          ^
+      51 |   await page.keyboard.press("Escape");
+      52 |   await expect(page.getByLabel("Hỏi Ask Satsunic")).toBeFocused();
+      53 |   await page.getByRole("button", { name: "Đổi ngôn ngữ" }).click();
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:50:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/learning-homepage-track-de-0144b-ale-and-responsive-keyboard/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/learning-homepage-track-de-0144b-ale-and-responsive-keyboard/error-context.md
+
+  3) tests/e2e/learning.spec.ts:81:1 › Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Đã đăng nhập vào tài khoản học.')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Đã đăng nhập vào tài khoản học.') with timeout 15000ms
+      - waiting for getByText('Đã đăng nhập vào tài khoản học.')
+
+
+      85 |   await page.goto("/settings");
+      86 |   await syntheticIdentity(page, `learner-${stamp}@example.test`);
+    > 87 |   await expect(page.getByText("Đã đăng nhập vào tài khoản học.")).toBeVisible();
+         |                                                                   ^
+      88 |   await page.goto("/roadmaps/dsa");
+      89 |   await page.getByRole("button", { name: "Theo học DSA" }).click();
+      90 |   await expect(page.getByRole("status")).toContainText("Đã lưu lộ trình DSA");
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:87:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/learning-Synthetic-emulato-bffc8--independent-user-isolation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/learning-Synthetic-emulato-bffc8--independent-user-isolation/error-context.md
+
+  4) tests/e2e/learning.spec.ts:136:1 › DSA full reference graph, topic drawer, sets and workspace tabs 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('status')
+    Expected substring: "Không có bài tập khớp"
+    Error: strict mode violation: getByRole('status') resolved to 2 elements:
+        1) <p class="empty" role="status">Không có bài tập khớp bộ lọc.</p> aka getByText('Không có bài tập khớp bộ lọc.').first()
+        2) <p class="empty" role="status">Không có bài tập khớp bộ lọc.</p> aka getByText('Không có bài tập khớp bộ lọc.').nth(1)
+
+    Call log:
+      - Expect "toContainText" getByRole('status') with timeout 15000ms
+      - waiting for getByRole('status')
+
+
+      189 |   await page.goto("/practice");
+      190 |   await page.getByLabel("Tìm bài tập").fill("không có bài này");
+    > 191 |   await expect(page.getByRole("status")).toContainText("Không có bài tập khớp");
+          |                                          ^
+      192 |   await page.getByLabel("Tìm bài tập").fill("");
+      193 |   await expect(
+      194 |     page.getByRole("link", { name: "Đỉnh lưu lượng yêu cầu" }),
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:191:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/learning-DSA-full-referenc-372c3-wer-sets-and-workspace-tabs/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/learning-DSA-full-referenc-372c3-wer-sets-and-workspace-tabs/error-context.md
+
+  4 failed
+    tests/e2e/account-v10.spec.ts:31:1 › synthetic emulator profile/menu, owned saved data and logout clearing; not Google OAuth 
+    tests/e2e/learning.spec.ts:24:1 › homepage track destinations, composer draft/minimize, locale and responsive keyboard 
+    tests/e2e/learning.spec.ts:81:1 › Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation 
+    tests/e2e/learning.spec.ts:136:1 › DSA full reference graph, topic drawer, sets and workspace tabs 
+  7 passed (1.9m)

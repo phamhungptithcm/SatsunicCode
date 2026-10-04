@@ -1,0 +1,7 @@
+# Test plan
+
+Current executable scope: pure graph/schema/job-state/author-reference/Yjs spike; Firestore owner draft/public projection rules and RTDB/Storage default denial; browser guest composer unavailable and real local learner persistence/isolation; user design delta graph/topic panel/search/difficulty/discipline states. Browser plugin skill absent, regular Playwright used for automated local E2E; CUA in-app browser used for public reference observation. No live integrations mocked and labeled PASS.
+
+Next: autosave races/account-switch/logout failure/recovery; multi-tab stale writes and independent enrollment readback; RTDB CRDT transport multi-context reorder/reconnect/epoch revocation/checkpoint; whiteboard delete/update; approved runner hostile-code fixtures/source hash/provider outage/replay; AI quota/concurrency/reservation/kill switch/assessment cutoff/history deletion then real-provider smoke/evaluation. All 66 acceptance scenarios remain in matrix with current partial states.
+
+Release gates remain all three Firebase surface integration, all callables/roles/cross-tenant negatives, browser full workflows, current dependency/license/secret scan, accessibility manual assistive technology and physical virtual keyboard, performance/load/cost caps, full original reviewed content, backup/restore/release rollback drill. CI runs are not claimed before observed authenticated run.

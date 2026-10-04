@@ -1,0 +1,1 @@
+Historical import retained for audit and MIT license integrity. REVERT-SATSUNIC-DNA-001 restored the reference catalog and importer to their prior active paths. The importer was not executed; no production migration or deployment occurred.

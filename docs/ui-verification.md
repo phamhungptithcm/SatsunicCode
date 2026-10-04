@@ -1,0 +1,19 @@
+# UI verification
+
+Local browser and Playwright observed the current shell. Navbar has one desktop row, primary links plus Community disclosure; mobile menu has accessible name/expanded state and closes on selection. Footer uses grouped real routes, explicit by HunpeoLabs and restrained brand credit. Both themes, Vietnamese/English and target viewports were scanned; latest 5 browser tests passed. Actual NeetCode public interaction was inspected (see reference-experience-audit.md); no source, assets or proprietary exercises copied.
+
+Google One Tap is the confirmed user choice. Email/password product UI removed. Unavailable identity state explains the exact missing staging/OAuth configuration; no simulated chooser or fake signed-in state. Real chooser, browser FedCM, consent, dismissal/retry, token verification and session refresh remain NOT TESTED until provider readiness.
+
+v3 supersedes v2 screenshots: centered floating navbar, small local SVG brand, subtle sign-in control, reduced hero typography, no hero graph bounding box, single-row footer brand/links and by HunpeoLabs. Inspected current desktop full-page screenshot plus actual local browser. Five browser tests/axe/target viewports passed; typecheck/build passed.
+
+v4: inspected current actual screenshot showing six icon tiles and selected detail. Six browser tests pass including native keyboard/all-six destinations/reduced motion/390px. Current homepage-desktop/mobile screenshots replace old selector; track-switcher-mobile.png records radio control UI. Full-product readiness unchanged.
+
+v5 actual local browser observed English default with all homepage/footer/menu/track descriptions in English. Vietnamese toggle uses translated discipline and navigation/difficulty/helper labels; proper product names remain. Google-only Account config boundary tested local, live production chooser not verified.
+
+V6 current evidence: live graph18nodes and Arrays drawer9problems, independent Contains Duplicate preview/Monaco split workspace. See evidence/deployed-dsa-drawer.png and deployed-workspace.png. Deployed read-only browser passed and current local eight-test suite passed;100% NeetCode functional parity is NOT achieved. Missing editor draft tabs/persistence for reference pages, authored problem suites, real execution, solutions and discussion are retained in next-session/matrix.
+
+## V8 gesture checkpoint — 2026-10-03 America/Chicago
+
+Human approved ROADMAP-GESTURES-V8. Atomic RAF-coalesced viewport, nonpassive canvas wheel, two-finger pan, ctrl/meta wheel anchored zoom, touch pinch/centroid translation, mouse/node drag threshold with click suppression, middle drag, keyboard and centered +/-/reset implemented. WebKit gesture adapter exists, native Safari/macOS hardware validation NOT TESTED. No deployment from this task; prior live version remains separate evidence.
+
+Current verify:local passed strict typecheck,14 unit tests, web/Functions builds. Five focused browser tests passed: gesture/pinch2→1/cancel/keyboard/axe; Shift+wheel line mode and no outside-canvas change; DSA drawer/set/workspace regression; target viewports/Monaco; EN default/persisted VI. Current evidence browser-results.json, graph-gestures-v8.png, verify-local-v8.txt and SHA256 candidate manifest. Physical trackpad NOT TESTED; browser wheel/CDP touch evidence only. First launch sandbox listen denied, escalated local run permitted. Initial touch transition test sent wrong released pointer (corrected CDP event and rerun); lost-capture handler now ignores bubbled descendant capture transfer. Additional test waited for removed header class during concurrent WIP edit; changed outside-canvas target to body and reran all five. Concurrent header changes preserved, not attributed to V8. No Rules/schema/backend changes, no Rules rerun needed.

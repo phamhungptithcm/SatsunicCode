@@ -1,0 +1,90 @@
+{
+  "status": "success",
+  "result": {
+    "channels": [
+      {
+        "name": "projects/satsuniccode/sites/satsuniccode/channels/live",
+        "url": "https://satsuniccode.web.app",
+        "release": {
+          "name": "projects/satsuniccode/sites/satsuniccode/channels/live/releases/1791078705297000",
+          "version": {
+            "name": "projects/satsuniccode/sites/satsuniccode/versions/f9160636113d0189",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "X-Content-Type-Options": "nosniff",
+                    "Referrer-Policy": "no-referrer",
+                    "X-Frame-Options": "DENY"
+                  },
+                  "glob": "**"
+                }
+              ],
+              "rewrites": [
+                {
+                  "glob": "**",
+                  "path": "/index.html"
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-10-04T01:51:44.145958Z",
+            "finalizeTime": "2026-10-04T01:51:45.574035Z",
+            "fileCount": "106",
+            "versionBytes": "3584373"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-10-04T01:51:45.297Z"
+        },
+        "createTime": "2026-10-04T01:14:18.248727333Z",
+        "updateTime": "2026-10-04T01:51:45.297Z",
+        "retainedReleaseCount": 2147483647
+      },
+      {
+        "name": "projects/satsuniccode/sites/satsuniccode/channels/dsa-preview",
+        "url": "https://satsuniccode--dsa-preview-t5c4we75.web.app",
+        "release": {
+          "name": "projects/satsuniccode/sites/satsuniccode/channels/dsa-preview/releases/1791078536305000",
+          "version": {
+            "name": "projects/satsuniccode/sites/satsuniccode/versions/3ea823ede59499f4",
+            "status": "FINALIZED",
+            "config": {
+              "headers": [
+                {
+                  "headers": {
+                    "X-Frame-Options": "DENY",
+                    "X-Content-Type-Options": "nosniff",
+                    "Referrer-Policy": "no-referrer"
+                  },
+                  "glob": "**"
+                }
+              ],
+              "rewrites": [
+                {
+                  "glob": "**",
+                  "path": "/index.html"
+                }
+              ]
+            },
+            "labels": {
+              "deployment-tool": "cli-firebase"
+            },
+            "createTime": "2026-10-04T01:48:40.310275Z",
+            "finalizeTime": "2026-10-04T01:48:56.609355Z",
+            "fileCount": "106",
+            "versionBytes": "3584373"
+          },
+          "type": "DEPLOY",
+          "releaseTime": "2026-10-04T01:48:56.305Z"
+        },
+        "createTime": "2026-10-04T01:48:40.003803635Z",
+        "updateTime": "2026-10-04T01:48:56.305Z",
+        "retainedReleaseCount": 10,
+        "expireTime": "2026-10-11T01:48:40.003803635Z"
+      }
+    ]
+  }
+}

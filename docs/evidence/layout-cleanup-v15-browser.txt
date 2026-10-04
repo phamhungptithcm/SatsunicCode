@@ -1,0 +1,39 @@
+[WebServer] (node:4984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:5030) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/shared-layout.spec.ts:2:1 › shared chrome on pages, excluded only on code workspace; roadmap copy removed (5.8s)
+
+
+  1) tests/e2e/shared-layout.spec.ts:2:1 › shared chrome on pages, excluded only on code workspace; roadmap copy removed 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.site-footer')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('.site-footer') with timeout 5000ms
+      - waiting for locator('.site-footer')
+        14 × locator resolved to <footer class="site-footer">…</footer>
+           - unexpected value "hidden"
+
+
+      4 |   await page.goto(route);
+      5 |   await expect(page.locator('.site-header')).toBeVisible();
+    > 6 |   await expect(page.locator('.site-footer')).toBeVisible();
+        |                                              ^
+      7 |  }
+      8 |  await page.goto('/roadmaps/dsa');
+      9 |  await expect(page.getByText('Learning activity is not connected yet.',{exact:true})).toHaveCount(0);
+        at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/shared-layout.spec.ts:6:46
+
+    Error Context: test-results/shared-layout-shared-chrom-15581-kspace-roadmap-copy-removed/error-context.md
+
+  1 failed
+    tests/e2e/shared-layout.spec.ts:2:1 › shared chrome on pages, excluded only on code workspace; roadmap copy removed 

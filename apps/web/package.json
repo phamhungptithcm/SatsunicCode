@@ -1,0 +1,19 @@
+{
+  "name": "@satsuniccode/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "dev:google": "vite --mode production --host 127.0.0.1 --port 5173"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "4.7.0",
+    "firebase": "12.19.0",
+    "monaco-editor": "0.55.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-router-dom": "7.18.4"
+  }
+}

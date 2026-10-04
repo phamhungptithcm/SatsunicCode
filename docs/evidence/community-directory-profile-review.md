@@ -1,0 +1,29 @@
+# Company directory/profile delivery review
+
+Approved human scope: docs/plans/community-directory-balance.md and docs/plans/community-company-create-flow.md, recorded in docs/approval-community-progress-v1.md. Repository intelligence DEGRADED (stale structural/semantic indexes); bounded source, Git, compiler and executable checks used. React19 / TypeScript7 / Firebase, matching web/visual/product-content/security/data/motion quality profiles. No dependency added, no billing/API/IAM activation, no unrelated source refactor.
+
+## Review cycles and fixes
+
+Cycle1 BLOCKED: review found undefined CSS token names in the new media styles, a raw native file button, and possible metadata carried inside retained compressed PNG chunks. Fixed to existing --line/--surface/--ink tokens, styled the native picker, and reconstructed PNG IDAT from bounded validated pixels. A misplaced test success assertion was moved from moderator decision helper to the profile submission point. Pagination test waits now observe actual card addition/end-of-list rather than transient button enablement. Disk exhaustion interrupted file formatting; functions/index.ts was checked against Git and remained intact apart from the intended exports. Interrupted/resource-contended checks do not count as passes.
+
+Cycle2: complete approved source diff self-reviewed again. Client upload and profile submission have explicit30-second deadlines, unclaimed-upload cleanup has10-second deadline. New API remains fail-closed in production. Authenticated server-only immutable upload, digest-bound ownership/claim, quota10uploads/hour, private preview, moderator claim, create-only staged image, explicit public field allowlist and post-commit publication are checked. Mutation receipts preserve retries and repair post-commit publication. Concurrent discard cannot delete a claimed logo; cancelled uploads retain tombstones. CRC/dimension/inflate limits and canonical PNG reconstruction remove ancillary data. No owner UID/upload ID/declaration is copied into public company data. Legacy suggestions remain emulator-compatible and readable for moderation; new production submissions require complete profile.
+
+## Validation ledger
+
+- npm run verify:local: typecheck, web/Functions build,49unit tests PASSED. Final timeout-only source edits also pass npm run typecheck.
+- Local integration6/6 PASSED after clean emulator restart: original private review/salary/progress flows plus private media ownership, invalid image, quota, duplicate/retry, discard/claim, moderation, image bytes/metadata and explicit public business fields.
+- Local rules15/15 PASSED: original public/private regressions and two media-boundary tests. Direct client media writes denied; other-user and guest private reads denied; only trusted moderator preview and published media readable.
+- Five scoped browser workflows PASSED: company creation/moderation/review/salary/withdrawal; guest mobile/dark/reduced-motion; persisted self-reported progress; shared chrome; shared account session. Final affected company flow rerun recorded separately in community-profile-final-browser-results.json after explicit deadline edits.
+-16 directory cases PASSED: VI/EN ×360/390/768/1280 ×light/dark,44px search, no overflow, no standalone button, keyboard selection, source links, exact-match suppression and Axe.
+- Form screenshots cover VI/EN initial steps at four widths, mobile/desktop contact and confirmation, dark variants, icon/search panels and reduced-motion. Website focus is verified above the sticky footer. Company detail verifies submitted HQ/phone and actual published logo in emulator.
+- git diff --check PASSED. No dedicated lint script; TypeScript plus targeted source/security review used. Broader known baseline/provider gates were not rerun or certified by this scoped checkpoint.
+
+Current product inventory/principles: community-directory-profile-content.json and community-directory-profile-product-review.md. Current source fingerprint and runtime review receipts are task-local; release manifest binds built artifacts. Local checks use synthetic identities/data only.
+
+## Production checkpoint and limits
+
+Eleven first-party-sourced directory metadata records were created once in satsuniccode (atomic exists:false); readback confirms11existing/create0. Approved Firestore rules and indexes deployed. Removed nine rejected redundant equality+document-ID composite declarations; supported required indexes retained. No private Storage rules or Functions deployed. Hosting release/hash/read-only evidence is recorded in community-directory-profile-production-report.md after deployment.
+
+Full private profile production activation remains NOT_READY: billing disabled, Functions API unavailable, App Check/provider configuration and authorized moderator not verified. UI creation is intentionally emulator-only until those prerequisites are completed; production autocomplete can select the published directory. New media bucket, CORS, real Google identity/attestation, live claims and live upload/moderation are NOT TESTED. No fake company/contact/logo/review/rating/salary data imported. Chromium local evidence does not certify Safari/Firefox, hardware screen readers or device IME. Orphaned failed private/staged objects are bounded by quotas but no automatic retention job is introduced. The self-review is not independent production assurance.
+
+Compilation, static analysis, scoped unit/integration/browser/rules, profile selection, security, directory migration, additive API compatibility, privacy, observability (existing audit plus upload reservation), responsive/motion/content gates pass within executed scope. SEO metadata/crawler policy/structured data unchanged. Final review is recorded only after the last affected check and current production checkpoint verification. Token usage and billed/API-equivalent cost: Unavailable. Memory candidates: None.

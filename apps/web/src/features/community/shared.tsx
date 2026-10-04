@@ -201,3 +201,58 @@ export const statusLabel: Record<string, { vi: string; en: string }> = {
   REMOVED: text("Đã rút", "Withdrawn"),
   APPEALED: text("Đang xem xét lại", "Appeal pending"),
 };
+
+/** Provenance refers to company metadata, never to contributed reviews or salary. */
+export function CompanySource({
+  company,
+}: {
+  company: import("../../../../../packages/contracts/src/community").Company;
+}) {
+  const { t } = useLanguage();
+  if (company.source === "OFFICIAL_DIRECTORY") {
+    let url: URL | null = null;
+    try {
+      url = new URL(company.sourceUrl ?? "");
+    } catch {
+      /* Missing provenance remains plain text. */
+    }
+    return url?.protocol === "https:" ? (
+      <a
+        href={url.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {t(text("Nguồn chính thức", "Official source"))} ↗
+      </a>
+    ) : (
+      <>
+        {t(
+          text("Thông tin từ nguồn chính thức", "Official company information"),
+        )}
+      </>
+    );
+  }
+  return (
+    <>
+      {t(
+        text(
+          "Thông tin từ đề xuất cộng đồng",
+          "Community-suggested information",
+        ),
+      )}
+    </>
+  );
+}
+
+export function companyIndustryLabel(industry: string) {
+  const labels: Record<string, ReturnType<typeof text>> = {
+    "Software services": text("Dịch vụ phần mềm", "Software services"),
+    "Digital platforms": text("Nền tảng số", "Digital platforms"),
+    "Business software": text("Phần mềm doanh nghiệp", "Business software"),
+    "Software engineering": text("Phát triển phần mềm", "Software engineering"),
+    "Digital transformation": text("Chuyển đổi số", "Digital transformation"),
+    "Financial technology": text("Công nghệ tài chính", "Financial technology"),
+  };
+  return labels[industry] ?? text(industry, industry);
+}

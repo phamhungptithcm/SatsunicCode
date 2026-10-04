@@ -6,10 +6,7 @@
       "test",
       "--config",
       "docs/evidence/community-playwright.config.ts",
-      "community.spec.ts",
-      "progress.spec.ts",
-      "shared-layout.spec.ts",
-      "workspace-session.spec.ts"
+      "community.spec.ts"
     ],
     "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/docs/evidence/community-playwright.config.ts",
     "rootDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
@@ -97,12 +94,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 34548,
+                  "duration": 29775,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T16:21:12.555Z",
+                  "startTime": "2026-10-04T18:12:11.505Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -112,7 +109,7 @@
           ],
           "id": "6cf8406558519b2971af-c2ed0d7c11c7512dcadf",
           "file": "community.spec.ts",
-          "line": 257,
+          "line": 284,
           "column": 1
         },
         {
@@ -131,12 +128,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2894,
+                  "duration": 4253,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-04T16:21:47.676Z",
+                  "startTime": "2026-10-04T18:12:41.647Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -146,133 +143,7 @@
           ],
           "id": "6cf8406558519b2971af-850545002f2840e20cd5",
           "file": "community.spec.ts",
-          "line": 484,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "progress.spec.ts",
-      "file": "progress.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "self-reported progress persists and resumes real lesson, keyboard/mobile/locale",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3119,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T16:21:50.582Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "ca3a771848969cb77bf6-507818d1a8051c1b91cf",
-          "file": "progress.spec.ts",
-          "line": 3,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "shared-layout.spec.ts",
-      "file": "shared-layout.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "shared chrome on pages, excluded only on code workspace; roadmap copy removed",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1828,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T16:21:53.713Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7eb7fec572d479bccd5f-2fcbe3a73876d49a57cd",
-          "file": "shared-layout.spec.ts",
-          "line": 2,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "workspace-session.spec.ts",
-      "file": "workspace-session.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "workspace shares the application account across navigation, refresh and logout",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3823,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T16:21:55.553Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "43c30918daa7809ee0c8-4e6f8d1d20b0dce57e8e",
-          "file": "workspace-session.spec.ts",
-          "line": 3,
+          "line": 504,
           "column": 1
         }
       ]
@@ -280,9 +151,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T16:21:11.305Z",
-    "duration": 48127.707,
-    "expected": 5,
+    "startTime": "2026-10-04T18:12:10.887Z",
+    "duration": 35121.338,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

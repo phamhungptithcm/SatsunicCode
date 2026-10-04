@@ -45,3 +45,9 @@ Stepper-motion continuation — 2026-10-04: human user explicitly requested a th
 Continuation approval: human requested “bỏ lưu bản nháp”. Scoped plan: docs/plans/community-remove-draft.md. Remove review draft action; preserve stored records and submission validation.
 
 Release authorization: human requested “release lên production & commit and push to main”. Plan: docs/plans/community-production-release.md. Commit/push implemented scope and limited Hosting checkpoint per existing Hosting authorization; full backend activation remains prerequisite-gated. No billing/role/data mutation inferred.
+
+UI continuation authorization: human requested “input, button bị lệch … làm phải cân đối consistency, flow mượt mà”. Same approved community UI scope; plan docs/plans/community-directory-balance.md. New official directory import and production rules delta pending reviewed approval; no data publication authorization fabricated.
+
+Reviewed delta approval: user selected “Duyệt triển khai danh mục production” for docs/plans/community-directory-balance.md (11 sourced companies, create-only production import and public directory rules). New logo/contact creation flow plan docs/plans/community-company-create-flow.md pending approval.
+
+Reviewed profile delta approval: user selected “Duyệt triển khai flow mới” for docs/plans/community-company-create-flow.md. New autocomplete/profile/logo/contact flow, private upload + moderator publication and scoped tests authorized. Production billing/API/App Check activation remains separate and unapproved.

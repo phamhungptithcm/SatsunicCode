@@ -1,3 +1,4 @@
+import CompanyLogo from "./community/CompanyLogo";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useLanguage, text } from "../i18n";
@@ -17,6 +18,8 @@ import { ReviewForm } from "./community/Forms";
 import {
   Dialog,
   ErrorNotice,
+  CompanySource,
+  companyIndustryLabel,
   Hero,
   errorText,
   useAction,
@@ -75,11 +78,52 @@ export default function CompanyDetail() {
       )}
       {company && (
         <>
+          {company.logoPath && (
+            <CompanyLogo path={company.logoPath} name={company.name} />
+          )}
           <Hero
             label="COMPANY REVIEWS"
             title={company.name}
-            description={`${company.industry} · ${company.country} · ${t(text("Thông tin từ cộng đồng", "Community-suggested information"))}`}
+            description={`${t(companyIndustryLabel(company.industry))} · ${t(company.country === "VN" ? text("Việt Nam", "Vietnam") : text("Hoa Kỳ", "United States"))}`}
           />
+          <p className="community-caption">
+            <CompanySource company={company} />
+          </p>
+          {company.headquarters && (
+            <div className="community-panel">
+              <h2>
+                {t(text("Thông tin doanh nghiệp", "Business information"))}
+              </h2>
+              <dl>
+                <dt>{t(text("Trụ sở chính", "Headquarters"))}</dt>
+                <dd>{company.headquarters}</dd>
+                <dt>{t(text("Điện thoại doanh nghiệp", "Business phone"))}</dt>
+                <dd>{company.phone}</dd>
+                {company.website && /^https:\/\//.test(company.website) && (
+                  <>
+                    <dt>Website</dt>
+                    <dd>
+                      <a
+                        href={company.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {company.website}
+                      </a>
+                    </dd>
+                  </>
+                )}
+              </dl>
+              <p className="community-hint">
+                {t(
+                  text(
+                    "Thông tin do người đóng góp cung cấp và được duyệt trước khi công khai.",
+                    "Submitted information reviewed before publication.",
+                  ),
+                )}
+              </p>
+            </div>
+          )}
           <div className="community-layout">
             <div>
               {stats && (

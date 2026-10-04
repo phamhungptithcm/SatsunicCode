@@ -1,3 +1,4 @@
+import { logoPng } from "../helpers/logo";
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { createHash } from "node:crypto";
@@ -9,6 +10,37 @@ if (
     "Use explicit localhost emulators for community E2E fixtures",
   );
 const stamp = Date.now();
+async function createCompany(page: Page, vi = false, name = "New UI company") {
+  const search = page.getByRole("combobox", {
+    name: vi ? "Tìm công ty" : "Find a company",
+    exact: true,
+  });
+  await expect(search).toBeVisible();
+  await expect(page.locator(".community-directory-loading")).toHaveCount(0);
+  const more = page.getByRole("button", {
+    name: vi ? "Tải thêm công ty" : "Load more companies",
+    exact: true,
+  });
+  while (await more.isVisible()) {
+    const count = await page.locator(".community-company-card").count();
+    await more.click();
+    await expect
+      .poll(
+        async () =>
+          !(await more.isVisible()) ||
+          (await page.locator(".community-company-card").count()) > count,
+      )
+      .toBe(true);
+  }
+  await search.click();
+  await search.fill(name);
+  await page
+    .getByRole("option", {
+      name: vi ? `Tạo công ty “${name}”` : `Create company “${name}”`,
+      exact: true,
+    })
+    .click();
+}
 async function identity(page: Page, name: string) {
   return page.evaluate(async (email) => {
     const fixture = await import(
@@ -269,28 +301,47 @@ test("community real UI → company suggestion → moderation → review → com
       .update(`VN-${name.toLowerCase()}`)
       .digest("hex")
       .slice(0, 40);
-  await page
-    .getByRole("button", { name: "Suggest company", exact: true })
-    .click();
+  await createCompany(page);
   await auditForm(page, "company", async (vi) => {
-    await page
-      .getByRole("button", {
-        name: vi ? "Đề xuất công ty" : "Suggest company",
-        exact: true,
-      })
-      .click();
+    await createCompany(page, vi);
   });
   const d = page.getByRole("dialog");
   await d.getByLabel("Company name").fill(name);
   await d.getByLabel("Industry").fill("   ");
-  await d.getByRole("button", { name: "Send suggestion", exact: true }).click();
+  await d.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(d.getByRole("alert")).toContainText(
-    "Enter company name and industry.",
+    "Check the name, industry, logo, address and phone.",
   );
   await d.getByLabel("Industry").fill("Synthetic UI fixture");
-  await d.getByRole("button", { name: "Send suggestion" }).click();
-  await expect(d.getByRole("status")).toContainText("awaiting review");
-  await d.getByRole("button", { name: "Close", exact: true }).click();
+  await d.getByRole("button", { name: "Continue", exact: true }).click();
+  await d.getByLabel("Company logo", { exact: true }).setInputFiles({
+    name: "logo.png",
+    mimeType: "image/png",
+    buffer: logoPng(),
+  });
+  await expect(d.getByAltText("Logo preview").first()).toBeVisible();
+  await d
+    .getByLabel("Headquarters address")
+    .fill("12 Example Street, Hanoi, Vietnam");
+  await d.getByLabel("Business phone").fill("+84 24 1234 5678");
+  await d.getByLabel("Website · Optional").fill("https://example.test");
+  await captureStep(page, "company", "details");
+  const websiteField = d.getByLabel("Website · Optional");
+  await websiteField.focus();
+  await expect(websiteField).toBeInViewport();
+  const fieldBounds = await websiteField.boundingBox(),
+    footerBounds = await d.locator(".community-form-footer").boundingBox();
+  expect(fieldBounds!.y + fieldBounds!.height).toBeLessThanOrEqual(
+    footerBounds!.y + 1,
+  );
+  await d.getByRole("button", { name: "Preview", exact: true }).click();
+  await captureStep(page, "company", "confirm");
+  await d.getByRole("checkbox").check();
+  await d.getByRole("button", { name: "Send for review", exact: true }).click();
+  await expect(d).not.toBeVisible();
+  await expect(page.getByRole("status")).toContainText(
+    "Company profile sent and awaiting moderation.",
+  );
   const mc = await browser.newContext(),
     mp = await mc.newPage();
   await mp.goto("/companies");
@@ -314,6 +365,13 @@ test("community real UI → company suggestion → moderation → review → com
   });
   await approve(mp, name);
   await page.goto(`/companies/${companyId}`);
+  await expect(
+    page.getByText("12 Example Street, Hanoi, Vietnam", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("+84 24 1234 5678", { exact: true }),
+  ).toBeVisible();
+  await expect(page.locator(".community-logo img")).toBeVisible();
   await page
     .getByRole("button", { name: "Write a review", exact: true })
     .first()
@@ -487,9 +545,7 @@ test("guest company/salary/progress, mobile icons, dark mode and reduced motion"
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/companies");
-  await page
-    .getByRole("button", { name: "Suggest company", exact: true })
-    .click();
+  await createCompany(page);
   await expect(
     page
       .getByRole("dialog")
@@ -498,7 +554,7 @@ test("guest company/salary/progress, mobile icons, dark mode and reduced motion"
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Suggest company", exact: true }),
+    page.getByRole("combobox", { name: "Find a company", exact: true }),
   ).toBeFocused();
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await page.screenshot({

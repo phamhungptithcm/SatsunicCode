@@ -1,3 +1,13 @@
+import { z } from "zod";
+import {
+  validatedCompanyLogo,
+  logoDigest,
+  savePrivateLogo,
+  deletePrivateLogo,
+  readOwnedLogo,
+  stageCompanyLogo,
+  publishCompanyLogo,
+} from "./company-logo";
 import { createHash, randomUUID } from "node:crypto";
 import {
   FieldValue,
@@ -10,6 +20,7 @@ import {
   type CallableRequest,
 } from "firebase-functions/https";
 import {
+  companyProfileInput,
   communityRequest,
   reviewInput,
   salaryInput,
@@ -178,7 +189,40 @@ export async function runCommunity(request: CallableRequest) {
     receiptRef = db.doc(`users/${uid}/communityRequests/${input.requestId}`),
     limitRef = db.doc(`communityLimits/${uid}`),
     fingerprint = hash(JSON.stringify(input));
-  return db.runTransaction(async (tx) => {
+  if (input.action === "suggestCompany" && !local)
+    fail("A complete company profile is required.");
+  const prior = await receiptRef.get();
+  if (prior.exists) {
+    if (prior.data()!.fingerprint !== fingerprint)
+      throw new HttpsError("already-exists", "Request ID already used.");
+    const result = prior.data()!.result;
+    if (result.logoPath) await publishCompanyLogo(result.logoPath);
+    return result;
+  }
+  let digest: string | undefined, stagedPath: string | undefined;
+  if (input.action === "suggestCompanyProfile")
+    digest = logoDigest(await readOwnedLogo(uid, input.input.logoUploadId));
+  if (
+    input.action === "moderate" &&
+    input.kind === "company" &&
+    input.decision === "PUBLISHED"
+  ) {
+    const proposal = (
+      await db.doc(`companySuggestions/${input.id}`).get()
+    ).data();
+    if (proposal?.input.logoUploadId) {
+      if (proposal.revision !== input.revision) conflict();
+      const profile = companyProfileInput.parse(proposal.input);
+      stagedPath = await stageCompanyLogo(
+        proposal.ownerUid,
+        profile.logoUploadId,
+        input.id,
+        input.requestId,
+        proposal.logoDigest,
+      );
+    }
+  }
+  const outcome = await db.runTransaction(async (tx) => {
     const [receipt, limit] = await Promise.all([
       tx.get(receiptRef),
       tx.get(limitRef),
@@ -197,10 +241,18 @@ export async function runCommunity(request: CallableRequest) {
         "Too many changes. Try again later.",
       );
     const writes: Writes = [];
-    let result: { id: string; revision?: number; status?: string } = {
+    let result: {
+      id: string;
+      revision?: number;
+      status?: string;
+      logoPath?: string;
+    } = {
       id: input.requestId,
     };
-    if (input.action === "suggestCompany") {
+    if (
+      input.action === "suggestCompany" ||
+      input.action === "suggestCompanyProfile"
+    ) {
       const id = hash(companyKey(input.input.name, input.input.country)).slice(
           0,
           40,
@@ -216,10 +268,24 @@ export async function runCommunity(request: CallableRequest) {
           "already-exists",
           "This company is already listed or awaiting review.",
         );
+      if (input.action === "suggestCompanyProfile") {
+        const uploadRef = db.doc(
+            `companyLogoUploads/${uid}_${input.input.logoUploadId}`,
+          ),
+          upload = await tx.get(uploadRef);
+        if (
+          upload.data()?.state !== "READY" ||
+          upload.data()?.claimedCompanyId ||
+          upload.data()?.digest !== digest
+        )
+          fail("Upload the company logo again.");
+        writes.push(() => tx.update(uploadRef, { claimedCompanyId: id }));
+      }
       writes.push(() =>
         tx.create(ref, {
           ownerUid: uid,
           input: input.input,
+          ...(digest ? { logoDigest: digest } : {}),
           status: "PENDING_MODERATION",
           revision: 0,
           createdDate: time(),
@@ -327,7 +393,12 @@ export async function runCommunity(request: CallableRequest) {
           ...(input.action === "appeal" ? { appeal: input.reason } : {}),
         }),
       );
-      result = { id: input.id, revision, status };
+      result = {
+        id: input.id,
+        revision,
+        status,
+        ...(stagedPath ? { logoPath: stagedPath } : {}),
+      };
     } else if (input.action === "vote" || input.action === "report") {
       const pubRef = db.doc(`publicReviews/${input.id}`),
         mapRef = db.doc(`reviewPublicMappings/${input.id}`);
@@ -382,7 +453,19 @@ export async function runCommunity(request: CallableRequest) {
           writes.push(() =>
             tx.set(db.doc(`companies/${input.id}`), {
               id: input.id,
-              ...old.input,
+              name: old.input.name,
+              country: old.input.country,
+              industry: old.input.industry,
+              ...(old.input.logoUploadId
+                ? {
+                    logoPath: stagedPath,
+                    headquarters: old.input.headquarters,
+                    phone: old.input.phone,
+                    ...(old.input.website
+                      ? { website: old.input.website }
+                      : {}),
+                  }
+                : {}),
               publicationState: "PUBLISHED",
               source: "COMMUNITY_SUGGESTION",
             }),
@@ -457,7 +540,12 @@ export async function runCommunity(request: CallableRequest) {
           changedDate: time(),
         }),
       );
-      result = { id: input.id, revision, status };
+      result = {
+        id: input.id,
+        revision,
+        status,
+        ...(stagedPath ? { logoPath: stagedPath } : {}),
+      };
     }
     for (const write of writes) write();
     tx.set(limitRef, { hour, count: count + 1 });
@@ -471,6 +559,8 @@ export async function runCommunity(request: CallableRequest) {
     });
     return result;
   });
+  if (outcome.logoPath) await publishCompanyLogo(outcome.logoPath);
+  return outcome;
 }
 export const changeCommunity = onCall(communityOptions, runCommunity);
 export const listCommunityContributions = onCall(
@@ -524,6 +614,11 @@ export const listCommunityContributions = onCall(
           revision: v.revision,
           status: v.status,
           input: v.input,
+          ...(kind === "company" && v.input.logoUploadId
+            ? {
+                logoUploadPath: `companyUploads/${v.ownerUid}/${v.input.logoUploadId}/logo.png`,
+              }
+            : {}),
           reason: v.reason ?? null,
           ...(v.companyName ? { companyName: v.companyName } : {}),
         });
@@ -584,3 +679,80 @@ export const getOwnCommunityContribution = onCall(
     return { item };
   },
 );
+
+const uploadRequest = z
+  .object({
+    uploadId: z.string().uuid(),
+    data: z
+      .string()
+      .max(2796204)
+      .regex(/^[A-Za-z0-9+/]+={0,2}$/),
+  })
+  .strict();
+export const uploadCompanyLogo = onCall(communityOptions, async (request) => {
+  const uid = actor(request),
+    parsed = uploadRequest.safeParse(request.data);
+  if (!parsed.success)
+    throw new HttpsError("invalid-argument", "Choose a PNG logo up to 2 MiB.");
+  const { uploadId, data } = parsed.data,
+    bytes = validatedCompanyLogo(Buffer.from(data, "base64")),
+    digest = logoDigest(bytes),
+    db = getFirestore(),
+    ref = db.doc(`companyLogoUploads/${uid}_${uploadId}`),
+    rate = db.doc(`companyLogoUploadRate/${uid}`);
+  await db.runTransaction(async (tx) => {
+    const [snap, limit] = await Promise.all([tx.get(ref), tx.get(rate)]);
+    if (snap.exists) {
+      if (snap.data()!.digest !== digest || snap.data()!.state === "DELETED")
+        throw new HttpsError("already-exists", "Upload ID already used.");
+      return;
+    }
+    const hour = Math.floor(Date.now() / 3600000),
+      count = limit.data()?.hour === hour ? limit.data()!.count : 0;
+    if (count >= 10)
+      throw new HttpsError(
+        "resource-exhausted",
+        "Too many uploads. Try again later.",
+      );
+    tx.create(ref, {
+      ownerUid: uid,
+      digest,
+      state: "PENDING",
+      claimedCompanyId: null,
+      createdDate: time(),
+    });
+    tx.set(rate, { hour, count: count + 1 });
+  });
+  await savePrivateLogo(uid, uploadId, bytes);
+  const ready = await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    if (snap.data()?.state === "DELETED") return false;
+    tx.update(ref, { state: "READY" });
+    return true;
+  });
+  if (!ready) {
+    await deletePrivateLogo(uid, uploadId);
+    throw new HttpsError("cancelled", "Upload cancelled.");
+  }
+  return { uploadId };
+});
+export const discardCompanyLogo = onCall(communityOptions, async (request) => {
+  const uid = actor(request),
+    parsed = z
+      .object({ uploadId: z.string().uuid() })
+      .strict()
+      .safeParse(request.data);
+  if (!parsed.success)
+    throw new HttpsError("invalid-argument", "Invalid upload.");
+  const { uploadId } = parsed.data,
+    db = getFirestore(),
+    ref = db.doc(`companyLogoUploads/${uid}_${uploadId}`);
+  await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    if (snap.data()?.claimedCompanyId)
+      fail("Submitted logos must be retained for moderation.");
+    tx.set(ref, { state: "DELETED" }, { merge: true });
+  });
+  await deletePrivateLogo(uid, uploadId);
+  return { discarded: true };
+});

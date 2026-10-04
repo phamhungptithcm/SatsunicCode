@@ -101,18 +101,28 @@
 .community-toolbar {
   display: flex;
   gap: 10px;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 22px;
 }
 .community-search {
   position: relative;
   flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+.community-toolbar > button {
+  flex: none;
+  height: 44px;
+  margin: 0;
+  white-space: nowrap;
 }
 .community-search > .community-icon {
   position: absolute;
   left: 13px;
-  top: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
   color: var(--muted);
 }
 .community input,
@@ -131,7 +141,38 @@
   padding: 10px 12px;
 }
 .community-search input {
+  height: 44px;
+  margin: 0;
   padding-left: 40px;
+}
+.community-directory-loading {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.community-directory-loading > span {
+  display: block;
+  height: 106px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    var(--surface),
+    var(--community-soft),
+    var(--surface)
+  );
+  background-size: 200% 100%;
+  animation: community-loading 1.4s ease-in-out infinite;
+}
+@keyframes community-loading {
+  to {
+    background-position: -200% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .community-directory-loading > span {
+    animation: none;
+  }
 }
 .community-empty {
   text-align: center;
@@ -734,7 +775,8 @@
     flex-basis: 100%;
   }
   .community-toolbar > .primary {
-    margin-left: auto;
+    width: 100%;
+    margin: 0;
   }
   .community-review-copy {
     grid-template-columns: 1fr;
@@ -1053,4 +1095,101 @@
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
   margin-bottom: 14px;
+}
+
+/* Directory uses one full-width combobox instead of competing adjacent actions. */
+.community-toolbar > .community-field {
+  flex: 1;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.community-toolbar .community-combobox input {
+  margin: 0;
+  height: 44px;
+  padding-inline: 40px 12px;
+}
+.community-toolbar .community-combobox-icon {
+  left: 13px;
+  right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.community-toolbar .community-options {
+  z-index: 20;
+}
+.community-toolbar .community-combobox {
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .community-toolbar .community-combobox input {
+    font-size: 16px;
+  }
+}
+
+.community-logo-upload {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.community-logo-upload input {
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.community-logo-upload img,
+.community-company-preview img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 6px;
+  background: white;
+}
+.community-company-preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.community-company-preview p {
+  margin: 4px 0 0;
+}
+.community-wide {
+  grid-column: 1/-1;
+}
+.community-preview dd {
+  overflow-wrap: anywhere;
+}
+.community-logo {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  flex: none;
+  overflow: hidden;
+}
+.community-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+}
+
+.community-logo-upload input::file-selector-button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-right: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
 }

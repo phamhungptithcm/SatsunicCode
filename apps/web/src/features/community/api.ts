@@ -34,10 +34,9 @@ export async function changeCommunity(input: Record<string, unknown>) {
   const result = await httpsCallable<
     Record<string, unknown>,
     { id: string; revision?: number; status?: string }
-  >(
-    functions,
-    "changeCommunity",
-  )({ ...input, requestId });
+  >(functions, "changeCommunity", {
+    timeout: input.action === "suggestCompanyProfile" ? 30000 : 70000,
+  })({ ...input, requestId });
   retryIds.delete(key);
   return result.data;
 }

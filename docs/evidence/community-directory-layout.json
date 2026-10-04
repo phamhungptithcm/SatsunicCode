@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "vi": false,
+      "width": 360,
+      "dark": false,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 360,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 390,
+      "dark": false,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 390,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 768,
+      "dark": false,
+      "height": 44.000030517578125,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 768,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 1280,
+      "dark": false,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": false,
+      "width": 1280,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 360,
+      "dark": false,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 360,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 390,
+      "dark": false,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 390,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 768,
+      "dark": false,
+      "height": 44.000030517578125,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 768,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 1280,
+      "dark": false,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    },
+    {
+      "vi": true,
+      "width": 1280,
+      "dark": true,
+      "height": 44,
+      "keyboardSelection": true,
+      "exactMatchSuppressesCreate": true
+    }
+  ],
+  "testsPassed": 16
+}

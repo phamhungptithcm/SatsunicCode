@@ -1,11 +1,8 @@
 import { useEffect, useLayoutEffect, useState, type FormEvent } from "react";
-import { companyKey } from "../../../../../packages/domain/src/community";
 import Autocomplete from "./Autocomplete";
-import { Link } from "react-router-dom";
 import FormStepper, { useFormSteps } from "./FormStepper";
 import { useLanguage, text } from "../../i18n";
 import {
-  companyInput,
   reviewInput,
   salaryInput,
   type Company,
@@ -43,151 +40,7 @@ export const typeLabels = {
   FULL_TIME: text("Toàn thời gian", "Full-time"),
   CONTRACT: text("Hợp đồng", "Contract"),
 };
-export function CompanySuggestion({
-  knownCompanies = [],
-  open,
-  onClose,
-  onSaved,
-}: {
-  open: boolean;
-  onClose: () => void;
-  onSaved: () => void;
-  knownCompanies?: Company[];
-}) {
-  const { t } = useLanguage(),
-    a = useAction(),
-    [name, setName] = useState(""),
-    [invalid, setInvalid] = useState(false),
-    [industry, setIndustry] = useState(""),
-    [country, setCountry] = useState<"VN" | "US">("VN");
-  const existingCompany = knownCompanies.find(
-    (c) => companyKey(c.name, c.country) === companyKey(name, country),
-  );
-  async function submit(e: FormEvent) {
-    e.preventDefault();
-    if (existingCompany) return;
-    const parsed = companyInput.safeParse({ name, industry, country });
-    setInvalid(!parsed.success);
-    if (!parsed.success) return;
-    if (
-      await a.run(
-        () => changeCommunity({ action: "suggestCompany", input: parsed.data }),
-        t(
-          text(
-            "Đã gửi đề xuất. Công ty đang chờ duyệt.",
-            "Suggestion sent. The company is awaiting review.",
-          ),
-        ),
-      )
-    ) {
-      onSaved();
-      setName("");
-      setIndustry("");
-    }
-  }
-  return (
-    <Dialog
-      open={open}
-      onClose={onClose}
-      title={t(text("Đề xuất công ty", "Suggest a company"))}
-    >
-      <AccountRequired>
-        <form onSubmit={submit} className="community-form">
-          <div className="community-fields">
-            <Autocomplete
-              wide
-              label={t(text("Tên công ty", "Company name"))}
-              disabled={a.busy}
-              value={name}
-              required
-              maxLength={100}
-              allowCustom
-              options={knownCompanies
-                .filter((c) => c.country === country)
-                .map((c) => ({ value: c.name, label: c.name }))}
-              onChange={(value) => {
-                setName(value);
-                setInvalid(false);
-              }}
-            />
-            <Autocomplete
-              label={t(text("Ngành", "Industry"))}
-              disabled={a.busy}
-              value={industry}
-              required
-              maxLength={100}
-              allowCustom
-              options={[...new Set(knownCompanies.map((c) => c.industry))]
-                .sort()
-                .map((industry) => ({ value: industry, label: industry }))}
-              onChange={(value) => {
-                setIndustry(value);
-                setInvalid(false);
-              }}
-            />
-            <Field label={t(text("Quốc gia", "Country"))}>
-              <select
-                disabled={a.busy}
-                value={country}
-                onChange={(e) => setCountry(e.target.value as "VN" | "US")}
-              >
-                {Object.entries(countryLabels).map(([v, l]) => (
-                  <option key={v} value={v}>
-                    {t(l)}
-                  </option>
-                ))}
-              </select>
-            </Field>
-          </div>
-          <p className="community-hint">
-            {t(
-              text(
-                "Đề xuất được duyệt trước khi xuất hiện trong danh mục.",
-                "Suggestions are reviewed before appearing in the directory.",
-              ),
-            )}
-          </p>
-          {existingCompany && (
-            <p className="community-hint">
-              {t(
-                text(
-                  "Công ty đã có trong danh mục.",
-                  "This company is already listed.",
-                ),
-              )}{" "}
-              <Link to={`/companies/${existingCompany.id}`} onClick={onClose}>
-                {t(text("Xem công ty", "View company"))} →
-              </Link>
-            </p>
-          )}
-          {invalid && (
-            <p role="alert">
-              {t(
-                text(
-                  "Nhập tên công ty và ngành nghề.",
-                  "Enter company name and industry.",
-                ),
-              )}
-            </p>
-          )}
-          <ErrorNotice error={a.error} />
-          {a.success && <p role="status">{a.success}</p>}
-          <div className="community-form-footer">
-            <button type="button" onClick={onClose}>
-              {t(text("Đóng", "Close"))}
-            </button>
-            <button className="primary" disabled={a.busy || !!existingCompany}>
-              {a.busy
-                ? t(text("Đang gửi…", "Sending…"))
-                : t(text("Gửi đề xuất", "Send suggestion"))}
-              <Icon name="arrow" />
-            </button>
-          </div>
-        </form>
-      </AccountRequired>
-    </Dialog>
-  );
-}
+export { CompanySuggestion } from "./CompanyProfile";
 const blankReview = (companyId: string): ReviewInput => ({
   companyId,
   kind: "EMPLOYEE",

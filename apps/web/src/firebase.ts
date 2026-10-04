@@ -1,3 +1,4 @@
+import { getStorage, connectStorageEmulator } from "firebase/storage";
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -36,6 +37,8 @@ if (isEmulator) {
   connectFirestoreEmulator(db, "127.0.0.1", 8080);
   connectFunctionsEmulator(functions, "127.0.0.1", 5001);
 }
+export const storage = getStorage(app);
+if (isEmulator) connectStorageEmulator(storage, "127.0.0.1", 9199);
 export const googleClientId: string =
   import.meta.env.VITE_GOOGLE_CLIENT_ID ?? "";
 export const googleOneTapReady =

@@ -1,3 +1,5 @@
+import { getStorage as adminStorage } from "firebase-admin/storage";
+import { logoPng } from "../helpers/logo";
 import { beforeAll, describe, it, expect } from "vitest";
 import { createHash } from "node:crypto";
 import {
@@ -57,6 +59,8 @@ async function client(name: string, moderator = false) {
   connectFunctionsEmulator(f, "127.0.0.1", 5001);
   return {
     uid: user.uid,
+    call: async (name: string, data: Record<string, unknown>) =>
+      (await httpsCallable<any, any>(f, name)(data)).data,
     change: async (d: Record<string, unknown>) =>
       (
         await httpsCallable<Record<string, unknown>, any>(
@@ -432,4 +436,127 @@ describe("real emulator callable lifecycle", () => {
       "NOT_STARTED",
     );
   });
+});
+
+describe("complete company profiles", () => {
+  it("binds private logo ownership, claims, moderated public projection and retry", async () => {
+    const uploadId = crypto.randomUUID(),
+      bytes = logoPng(2, 2, true),
+      input = {
+        name: `Profile ${prefix}`,
+        industry: "Software",
+        country: "VN",
+        logoUploadId: uploadId,
+        headquarters: "12 Example Street, Hanoi",
+        phone: "+84 24 1234 5678",
+        website: "https://example.test",
+        acknowledged: true,
+      };
+    await expect(
+      owner.call("uploadCompanyLogo", {
+        uploadId: crypto.randomUUID(),
+        data: Buffer.from("not png").toString("base64"),
+      }),
+    ).rejects.toThrow();
+    await owner.call("uploadCompanyLogo", {
+      uploadId,
+      data: bytes.toString("base64"),
+    });
+    await owner.call("uploadCompanyLogo", {
+      uploadId,
+      data: bytes.toString("base64"),
+    });
+    await expect(
+      other.change({ action: "suggestCompanyProfile", input }),
+    ).rejects.toThrow();
+    const requestId = crypto.randomUUID(),
+      saved = await owner.change({
+        requestId,
+        action: "suggestCompanyProfile",
+        input,
+      });
+    await expect(
+      owner.call("discardCompanyLogo", { uploadId }),
+    ).rejects.toThrow();
+    expect(
+      (
+        await owner.change({
+          requestId,
+          action: "suggestCompanyProfile",
+          input,
+        })
+      ).id,
+    ).toBe(saved.id);
+    const queue = await mod.list(true);
+    expect(queue.items.find((i: any) => i.id === saved.id).logoUploadPath).toBe(
+      `companyUploads/${owner.uid}/${uploadId}/logo.png`,
+    );
+    await expect(
+      other.change({
+        action: "moderate",
+        kind: "company",
+        id: saved.id,
+        revision: 0,
+        decision: "PUBLISHED",
+        reason: "Reviewed business profile",
+      }),
+    ).rejects.toThrow();
+    const approvalId = crypto.randomUUID();
+    await mod.change({
+      requestId: approvalId,
+      action: "moderate",
+      kind: "company",
+      id: saved.id,
+      revision: 0,
+      decision: "PUBLISHED",
+      reason: "Reviewed business profile",
+    });
+    const published = (await db.doc(`companies/${saved.id}`).get()).data()!;
+    expect(published.headquarters).toBe(input.headquarters);
+    expect(published.phone).toBe(input.phone);
+    expect(published).not.toHaveProperty("logoUploadId");
+    expect(published).not.toHaveProperty("ownerUid");
+    expect(published.logoPath).not.toContain(owner.uid);
+    const file = adminStorage(admin)
+        .bucket("demo-satsuniccode.appspot.com")
+        .file(published.logoPath),
+      [metadata] = await file.getMetadata(),
+      [png] = await file.download();
+    expect(metadata.metadata?.published).toBe("true");
+    expect(png).toEqual(logoPng());
+    await mod.change({
+      requestId: approvalId,
+      action: "moderate",
+      kind: "company",
+      id: saved.id,
+      revision: 0,
+      decision: "PUBLISHED",
+      reason: "Reviewed business profile",
+    });
+    const discarded = crypto.randomUUID();
+    await owner.call("discardCompanyLogo", { uploadId: discarded });
+    await expect(
+      owner.call("uploadCompanyLogo", {
+        uploadId: discarded,
+        data: logoPng().toString("base64"),
+      }),
+    ).rejects.toThrow();
+  }, 30000);
+  it("limits image uploads separately and retains deletion tombstones", async () => {
+    const learner = await client("upload-rate");
+    for (let i = 0; i < 10; i++) {
+      const uploadId = crypto.randomUUID();
+      await learner.call("uploadCompanyLogo", {
+        uploadId,
+        data: logoPng().toString("base64"),
+      });
+      await learner.call("discardCompanyLogo", { uploadId });
+    }
+    await expect(
+      learner.call("uploadCompanyLogo", {
+        uploadId: crypto.randomUUID(),
+        data: logoPng().toString("base64"),
+      }),
+    ).rejects.toThrow(/Too many uploads/);
+  }, 30000);
 });

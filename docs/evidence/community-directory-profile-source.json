@@ -1,0 +1,85 @@
+{
+  "scope": "approved implementation source, no production readiness assertion",
+  "files": [
+    {
+      "path": "apps/web/src/features/Companies.tsx",
+      "sha256": "d55e1f74ca4cc05db4ab754670544210c59f91724f6b05dcec26a6623f706e4d"
+    },
+    {
+      "path": "apps/web/src/features/CompanyDetail.tsx",
+      "sha256": "359338f2429a03506547a9fb2a5bdc5360eeba1731844a70484517f7207c5208"
+    },
+    {
+      "path": "apps/web/src/features/CommunityModeration.tsx",
+      "sha256": "0e708f9910ad41160fbab4d37c56ac6bf06947406b8d259141e70c9360e7b38e"
+    },
+    {
+      "path": "apps/web/src/features/community/Autocomplete.tsx",
+      "sha256": "1526a0a5c2b3098ff2a290df596ab9dcf8d6d1eea31c7da9e2d6d9efe953f9de"
+    },
+    {
+      "path": "apps/web/src/features/community/CompanyProfile.tsx",
+      "sha256": "50da64a72965c1fcddd09f0d3a084a4010090bf998043f868adbaa4392bcc99a"
+    },
+    {
+      "path": "apps/web/src/features/community/CompanyLogo.tsx",
+      "sha256": "091fb63e36421ffeceb17b5034c9a084a9b72f1632f88f17f30952ab6c980438"
+    },
+    {
+      "path": "apps/web/src/features/community/Forms.tsx",
+      "sha256": "9125eddc14bbba9c91c8850d231e05469444aeb0c768f062895628eee383ca89"
+    },
+    {
+      "path": "apps/web/src/features/community/api.ts",
+      "sha256": "86f12f2cd958be3167aa6154f6e68dbace98390de6c56931be44c5823e32912a"
+    },
+    {
+      "path": "apps/web/src/features/community/shared.tsx",
+      "sha256": "f33dcb1887c4ffe3212fd3a7609ceb285671fa0409cf261eb3e5dda11af867bb"
+    },
+    {
+      "path": "apps/web/src/features/community/community.css",
+      "sha256": "2ab41b64f35500eb9122c89177679d1d399681eb124d4d3084b788fbe0445d36"
+    },
+    {
+      "path": "apps/web/src/firebase.ts",
+      "sha256": "1d81c0c1b55a4524d2772db0a336e81edcbe94bb704a970fbf8b086c66e0cdd8"
+    },
+    {
+      "path": "packages/contracts/src/community.ts",
+      "sha256": "0f02d7640ceda0b4e5f4506bfb45f01e8c619ef0f3529827cf4dfade8017484b"
+    },
+    {
+      "path": "functions/src/community.ts",
+      "sha256": "24611b37296bf75fd629c963ff26e7ae11b06e168e0ed6d7dc683f22692092e9"
+    },
+    {
+      "path": "functions/src/company-logo.ts",
+      "sha256": "30dd068f2acde1a5de45200f9ee96fabebcd770bd10d95649d378498c8f001bb"
+    },
+    {
+      "path": "functions/src/index.ts",
+      "sha256": "040972a5267709b08b60c986ec9712703df51d03013c7b48d51670361eeec1a0"
+    },
+    {
+      "path": "storage.rules",
+      "sha256": "5768f9205a3da88dbb220b9ea26fa8d1af70a567f482d1c0466c88c1fdf953c5"
+    },
+    {
+      "path": "firestore.rules",
+      "sha256": "0b4bc7ffc3fcd0f11bf963afb7fa307852d0cf1a2698850080302cc3afafe02c"
+    },
+    {
+      "path": "firestore.indexes.json",
+      "sha256": "64dadd872060d63a6e2d2238c3c39ba1cf701bb898247d975bff4e953ff29792"
+    },
+    {
+      "path": "scripts/import-company-directory.mjs",
+      "sha256": "2e43256e4a56b0be2d1691736f7b895dfce28ea8d047cf67186fb77d7bf78b83"
+    },
+    {
+      "path": "docs/research/vietnam-company-directory.json",
+      "sha256": "ae8bd6f8959b9f90b92554782bfcd7909cb391fdb9fd65623d875f1ffd4c454e"
+    }
+  ]
+}

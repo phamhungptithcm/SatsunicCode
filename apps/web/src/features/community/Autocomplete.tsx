@@ -20,6 +20,10 @@ export default function Autocomplete({
   required = false,
   maxLength = 100,
   wide = false,
+  onSelect,
+  onCreate,
+  placeholder,
+  hideLabel = false,
 }: {
   label: string;
   value: string;
@@ -30,6 +34,10 @@ export default function Autocomplete({
   required?: boolean;
   maxLength?: number;
   wide?: boolean;
+  onSelect?: (value: string) => void;
+  onCreate?: (name: string) => void;
+  placeholder?: string;
+  hideLabel?: boolean;
 }) {
   const { t } = useLanguage(),
     id = useId(),
@@ -42,9 +50,21 @@ export default function Autocomplete({
   useEffect(() => {
     setQuery(selected);
   }, [selected]);
-  const matches = options
+  const found = options
     .filter((o) => searchable(o.label).includes(searchable(query)))
     .slice(0, 8);
+  const canCreate =
+    !!onCreate &&
+    query.trim().length >= 2 &&
+    found.length === 0 &&
+    !options.some((o) => searchable(o.label) === searchable(query));
+  const createOption = {
+    value: "__create__",
+    label: t(
+      text(`Tạo công ty “${query.trim()}”`, `Create company “${query.trim()}”`),
+    ),
+  };
+  const matches = canCreate ? [...found, createOption] : found;
   const expanded = open && !disabled && matches.length > 0;
   useLayoutEffect(() => {
     if (!open || disabled) return;
@@ -85,19 +105,29 @@ export default function Autocomplete({
   }, [expanded, active, id]);
   function choose(option: Option) {
     if (inputRef.current?.matches(":disabled")) return;
+    if (option === createOption) {
+      setOpen(false);
+      setActive(-1);
+      onCreate?.(query.trim());
+      return;
+    }
     onChange(option.value);
+    onSelect?.(option.value);
     setQuery(option.label);
     setOpen(false);
     setActive(-1);
   }
   return (
     <div className={`community-field${wide ? " wide" : ""}`}>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className={hideLabel ? "sr-only" : undefined}>
+        {label}
+      </label>
       <div className="community-combobox">
         <input
           ref={inputRef}
           id={id}
           role="combobox"
+          placeholder={placeholder}
           autoComplete="off"
           aria-autocomplete="list"
           aria-expanded={expanded}

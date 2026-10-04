@@ -4,6 +4,35 @@ const short = z.string().trim().min(1).max(100);
 export const companyInput = z
   .object({ name: short, country: z.enum(["VN", "US"]), industry: short })
   .strict();
+export const companyProfileInput = companyInput
+  .extend({
+    logoUploadId: z.string().uuid(),
+    headquarters: z.string().trim().min(10).max(300),
+    phone: z
+      .string()
+      .trim()
+      .regex(/^\+?[0-9() .-]{8,25}$/)
+      .refine((v) => {
+        const digits = v.replace(/\D/g, "");
+        return digits.length >= 8 && digits.length <= 15;
+      }),
+    website: z
+      .string()
+      .trim()
+      .max(200)
+      .refine((v) => {
+        if (!v) return true;
+        try {
+          const u = new URL(v);
+          return u.protocol === "https:" && !u.username && !u.password;
+        } catch {
+          return false;
+        }
+      }),
+    acknowledged: z.literal(true),
+  })
+  .strict();
+export type CompanyProfileInput = z.infer<typeof companyProfileInput>;
 export const reviewInput = z
   .object({
     companyId: idSchema,
@@ -91,6 +120,13 @@ export const communityRequest = z.discriminatedUnion("action", [
     .strict(),
   z
     .object({
+      action: z.literal("suggestCompanyProfile"),
+      ...mutation,
+      input: companyProfileInput,
+    })
+    .strict(),
+  z
+    .object({
       action: z.literal("saveReview"),
       ...mutation,
       ...update,
@@ -153,7 +189,13 @@ export type Company = {
   country: "VN" | "US";
   industry: string;
   publicationState: "PUBLISHED";
-  source: "COMMUNITY_SUGGESTION";
+  source: "COMMUNITY_SUGGESTION" | "OFFICIAL_DIRECTORY";
+  sourceUrl?: string;
+  researchedAt?: string;
+  logoPath?: string;
+  headquarters?: string;
+  phone?: string;
+  website?: string;
 };
 export type PublicReview = Pick<
   ReviewInput,
@@ -185,9 +227,11 @@ export type Contribution = {
   input:
     | ReviewInput
     | SalaryInput
+    | CompanyProfileInput
     | z.infer<typeof companyInput>
     | { reviewId: string; reason: string };
   reason: string | null;
+  logoUploadPath?: string;
   companyName?: string;
   reportedReview?: PublicReview | null;
 };

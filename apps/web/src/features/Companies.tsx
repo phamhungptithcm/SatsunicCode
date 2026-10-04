@@ -1,38 +1,48 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import CompanyLogo from "./community/CompanyLogo";
+import { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage, text } from "../i18n";
 import type { Company } from "../../../../packages/contracts/src/community";
 import { loadCompanies } from "./community/api";
+import { isEmulator } from "../firebase";
 import { CompanySuggestion } from "./community/Forms";
-import { Hero, ErrorNotice, errorText } from "./community/shared";
+import { Hero, ErrorNotice, companyIndustryLabel } from "./community/shared";
 import Icon from "./community/Icon";
+import Autocomplete from "./community/Autocomplete";
 export default function Companies() {
-  const { t, locale } = useLanguage(),
+  const navigate = useNavigate();
+  const { t } = useLanguage(),
     [companies, setCompanies] = useState<Company[]>([]),
     [query, setQuery] = useState(""),
     [loading, setLoading] = useState(true),
     [error, setError] = useState<string | null>(null),
     [open, setOpen] = useState(false),
-    [more, setMore] = useState(false);
+    [newCompanyName, setNewCompanyName] = useState(""),
+    [submitted, setSubmitted] = useState(false),
+    [more, setMore] = useState(false),
+    request = useRef(0);
   async function load(cursor?: string) {
+    const version = ++request.current;
     setLoading(true);
     setError(null);
     try {
       const rows = await loadCompanies(cursor);
+      if (request.current !== version) return;
       setCompanies((old) => (cursor ? [...old, ...rows] : rows));
       setMore(rows.length === 30);
-    } catch (e) {
-      setError(errorText(e, locale === "vi"));
+    } catch {
+      if (request.current === version) setError("load_failed");
     } finally {
-      setLoading(false);
+      if (request.current === version) setLoading(false);
     }
   }
   useEffect(() => {
     void load();
+    return () => {
+      request.current++;
+    };
   }, []);
-  const shown = companies.filter((c) =>
-    c.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()),
-  );
+  const shown = companies;
   return (
     <section className="community">
       <Hero
@@ -56,29 +66,59 @@ export default function Companies() {
       <div className="community-layout">
         <div>
           <div className="community-toolbar">
-            <label className="community-search">
-              <Icon name="search" />
-              <span className="sr-only">
-                {t(text("Tìm trong công ty đã tải", "Search loaded companies"))}
-              </span>
-              <input
-                placeholder={t(
-                  text("Tìm trong công ty đã tải…", "Search loaded companies…"),
-                )}
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-            </label>
-            <button onClick={() => setOpen(true)} className="primary">
-              <Icon name="plus" />
-              {t(text("Đề xuất công ty", "Suggest company"))}
-            </button>
+            <Autocomplete
+              hideLabel
+              label={t(text("Tìm công ty", "Find a company"))}
+              placeholder={t(
+                text("Tìm và chọn công ty…", "Find and select a company…"),
+              )}
+              value={query}
+              allowCustom
+              options={companies.map((c) => ({ value: c.id, label: c.name }))}
+              onChange={setQuery}
+              onSelect={(id) => navigate(`/companies/${id}`)}
+              onCreate={
+                isEmulator && !loading && !more && !error
+                  ? (name) => {
+                      setNewCompanyName(name);
+                      setOpen(true);
+                    }
+                  : undefined
+              }
+            />
           </div>
-          <ErrorNotice error={error} retry={() => void load()} />
-          {loading && (
-            <p role="status">
-              {t(text("Đang tải công ty…", "Loading companies…"))}
+          {submitted && (
+            <p role="status" className="community-hint">
+              {t(
+                text(
+                  "Đã gửi hồ sơ công ty, đang chờ duyệt.",
+                  "Company profile sent and awaiting moderation.",
+                ),
+              )}
             </p>
+          )}
+          <ErrorNotice
+            error={
+              error
+                ? t(
+                    text(
+                      "Chưa tải được danh mục công ty. Thử lại để tiếp tục.",
+                      "The company directory could not be loaded. Try again to continue.",
+                    ),
+                  )
+                : null
+            }
+            retry={() => void load()}
+          />
+          {loading && !companies.length && (
+            <div className="community-directory-loading" role="status">
+              <p className="sr-only">
+                {t(text("Đang tải công ty…", "Loading companies…"))}
+              </p>
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </div>
           )}
           {!loading && !error && !shown.length && (
             <div className="community-empty">
@@ -113,18 +153,26 @@ export default function Companies() {
                 className="community-company-card"
                 to={`/companies/${c.id}`}
               >
-                <span className="community-avatar">{c.name.slice(0, 1)}</span>
+                <CompanyLogo path={c.logoPath} name={c.name} />
                 <div>
                   <h2>{c.name}</h2>
                   <p>
-                    {c.industry} · {c.country}
+                    {t(companyIndustryLabel(c.industry))} ·{" "}
+                    {c.country === "VN"
+                      ? t(text("Việt Nam", "Vietnam"))
+                      : t(text("Hoa Kỳ", "United States"))}
                   </p>
                   <small>
                     {t(
-                      text(
-                        "Thông tin từ đề xuất cộng đồng",
-                        "Community-suggested information",
-                      ),
+                      c.source === "OFFICIAL_DIRECTORY"
+                        ? text(
+                            "Thông tin từ nguồn chính thức",
+                            "Official company information",
+                          )
+                        : text(
+                            "Thông tin từ đề xuất cộng đồng",
+                            "Community-suggested information",
+                          ),
                     )}
                   </small>
                 </div>
@@ -190,10 +238,11 @@ export default function Companies() {
         </aside>
       </div>
       <CompanySuggestion
+        initialName={newCompanyName}
         knownCompanies={companies}
         open={open}
         onClose={() => setOpen(false)}
-        onSaved={() => {}}
+        onSaved={() => setSubmitted(true)}
       />
     </section>
   );

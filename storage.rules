@@ -1,2 +1,16 @@
 rules_version = '2';
-service firebase.storage { match /b/{bucket}/o { match /{allPaths=**} { allow read,write: if false; } } }
+service firebase.storage {
+ match /b/{bucket}/o {
+  function learner() { return request.auth != null && request.auth.token.firebase.sign_in_provider != 'anonymous'; }
+  function moderator() { return learner() && request.auth.token.communityModerator == true; }
+  match /companyUploads/{uid}/{uploadId}/logo.png {
+   allow get: if learner() && (request.auth.uid == uid || moderator());
+   allow write, list: if false;
+  }
+  match /companyLogos/{companyId}/{uploadId}/logo.png {
+   allow get: if resource.metadata.published == 'true';
+   allow write, list: if false;
+  }
+  match /{allPaths=**} { allow read,write: if false; }
+ }
+}

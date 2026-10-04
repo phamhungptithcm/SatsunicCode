@@ -1,3 +1,4 @@
+import CompanyLogo from "./community/CompanyLogo";
 import { useEffect, useState } from "react";
 import { useLanguage, text } from "../i18n";
 import { useSession } from "../session";
@@ -20,6 +21,9 @@ import {
   Dialog,
 } from "./community/shared";
 const fieldLabels: Record<string, { vi: string; en: string }> = {
+  headquarters: text("Trụ sở chính", "Headquarters"),
+  phone: text("Điện thoại doanh nghiệp", "Business phone"),
+  website: text("Website", "Website"),
   name: text("Tên công ty", "Company name"),
   industry: text("Ngành", "Industry"),
   country: text("Quốc gia", "Country"),
@@ -171,6 +175,12 @@ export default function CommunityModeration() {
       {allowed &&
         items.map((item) => (
           <article key={item.kind + item.id} className="community-panel">
+            {item.logoUploadPath && (
+              <CompanyLogo
+                path={item.logoUploadPath}
+                name={String((item.input as { name?: string }).name ?? "Logo")}
+              />
+            )}
             <div className="community-panel-title">
               <h2>{item.companyName ?? t(text("Đóng góp", "Contribution"))}</h2>
               <span className="community-pill">
@@ -180,7 +190,7 @@ export default function CommunityModeration() {
             <p>{t(kindLabels[item.kind])}</p>
             <dl className="community-moderation-data">
               {Object.entries(item.input)
-                .filter(([k]) => k !== "acknowledged")
+                .filter(([k]) => k !== "acknowledged" && k !== "logoUploadId")
                 .map(([k, v]) => (
                   <div key={k}>
                     <dt>{t(fieldLabels[k] ?? text(k, k))}</dt>
@@ -194,6 +204,16 @@ export default function CommunityModeration() {
                   </div>
                 ))}
             </dl>
+            {item.kind === "company" && (
+              <p className="community-hint">
+                {t(
+                  text(
+                    "Kiểm tra quyền sử dụng logo và xác nhận địa chỉ, điện thoại là thông tin công khai của doanh nghiệp trước khi duyệt.",
+                    "Check logo permission and confirm that the address and phone are public business information before publishing.",
+                  ),
+                )}
+              </p>
+            )}
             {item.kind === "report" && (
               <div className="community-assessment">
                 {item.reportedReview ? (

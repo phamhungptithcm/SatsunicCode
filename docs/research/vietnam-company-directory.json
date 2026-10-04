@@ -1,0 +1,73 @@
+{
+  "researchedAt": "2026-10-04",
+  "status": "REVIEW_READY_NOT_PUBLISHED",
+  "scope": "Technology employers with operations in Vietnam; curated directory, not ranking or employer endorsement. Country is work-location scope, not corporate domicile.",
+  "companies": [
+    {
+      "name": "FPT Software",
+      "country": "VN",
+      "industry": "Software services",
+      "sourceUrl": "https://fptsoftware.com/en/about-us/global-presence"
+    },
+    {
+      "name": "CMC Global",
+      "country": "VN",
+      "industry": "Software services",
+      "sourceUrl": "https://cmcglobal.com.vn/vi/cmc-global-3/"
+    },
+    {
+      "name": "VNG",
+      "country": "VN",
+      "industry": "Digital platforms",
+      "sourceUrl": "https://bctn2024.vng.com.vn/about"
+    },
+    {
+      "name": "MISA",
+      "country": "VN",
+      "industry": "Business software",
+      "sourceUrl": "https://www.misa.vn/cong-ty/"
+    },
+    {
+      "name": "TMA Solutions",
+      "country": "VN",
+      "industry": "Software services",
+      "sourceUrl": "https://www.tmasolutions.com/about-us"
+    },
+    {
+      "name": "Rikkeisoft",
+      "country": "VN",
+      "industry": "Software services",
+      "sourceUrl": "https://rikkeisoft.com/about-us/"
+    },
+    {
+      "name": "KMS Technology",
+      "country": "VN",
+      "industry": "Software engineering",
+      "sourceUrl": "https://kms-technology.com/about-us/"
+    },
+    {
+      "name": "NashTech",
+      "country": "VN",
+      "industry": "Software services",
+      "sourceUrl": "https://www.nashtechglobal.com/our-locations"
+    },
+    {
+      "name": "Viettel Solutions",
+      "country": "VN",
+      "industry": "Digital transformation",
+      "sourceUrl": "https://solutions.viettel.vn/en/"
+    },
+    {
+      "name": "VNPT-IT",
+      "country": "VN",
+      "industry": "Digital transformation",
+      "sourceUrl": "https://vnptit.vn/"
+    },
+    {
+      "name": "MoMo",
+      "country": "VN",
+      "industry": "Financial technology",
+      "sourceUrl": "https://momo.careers/about?fromType=nav_menu"
+    }
+  ]
+}

@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
 import { getBlob, ref } from "firebase/storage";
+import { officialCompanyLogo } from "./officialCompanyLogos";
+import type { Company } from "../../../../../packages/contracts/src/community";
 import { storage } from "../../firebase";
 export default function CompanyLogo({
   path,
   name,
+  company,
 }: {
   path?: string;
   name: string;
+  company?: Pick<Company, "id" | "name" | "source" | "sourceUrl">;
 }) {
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(""),
+    [failedSource, setFailedSource] = useState("");
+  const source = path ? url : officialCompanyLogo(company);
   useEffect(() => {
     let live = true,
       objectUrl = "";
@@ -33,8 +39,13 @@ export default function CompanyLogo({
   }, [path]);
   return (
     <span className="community-logo" aria-label={name}>
-      {url ? (
-        <img src={url} alt={name} onError={() => setUrl("")} />
+      {source && failedSource !== source ? (
+        <img
+          src={source}
+          alt={name}
+          decoding="async"
+          onError={() => setFailedSource(source)}
+        />
       ) : (
         <span aria-hidden="true">{name.slice(0, 2).toUpperCase()}</span>
       )}

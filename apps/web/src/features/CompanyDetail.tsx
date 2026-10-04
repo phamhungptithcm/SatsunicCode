@@ -1,4 +1,5 @@
 import CompanyLogo from "./community/CompanyLogo";
+import { officialCompanyLogo } from "./community/officialCompanyLogos";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useLanguage, text } from "../i18n";
@@ -78,8 +79,12 @@ export default function CompanyDetail() {
       )}
       {company && (
         <>
-          {company.logoPath && (
-            <CompanyLogo path={company.logoPath} name={company.name} />
+          {(company.logoPath || officialCompanyLogo(company)) && (
+            <CompanyLogo
+              path={company.logoPath}
+              name={company.name}
+              company={company}
+            />
           )}
           <Hero
             label="COMPANY REVIEWS"

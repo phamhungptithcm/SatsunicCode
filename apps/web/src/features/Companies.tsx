@@ -155,7 +155,7 @@ export default function Companies() {
                 className="community-company-card"
                 to={`/companies/${c.id}`}
               >
-                <CompanyLogo path={c.logoPath} name={c.name} />
+                <CompanyLogo path={c.logoPath} name={c.name} company={c} />
                 <div>
                   <h2>{c.name}</h2>
                   <p>

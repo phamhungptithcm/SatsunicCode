@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "path": "apps/web/src/features/Companies.tsx",
+      "sha256": "cc35b792c66d3ed44c9414b46bc293d62683761e88f2670706830d30fa0eae87"
+    },
+    {
+      "path": "apps/web/src/features/CompanyDetail.tsx",
+      "sha256": "274b5653897fda130f9882931155f73390bd41beafb1b90108283e8a73ff5e32"
+    },
+    {
+      "path": "apps/web/src/features/community/CompanyLogo.tsx",
+      "sha256": "4910af99ccd376b724e43636cd4d6192daa2deacd853a4e7bac632582b0933b3"
+    },
+    {
+      "path": "apps/web/src/features/community/officialCompanyLogos.ts",
+      "sha256": "2d43381b94ccaece4e348d8e6bf5bba0b53c49ab2d072db5091615769c66d37e"
+    },
+    {
+      "path": "tests/unit/company-official-logos.test.ts",
+      "sha256": "1217d8e9c354abf96c084e90063b2fff176a2a89187db84a5196505a04a3c6d4"
+    },
+    {
+      "path": "apps/web/public/company-logos/fpt-software.png",
+      "sha256": "1a9312b89a7f9cc48263ba78643fb93d8f36ef955b29afe0ca4dc68ed5c4b7dd"
+    },
+    {
+      "path": "apps/web/public/company-logos/cmc-global.svg",
+      "sha256": "53af2ac97a0d99e28d7b45d4ec6a3cef951897200d42f3eac7d3652757b22a92"
+    },
+    {
+      "path": "apps/web/public/company-logos/vng.png",
+      "sha256": "4d329549a3301574254ad9ed1d782c36f03c26d4837422fe7f461bfb8b344e24"
+    },
+    {
+      "path": "apps/web/public/company-logos/misa.svg",
+      "sha256": "f637f1d0b12a115c191bf5509f59b1caf139653fcd8aa8f59e6e8dd49c4f9bb3"
+    },
+    {
+      "path": "apps/web/public/company-logos/tma-solutions.png",
+      "sha256": "cc6181ac690177c6e2de06561c7b847719c18e509ccbd8337647a6d5a36b0295"
+    },
+    {
+      "path": "apps/web/public/company-logos/nashtech.svg",
+      "sha256": "1aabe4c0d4a038be4cc233b50e6a465d9d12902f672534f5c7812ccded2ebc38"
+    },
+    {
+      "path": "apps/web/public/company-logos/viettel-solutions.png",
+      "sha256": "70d3b77aff5a963f78772189532932e0177b94a1c1a5bce6b7a2374a3471b84a"
+    },
+    {
+      "path": "apps/web/public/company-logos/vnpt-it.svg",
+      "sha256": "65570d264bfcd36f24daf60c3132743c4b7975d6a482782b95cc5056609205f2"
+    },
+    {
+      "path": "apps/web/public/company-logos/momo.svg",
+      "sha256": "41d3eadebd629ec10dd28d7c13683b8c5cf564e37eae34ae478de6d89a72b26c"
+    }
+  ]
+}

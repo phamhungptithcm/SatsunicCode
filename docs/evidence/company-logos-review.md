@@ -1,0 +1,11 @@
+# Official logos review and scoped report
+
+Approved plan: community-official-logos.md; user requests actual company logos with existing production/main authorization. Intelligence refreshed, DEGRADED; current bounded source/Git/compiler/browser evidence used. No API/database/auth/rules/dependency change. Public logo allowlist requires exact ID/name/source/sourceURL; uploaded Storage logo retains priority and existing owner/moderator branch. SVG assets vetted for scripts/event handlers/foreignObject/external references; static same-origin image use only. No hotlink tracking or HTML injection.
+
+Cycle1: visual review found TMA white header mark unreadable on white. Corrected to its official structured-data blue PNG; no recolor/crop/invented logo. Initial audit context setup and emulator guard failures were corrected; failed runs are not passes.
+
+Cycle2: final source/asset review; unit identity spoof/unknown checks, TypeScript/web build,8 VI/EN mobile/desktop light/dark directory/Axe cases,9 list/detail decodes and image-failure initials verified. Existing uploaded-logo profile/moderation regression is recorded separately. No known issues within these executed checks. Source provenance and artifact hashes attached; self-review is not independent production assurance.
+
+Remaining: official KMS/Rikkeisoft downloads blocked HTTP403 Cloudflare challenge. Existing initials retained.9/11asset coverage only; complete11logo request remains PARTIAL/NOT_READY. No bypass, substituted outdated mark or fabricated data. Actual token usage/API-equivalent/billed cost Unavailable. Memory candidates None. Unrelated screenshots/cache preserved. Broad private product production readiness remains NOT_READY.
+
+Final uploaded-logo workflow PASSED59.9s after isolating emulator temporary storage and using project Node22. Previous failed attempts were an environment ENOENT (Storage blobs temp directory missing), not passes; no application/backend fix or provider mutation. Eight production-mode candidate cases pass for9assets with no Axe findings, overflow or external logo requests. Two identity-boundary unit tests, current TypeScript and web build pass. Redundant synthetic regression screenshots remain uncommitted; automatic review rejected restoration to avoid any risk to unrelated image WIP. No restoration performed.

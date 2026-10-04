@@ -6,28 +6,28 @@
   "privateUserHttp": 403,
   "checks": [
     {
-      "path": "assets/Account-CiSlI0UX.js",
-      "sha256": "de94398807218b68f04460c422df87bf56932aafbea52b9f1f2e35bd34c7701a",
+      "path": "assets/Account-CLfKnCzj.js",
+      "sha256": "928fd22795173f812c50d91c73feeaf2cdbe44b6db34d1907ed968dc438a60a9",
       "matches": true
     },
     {
-      "path": "assets/CodeEditor-BLnEkuEp.js",
-      "sha256": "a2ab7def0cb924c6bb9dbb2e053269c2f37f39dece98165c0f7e4a595bda441f",
+      "path": "assets/CodeEditor-CtwiMeRV.js",
+      "sha256": "425379d98688fbd848921c06727200d946922c7f049c3ab7149a1513d217943a",
       "matches": true
     },
     {
-      "path": "assets/Lesson-CHkEFCPU.js",
-      "sha256": "aa6f98d6130f0d5d1f8bbce9300456098eb76aa1272cee5c595fe2cb48be10a5",
+      "path": "assets/Lesson-C_lm76vl.js",
+      "sha256": "c9171b0d811afa6194b71b00f34ec88ef9b3c81b64d7900406236b1817600d53",
       "matches": true
     },
     {
-      "path": "assets/Practice-BNCG-LSg.js",
-      "sha256": "ff7c2edf159de7b3ef2cf5ddd4865ffa0cfa3d4a85960083b8f2f79dadd26619",
+      "path": "assets/Practice-D9JQ2fFi.js",
+      "sha256": "1e622d07b8d10df1e05b8dddb20c836ce52b5a98562e52ba38b8edcd4ef22f26",
       "matches": true
     },
     {
-      "path": "assets/Progress-seAwRPlG.js",
-      "sha256": "dc842b2a89eed2683afa42e761d4badaf61fa799db8139affc1143e7af9f3c59",
+      "path": "assets/Progress-2yxmHKBn.js",
+      "sha256": "dacb9ae47be8a925f2d7e327bd9fa67356c64791c21e72b6463dfc7b7cde1bfa",
       "matches": true
     },
     {
@@ -41,13 +41,13 @@
       "matches": true
     },
     {
-      "path": "assets/index-CsxlrD9j.css",
-      "sha256": "03c03991961fba383cd2a5beb4bd09ce74cab70457949dace121024e86c638a7",
+      "path": "assets/index-B36y3tF1.css",
+      "sha256": "d7c80f3a58c05d96edcae30e605425ba8a7577b798bd14a782873bfb1836873b",
       "matches": true
     },
     {
-      "path": "assets/index-akVOBUB9.js",
-      "sha256": "b259d5e87f32b221232b34e38f5482471e0d5ee3a0896c5edf6d9e77b94c5a2e",
+      "path": "assets/index-C69YTCgA.js",
+      "sha256": "e6dca76fe91a6a052c61c5eef0cfcf001149cc1eb2c05c591aeaeeb00466e7d2",
       "matches": true
     },
     {
@@ -86,13 +86,13 @@
       "matches": true
     },
     {
-      "path": "assets/tsMode-B34dlGCZ.js",
-      "sha256": "c7422d2b700a1c7c65dfd1d1daa5577950865c4523545d910c5095530b77ab0e",
+      "path": "assets/tsMode-BWn-zAyI.js",
+      "sha256": "86084b35bf7220cc8cdccd080380e6229edf2ce9f7f3a76fd87aea9106b66f49",
       "matches": true
     },
     {
       "path": "index.html",
-      "sha256": "c71e48d9789974591ad60678ea162c5e3a03af70dac802fe6c806bdfe2654fc9",
+      "sha256": "07c026ca9207ccac21049d5fd5124b1517bfa5f4de11d5bb3498f9e72f98701e",
       "matches": true
     },
     {

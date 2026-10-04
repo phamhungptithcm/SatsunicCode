@@ -1,0 +1,167 @@
+{
+  "base": "http://127.0.0.1:5184",
+  "checkedAt": "2026-10-04T20:10:57.894Z",
+  "cases": [
+    {
+      "vi": false,
+      "width": 360,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 360,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 390,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 390,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 768,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 768,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 1280,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": false,
+      "width": 1280,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 360,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 360,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 390,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 390,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 768,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 768,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 1280,
+      "dark": false,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "vi": true,
+      "width": 1280,
+      "dark": true,
+      "logoCentered": true,
+      "controlAlignment": true,
+      "backSeparate": true,
+      "noOverflow": true,
+      "axeViolations": 0
+    }
+  ],
+  "errors": []
+}

@@ -1,5 +1,4 @@
 import CompanyLogo from "./community/CompanyLogo";
-import { officialCompanyLogo } from "./community/officialCompanyLogos";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useLanguage, text } from "../i18n";
@@ -21,7 +20,6 @@ import {
   ErrorNotice,
   CompanySource,
   companyIndustryLabel,
-  Hero,
   errorText,
   useAction,
 } from "./community/shared";
@@ -66,7 +64,7 @@ export default function CompanyDetail() {
     void load();
   }, [companyId]);
   return (
-    <section className="community">
+    <section className="community community-company-detail">
       <Link className="community-back" to="/companies">
         ← {t(text("Danh mục công ty", "Company directory"))}
       </Link>
@@ -79,21 +77,28 @@ export default function CompanyDetail() {
       )}
       {company && (
         <>
-          {(company.logoPath || officialCompanyLogo(company)) && (
+          <header className="community-company-identity">
             <CompanyLogo
               path={company.logoPath}
               name={company.name}
               company={company}
             />
-          )}
-          <Hero
-            label="COMPANY REVIEWS"
-            title={company.name}
-            description={`${t(companyIndustryLabel(company.industry))} · ${t(company.country === "VN" ? text("Việt Nam", "Vietnam") : text("Hoa Kỳ", "United States"))}`}
-          />
-          <p className="community-caption">
-            <CompanySource company={company} />
-          </p>
+            <div>
+              <p className="eyebrow">COMPANY REVIEWS</p>
+              <h1>{company.name}</h1>
+              <div className="community-company-meta">
+                <p>
+                  {t(companyIndustryLabel(company.industry))} ·{" "}
+                  {t(
+                    company.country === "VN"
+                      ? text("Việt Nam", "Vietnam")
+                      : text("Hoa Kỳ", "United States"),
+                  )}
+                </p>
+                <CompanySource company={company} />
+              </div>
+            </div>
+          </header>
           {company.headquarters && (
             <div className="community-panel">
               <h2>

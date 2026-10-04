@@ -55,3 +55,5 @@ Reviewed profile delta approval: user selected “Duyệt triển khai flow mớ
 Compact shape continuation — 2026-10-04: human directly requested “làm gọn đẹp tinh tết và theo style shape hay css giống roadmap và home page đã làm”. Concrete CSS-only plan docs/plans/community-shape-refinement.md uses verified existing Home/Roadmap shapes, tokens, density; existing approved community UI and Hosting/main publication scope persists. No backend/data/dependency activation delta.
 
 2026-10-04 official logo continuation: human instruction “dùng logo thật của các công ty để vào” authorizes logo assets and scoped public display changes under docs/plans/community-official-logos.md. Existing Hosting/main release approval persists. No production database mutation or provider activation.
+
+2026-10-04 detail alignment: human instruction “các item bị lệch không cân đối cân xứng đối xứng” with current FPT screenshot authorizes scoped header/control alignment under docs/plans/company-detail-alignment.md; existing main/Hosting release authorization persists. No provider/data/backend changes.

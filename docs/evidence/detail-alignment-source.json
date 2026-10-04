@@ -1,0 +1,12 @@
+{
+  "files": [
+    {
+      "path": "apps/web/src/features/CompanyDetail.tsx",
+      "sha256": "c9dd3e923f556e0d31410bf0ba721876e7df896e4ff361559b4965d164cc86c6"
+    },
+    {
+      "path": "apps/web/src/features/community/community.css",
+      "sha256": "03614c664e9cb06433aa948f92bf336472775c265490794ec59ef18ce9a94558"
+    }
+  ]
+}

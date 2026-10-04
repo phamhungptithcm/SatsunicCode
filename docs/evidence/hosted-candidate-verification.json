@@ -1,13 +1,13 @@
 {
   "base": "https://satsuniccode.web.app",
-  "artifactCount": 31,
+  "artifactCount": 40,
   "candidateMatches": true,
   "publicReferenceHttp": 200,
   "privateUserHttp": 403,
   "checks": [
     {
-      "path": "assets/Account-C_pWLd_d.js",
-      "sha256": "40bd13bc71e48020fa491b076d3e6852151f63184a45f1c79ab45fb4f55bc12e",
+      "path": "assets/Account-BjOcOTwL.js",
+      "sha256": "82efed086748551acb7c6c3d4b0039e6d75a9cdeaa75860206139c14f8e1231d",
       "matches": true
     },
     {
@@ -16,58 +16,58 @@
       "matches": true
     },
     {
-      "path": "assets/CommunityContributions-BTE6gVVT.js",
-      "sha256": "431546c7cb327ef8e1a07e4433cc375d2ea9ed32421264cadb7d8f3bc9b957a4",
+      "path": "assets/CommunityContributions-D1OIdIn6.js",
+      "sha256": "abeaa7d69b5ca77eae26a976389ecd9ebc0f95b877b996b370a6b004736b5199",
       "matches": true
     },
     {
-      "path": "assets/CommunityModeration-DMZyjbV6.js",
-      "sha256": "0c3d644cb8d6c78770279460b22380bbcf70acf8f74c673d06c9d8065f08d384",
+      "path": "assets/CommunityModeration-enV_jYmx.js",
+      "sha256": "a45bfbf1ea23691f141eaedabfbf56f4e261f9f0bd1e16e8acdf52a5cd4c3d8a",
       "matches": true
     },
     {
-      "path": "assets/Companies-BzWvzs9_.js",
-      "sha256": "7645849ff3e2a220029c8202f31ca013d2bc87d6976265ff2ae716d3f0cf1c58",
+      "path": "assets/Companies-rMCp82k7.js",
+      "sha256": "e7ac88736f5a9cf816db973ed61c435f424449955e1895abf49aca02933235f9",
       "matches": true
     },
     {
-      "path": "assets/CompanyDetail-BmCOgIjf.js",
-      "sha256": "47b05f6803a5850dbd96c1b9118b0aaeafd0ca5b71e9ec7112922f5839dec3f2",
+      "path": "assets/CompanyDetail-3l7F4tzi.js",
+      "sha256": "50f8d7eec22a759abf3301e80dacef89836d5cbb45b4048f3fffbdb19bd92427",
       "matches": true
     },
     {
-      "path": "assets/CompanyLogo-DQF7dk-S.js",
-      "sha256": "9d972d24d6a15423f921559596cf1d157bd2345d0555a83256b4ab2bc77af100",
+      "path": "assets/CompanyLogo-DjvVGQpj.js",
+      "sha256": "74b1f1458e56b4bf1d3811914f3e20edeebaf2609c9c1b06418183c83abdda59",
       "matches": true
     },
     {
-      "path": "assets/Forms-Ci61ca7b.js",
-      "sha256": "7dfb2ba37f0d637524f7f9ecfdf312a6317022ed0d1ccbb3329019deae9f5e1a",
+      "path": "assets/Forms-K2pYg6lg.js",
+      "sha256": "2280f498b3b531e7b6a7960346403087bd7beac9098f4aacf12c3a6d615cc399",
       "matches": true
     },
     {
-      "path": "assets/Lesson-ii2zH2ez.js",
-      "sha256": "ea77e3e25289cb8a5807aa067df3d385e7699aa419bf90474aeab09b9dd3db6f",
+      "path": "assets/Lesson-BJkrfcg2.js",
+      "sha256": "dcfae4bf0ace4e3a658a76b070856c4e5c3fd7a1b75bc459ee626bd98cbe1a75",
       "matches": true
     },
     {
-      "path": "assets/Practice-BIJo1bOj.js",
-      "sha256": "4d2e82512c1860ce591a868bb7821911ef2f48ae5cbf3362d67197c19bcb818b",
+      "path": "assets/Practice-C6NfVRs-.js",
+      "sha256": "9d8d12d604dde101864da7b6105774c83fe29ba36355165a28dcaa58c1c37438",
       "matches": true
     },
     {
-      "path": "assets/Progress-CemAn54b.js",
-      "sha256": "b8ec80ed6f589e1d921222be8aab99c4c58a0db06e3c3cf39739b1021c02c0fc",
+      "path": "assets/Progress-DXcuRUwT.js",
+      "sha256": "f24336f56f928604850f3bb8e8087e3625eec0221ff2c0217656b5e1c1bc71d2",
       "matches": true
     },
     {
-      "path": "assets/Salaries-CzaEclKy.js",
-      "sha256": "d0976951c8927aea7d727d4308e624c23a5e4890001a44d94ca036fb03ad50c8",
+      "path": "assets/Salaries-BaVrcbsK.js",
+      "sha256": "401cfdf0130c8852bc4d7886b76e6c2fad09ceb84defada58f6aaf97f05bb865",
       "matches": true
     },
     {
-      "path": "assets/api-CqkK0deW.js",
-      "sha256": "0ba3fc08ba9274e609046246c4bfedf25f693e571a447ce9fcae5b31d6665077",
+      "path": "assets/api-CckGaDbZ.js",
+      "sha256": "36edac5c3c99c2365c09c074e6a6ed0c35b9abde98450fda25f21beb80eca5c5",
       "matches": true
     },
     {
@@ -86,8 +86,8 @@
       "matches": true
     },
     {
-      "path": "assets/index-D0klQHh6.js",
-      "sha256": "8b02042b08a910c1e61837cbfe42dc8b3c12bfb22aa2a846fbb11ce2ecc9575e",
+      "path": "assets/index-Cdr4Z6SZ.js",
+      "sha256": "dcd7187c5177fa72bf5cd71cb770a6790085af82b69e07f8e7bed127ddf5be45",
       "matches": true
     },
     {
@@ -116,8 +116,8 @@
       "matches": true
     },
     {
-      "path": "assets/shared-D6W2fJDc.js",
-      "sha256": "f278f1f2daea3ff733d2c8438adde13bb518953aa6b2ccffa873660bf8b13b4f",
+      "path": "assets/shared-BjG6EOGy.js",
+      "sha256": "62091ade7d9002bda6193146b1bdb4e82b8c5f31240b0cbaa4f7529f435b5263",
       "matches": true
     },
     {
@@ -146,13 +146,58 @@
       "matches": true
     },
     {
-      "path": "assets/useLearningActivity-mQdTZvGb.js",
-      "sha256": "3b9e1a121d05253b60f4a51b461450c6df5dc90af23f58bffbd9d05459deab90",
+      "path": "assets/useLearningActivity-D5eyTVrw.js",
+      "sha256": "71b1d59075b6c0059f5c9856d461d26a42da52e40541c072381e71619798388f",
+      "matches": true
+    },
+    {
+      "path": "company-logos/cmc-global.svg",
+      "sha256": "53af2ac97a0d99e28d7b45d4ec6a3cef951897200d42f3eac7d3652757b22a92",
+      "matches": true
+    },
+    {
+      "path": "company-logos/fpt-software.png",
+      "sha256": "1a9312b89a7f9cc48263ba78643fb93d8f36ef955b29afe0ca4dc68ed5c4b7dd",
+      "matches": true
+    },
+    {
+      "path": "company-logos/misa.svg",
+      "sha256": "f637f1d0b12a115c191bf5509f59b1caf139653fcd8aa8f59e6e8dd49c4f9bb3",
+      "matches": true
+    },
+    {
+      "path": "company-logos/momo.svg",
+      "sha256": "41d3eadebd629ec10dd28d7c13683b8c5cf564e37eae34ae478de6d89a72b26c",
+      "matches": true
+    },
+    {
+      "path": "company-logos/nashtech.svg",
+      "sha256": "1aabe4c0d4a038be4cc233b50e6a465d9d12902f672534f5c7812ccded2ebc38",
+      "matches": true
+    },
+    {
+      "path": "company-logos/tma-solutions.png",
+      "sha256": "cc6181ac690177c6e2de06561c7b847719c18e509ccbd8337647a6d5a36b0295",
+      "matches": true
+    },
+    {
+      "path": "company-logos/viettel-solutions.png",
+      "sha256": "70d3b77aff5a963f78772189532932e0177b94a1c1a5bce6b7a2374a3471b84a",
+      "matches": true
+    },
+    {
+      "path": "company-logos/vng.png",
+      "sha256": "4d329549a3301574254ad9ed1d782c36f03c26d4837422fe7f461bfb8b344e24",
+      "matches": true
+    },
+    {
+      "path": "company-logos/vnpt-it.svg",
+      "sha256": "65570d264bfcd36f24daf60c3132743c4b7975d6a482782b95cc5056609205f2",
       "matches": true
     },
     {
       "path": "index.html",
-      "sha256": "cc8b3f70943418fb6503b724c404b8252a0324ccba684618f6fc3c48c09b0056",
+      "sha256": "c7a20e27f2390f41dacfd33eeb3c08d5a6b31dd1068e9770a5ec616826473045",
       "matches": true
     },
     {

@@ -1,0 +1,1 @@
+PASS:8 locale/viewport/theme cases,9 directory/detail logos,Axe,geometry,image failure fallback;2 official assets unavailable.

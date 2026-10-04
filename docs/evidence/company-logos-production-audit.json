@@ -1,0 +1,86 @@
+{
+  "base": "https://satsuniccode.web.app",
+  "checkedAt": "2026-10-04T19:51:47.461Z",
+  "cases": [
+    {
+      "locale": "en",
+      "width": 390,
+      "dark": false,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "dark": true,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "dark": false,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "dark": true,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "vi",
+      "width": 390,
+      "dark": false,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "vi",
+      "width": 390,
+      "dark": true,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "vi",
+      "width": 1280,
+      "dark": false,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    },
+    {
+      "locale": "vi",
+      "width": 1280,
+      "dark": true,
+      "decodedOfficialLogos": 9,
+      "noOverflow": true,
+      "axeViolations": 0
+    }
+  ],
+  "detailLogos": 9,
+  "imageFailureFallback": true,
+  "errors": [],
+  "externalLogoRequests": [],
+  "remaining": [
+    {
+      "name": "Rikkeisoft",
+      "assetUrl": "https://rikkeisoft.com/wp-content/uploads/2026/05/footer-logo-1.png",
+      "reason": "Official site Cloudflare challenge HTTP403"
+    },
+    {
+      "name": "KMS Technology",
+      "assetUrl": "https://kms-technology.com/wp-content/uploads/KMS-Rebrand-Logo.png",
+      "reason": "Official site Cloudflare challenge HTTP403"
+    }
+  ]
+}

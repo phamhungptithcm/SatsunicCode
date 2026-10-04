@@ -1,0 +1,11 @@
+# Official logos — partial production delivery
+
+Source commit f2d0049. Hosting version10a833f75fc8f8b9 replaces c586a59baaad294c.40/40 candidate artifact hashes match production; anonymous public reference200/private user403. Eight read-only live VI/EN390/1280 light/dark cases pass with9actual logos,9detail decodes,44px frames, no overflow/Axe violations/external logo requests, and image-error initials fallback. Local candidate8cases also pass. Two identity-boundary unit tests, TypeScript, web build and uploaded-profile/moderation/logo regression (59.9s) pass. Current source and provenance hashes are attached.
+
+Nine verified first-party company logos deployed: FPT Software,CMC Global,VNG,MISA,TMA Solutions,NashTech,Viettel Solutions,VNPT-IT,MoMo. All retain colors/aspect ratio; TMA uses its official blue structured-data PNG after the white header version failed contrast review. No source redrawing or recolor. Upstream SVG CRLF bytes retained to preserve provenance: git -c core.whitespace=cr-at-eol diff --check passes; default whitespace check flags CRLF, not visual/source defects.
+
+Remaining2/11: KMS Technology and Rikkeisoft. Official header/brand/careers/newcomer downloads return Cloudflare403. Additional publicly identified press assets also returned403 or timed out. No access challenge bypass or unverified historical substitute. Initials remain. Full11logo task is PARTIAL/NOT_READY pending accessible authentic files; final review records this blocker. Source self-review is not independent production assurance. Repository intelligence DEGRADED; source/compiler/runtime fallback used.
+
+Production Hosting-only update; billing false/Functions API DISABLED remain unchanged. No database import, auth/rules/API/IAM/provider activation. Existing broad private backend production readiness remains NOT_READY. No Safari/Firefox/hardware screen-reader coverage. Token usage/actual or API-equivalent cost Unavailable. Memory candidates None.
+
+Unrelated existing screenshots preserved. Current synthetic regression also regenerated other form screenshots; these remain uncommitted. Automatic approval review rejected a broad git restore to protect possible unrelated WIP; no restoration occurred, and only explicit logo files/evidence were committed. Main push and final runtime review/report readback are checked before handoff.

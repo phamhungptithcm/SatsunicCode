@@ -1,3 +1,4 @@
+import { useActionNotice } from "../hooks/useToastNotice";
 import GoogleAction from "../components/GoogleAction";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -23,6 +24,7 @@ type Language = Draft["language"];
 function Workspace({ language }: { language: Language }) {
   const user = useSession();
   const { t, locale } = useLanguage();
+  const { status, transient, setStatus } = useActionNotice();
   const localDraft = useLocalDraft(
     draftKey(user?.uid ?? "guest", challenge.revision, language),
     challenge.starters[language],
@@ -32,7 +34,6 @@ function Workspace({ language }: { language: Language }) {
   const [revision, setRevision] = useState<number | null>(null),
     [ready, setReady] = useState(false),
     [cloudLoaded, setCloudLoaded] = useState(false),
-    [status, setStatus] = useState(""),
     [saving, setSaving] = useState(false),
     [editor, setEditor] = useState(() =>
       localStorage.getItem("satsuniccode.editor") === "textarea" ? false : true,
@@ -99,7 +100,7 @@ function Workspace({ language }: { language: Language }) {
     if (!user || !ready || !cloudLoaded) return;
     const immutable = source;
     setSaving(true);
-    setStatus(t(text("Đang lưu…", "Saving…")));
+    setStatus(t(text("Đang lưu…", "Saving…")), "info", true);
     try {
       await runTransaction(db, async (tx) => {
         const ref = doc(db, `users/${user.uid}/drafts/${key}`);
@@ -122,7 +123,7 @@ function Workspace({ language }: { language: Language }) {
         });
       });
       setRevision(revision === null ? 0 : revision + 1);
-      setStatus(t(text("Đã đồng bộ bản nháp.", "Draft synced.")));
+      setStatus(t(text("Đã đồng bộ bản nháp.", "Draft synced.")), "success");
     } catch {
       setStatus(
         t(
@@ -131,7 +132,7 @@ function Workspace({ language }: { language: Language }) {
             "Draft was not synced. Another tab may have changed it or the connection failed. Keep your code and reload the latest version before overwriting.",
           ),
         ),
-      );
+       "error");
     } finally {
       setSaving(false);
     }
@@ -144,7 +145,7 @@ function Workspace({ language }: { language: Language }) {
           "Checking execution availability…",
         ),
       ),
-    );
+     "info", true);
     try {
       await httpsCallable(
         functions,
@@ -164,7 +165,7 @@ function Workspace({ language }: { language: Language }) {
             "No approved sandbox is configured. Code was not executed or graded; no verdict or evidence was created.",
           ),
         ),
-      );
+       "warning");
     }
   }
   return (
@@ -367,7 +368,7 @@ function Workspace({ language }: { language: Language }) {
             {t(text("Nộp bài", "Submit"))}
           </button>
         </div>
-        <p role="status" className="draft-status" hidden={!consoleOpen}>
+        <p role={transient ? undefined : "status"} className="draft-status" hidden={!consoleOpen}>
           {status}
         </p>
         <p className="muted">

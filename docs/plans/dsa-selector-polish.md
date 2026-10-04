@@ -1,0 +1,2 @@
+# DSA selector polish
+Human directly requests compact polished selector/button, no NeetCode label. Scope DsaRoadmap display names only plus scoped CSS. Rename visible sets to Core 150, Essentials 75, All exercises (count); retain original filter identifiers, memberships, source attribution and enrollment behavior. Full-width primary enrollment button with 12px separation from select, 44px targets and bounded focus ring. Existing source verified; optional indexes DEGRADED. No data/auth changes. Validate typecheck and browser layout.

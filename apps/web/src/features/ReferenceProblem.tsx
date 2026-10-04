@@ -1,3 +1,4 @@
+import { useActionNotice } from "../hooks/useToastNotice";
 import WorkspaceIcon from "./workspace/WorkspaceIcon";
 import GoogleAction from "../components/GoogleAction";
 import AccountMenu from "../components/AccountMenu";
@@ -43,6 +44,7 @@ function ReferenceWorkspace({
   owner: string;
 }) {
   const { t, locale } = useLanguage();
+  const { status, transient, setStatus } = useActionNotice();
   const { ready } = useAccountControls();
   const user = useSession();
   const userAuthenticated = !!user && !user.isAnonymous;
@@ -55,7 +57,6 @@ function ReferenceWorkspace({
     setSource = draft.edit;
   const [tab, setTab] = useState("question"),
     [consoleOpen, setConsole] = useState(false),
-    [status, setStatus] = useState(""),
     [wide, setWide] = useState(false);
   const [mobileView, setMobileView] = useState("question");
   const [hint, setHint] = useState(0),
@@ -82,7 +83,7 @@ function ReferenceWorkspace({
             "This reference has no approved content and tests.",
           ),
         ),
-      );
+       "warning");
       return;
     }
     if (mode === "run" && caseIndex === -1) {
@@ -104,7 +105,7 @@ function ReferenceWorkspace({
               "Enter a valid array of 32-bit integers, up to 100,000 items.",
             ),
           ),
-        );
+         "error");
         return;
       }
     }
@@ -126,7 +127,7 @@ function ReferenceWorkspace({
               : "Runner is not connected. Code was not run or graded.",
           ),
         ),
-      );
+       "warning");
     } catch {
       setStatus(
         t(
@@ -135,7 +136,7 @@ function ReferenceWorkspace({
             "Execution service could not be reached. Code was not run or graded; your draft is preserved.",
           ),
         ),
-      );
+       "error");
     } finally {
       setBusy(false);
     }
@@ -613,7 +614,7 @@ function ReferenceWorkspace({
                             "Code exceeds 100,000 characters; the change was not saved.",
                           ),
                         ),
-                      );
+                       "error");
                     }
                   }}
                   readOnly={false}
@@ -678,7 +679,7 @@ function ReferenceWorkspace({
               </div>
             )}
             {consoleOpen && (
-              <p role="status">
+              <p role={transient ? undefined : "status"}>
                 {status || t(text("Chưa có lần chạy.", "No execution yet."))}
               </p>
             )}

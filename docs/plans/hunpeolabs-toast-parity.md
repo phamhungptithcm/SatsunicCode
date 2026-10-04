@@ -1,0 +1,24 @@
+# TOAST-PARITY-001 v1
+Status: APPROVED — human apporved after v1 plan; evidence .ai/local/toast-parity-approval.md
+
+Goal: copy the current HunpeoLabs toast handling into SatsunicCode for all applicable transient action notifications. Preserve durable form validation, connection/conflict warnings, content readiness, and real loading states.
+
+Source verified: HunpeoLabs/components/blog-admin/toast.tsx, lib/ui/toast-countdown.ts, styles/blog-design.css lines3278-3296 and3654-3657, tests/unit/toast-countdown.test.ts. Source has a single notice per hook, replacement semantics, not a queue. Four kinds(info/success/error/warning),5-second remaining-time budget; hover/focus/hidden-tab/pending holds; one expiration, cleanup; visible seconds/progress; pending hides dismiss/countdown; status vs alert; dialog-aware portal; responsive top-right360px; reduced motion; action slots; VI/EN accessible dismissal.
+
+Target currently uses scattered inline status/error notices in GoogleAction, OneTapController, AccountMenu, BookmarkButton, Roadmap enrollment, Practice draft/submission, ReferenceProblem, Assistant and account flows. No shared toast dependency/provider observed. Intelligence DEGRADED: stale indexes; source/Git/build evidence. React19/TypeScript7/Vite8. Current HEAD95d5faa; dirty DsaRoadmap/styles and selector work preserved.
+
+Implementation:
+1. Add apps/web/src/lib/toast-countdown.ts copied from verified source; components/Toast.tsx and hooks/useToastNotice.ts preserving source handling and adapting imports/icons to local SVG. No external dependency or queue redesign.
+2. Port exact toast CSS as scoped styles; maintain current layout and support current dark theme tokens. Keep original dimensions/kind colors/animation/controls and reduced-motion behavior.
+3. Integrate consistent application notification hosting via local context/provider in App.tsx; preserve source single-notice replacement semantics. Portal enters open dialog when needed, no focus stealing. Clear completed notice on explicit close/expiry and clean listeners/timers on unmount.
+4. Inventory every transient action status and migrate success/failure/warning/pending in components/{GoogleAction,OneTapController,AccountMenu,BookmarkButton} and features/{Account,Roadmap,Practice,ReferenceProblem,Assistant}; inspect session.tsx for relevant action feedback integration. Classify at each caller explicitly rather than inferring kind from localized strings. Durable field validation, draft-conflict recovery actions, content warnings and ongoing connection states remain durable; transient notices can complement them without removing recovery info.
+5. Preserve VI/EN message meaning and actual Firebase acknowledgment. Never announce saved/success before operation completes. Preserve drafts/reset/undo, owner isolation, login/session, pending controls and execution-unavailable truth. No OAuth/provider, backend, Rules, schema, seed, production/deploy changes.
+6. Add countdown regression tests copied/adapted from source (overlapping holds, remaining budget, disposal, pending); focused UI tests for kinds/close/replacement/dialog portal/actions/keyboard/mobile/reduced motion and real caller outcomes using safe local fixtures. Typecheck/unit/build and relevant existing workspace/account regressions. Product content review covers eight principles, in-context evidence and both locales; final implementation review/report required.
+
+Risks: transient expiry must not hide material error recovery; provider/global notice replacement could collide with caller-local statuses; dialog portal and focus holds require exact cleanup; repeated identical text needs event identity so retrigger remains visible. Fix parity gaps with regression evidence while retaining source external behavior. No literal transplant of Next alias/BlogIcon unrelated implementation.
+
+Acceptance:100% parity of verified toast contract; all applicable transient project notifications use it; no layout changes; durable warnings retained; tests and review current. Source does not implement stacked queues, so no unsupported queue claim. No claim100% until caller inventory and current visual tests complete.
+
+Approval required by .ai/workflows/plan-existing-system-change.md step15. User approves TOAST-PARITY-001 v1 before protected application edits. No application files changed in this planning turn. Memory candidates None.
+
+Implementation inventory refinement: current DsaRoadmap.tsx also exposes the same enrollment action as Roadmap; migrate its notification only, preserving ongoing selector changes. Shared CloudDraftControls handles reference workspace save. Corresponding workspace/learning tests target toast announcement instead of prior inline role=status, preserving assertions. These are consumers of approved whole-project notification scope.

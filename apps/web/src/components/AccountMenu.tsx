@@ -1,3 +1,4 @@
+import { useToastNotice } from "../hooks/useToastNotice";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSession, useAccountControls } from "../session";
@@ -38,8 +39,8 @@ export default function AccountMenu() {
     { t } = useLanguage(),
     location = useLocation();
   const [open, setOpen] = useState(false),
-    [busy, setBusy] = useState(false),
-    [error, setError] = useState(false);
+    [busy, setBusy] = useState(false);
+  const { notify, dismiss } = useToastNotice();
   const root = useRef<HTMLDivElement>(null),
     trigger = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -144,24 +145,16 @@ export default function AccountMenu() {
             disabled={busy}
             onClick={() => {
               setBusy(true);
-              setError(false);
+              const noticeId = notify(t(text("Đang đăng xuất…", "Signing out…")), "info", { pending: true });
               void logout()
-                .catch(() => setError(true))
-                .finally(() => setBusy(false));
+                .then(() => notify(t(text("Đã đăng xuất.", "Signed out.")), "success"))
+                .catch(() => notify(t(text("Chưa đăng xuất được. Thử lại.", "Sign-out did not complete. Try again.")), "error"))
+                .finally(() => { dismiss(noticeId); setBusy(false); });
             }}
           >
             {t(text("Đăng xuất", "Sign out"))}
           </button>
-          {error && (
-            <p role="status">
-              {t(
-                text(
-                  "Chưa đăng xuất được. Thử lại.",
-                  "Sign-out did not complete. Try again.",
-                ),
-              )}
-            </p>
-          )}
+
         </div>
       )}
     </div>

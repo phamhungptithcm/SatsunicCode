@@ -39,8 +39,8 @@ test("workspace restores independent drafts and exposes real hints/custom input"
   await page.getByLabel("Test case", { exact: true }).selectOption("-1");
   await page.getByRole("textbox", { name: "Test input" }).fill('["invalid"]');
   await page.getByRole("button", { name: "Run", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("32-bit integers");
-  await expect(page.getByRole("status")).toBeVisible();
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("32-bit integers");
+  await expect(page.locator(".satsunic-toast-content p")).toBeVisible();
   await page.getByRole("tab", { name: "Question", exact: true }).click();
   await page.getByRole("tab", { name: "Question", exact: true }).focus();
   await page.keyboard.press("ArrowRight");
@@ -278,7 +278,7 @@ test("peak-requests local drafts survive refresh and cloud save remains real", a
   await expect(code).toBeEnabled();
   await code.fill("// authored private snapshot");
   await page.getByRole("button", { name: "Save draft", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("Draft synced.");
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("Draft synced.");
   await page.reload();
   await expect(code).toHaveValue("// authored private snapshot");
 });
@@ -288,7 +288,7 @@ test("execution capability reports no configured runner and creates no verdict",
 }) => {
   await page.goto("/practice/contains-duplicate");
   await page.getByRole("button", { name: "Run", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText(
+  await expect(page.locator(".satsunic-toast-content p")).toContainText(
     "Code was not run or graded",
   );
   await expect(

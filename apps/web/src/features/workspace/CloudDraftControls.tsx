@@ -1,5 +1,6 @@
+import { useToastNotice } from "../../hooks/useToastNotice";
 import WorkspaceIcon from "./WorkspaceIcon";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   doc,
   getDoc,
@@ -24,6 +25,9 @@ export default function CloudDraftControls({
 }) {
   const user = useSession(),
     { t } = useLanguage();
+  const { notify, dismiss } = useToastNotice();
+  const pending = useRef<number | null>(null);
+  useEffect(() => () => { if (pending.current !== null) dismiss(pending.current); }, [dismiss]);
   const [remote, setRemote] = useState<{
     revision: number | null;
     source: string;
@@ -64,6 +68,8 @@ export default function CloudDraftControls({
     const snapshotSource = source,
       expected = remote.revision;
     setStatus("saving");
+    const noticeId = notify(t(text("Đang đồng bộ…", "Syncing…")), "info", { pending: true });
+    pending.current = noticeId;
     try {
       await runTransaction(db, async (tx) => {
         const ref = doc(
@@ -91,8 +97,13 @@ export default function CloudDraftControls({
         source: snapshotSource,
       });
       setStatus("saved");
+      notify(t(text("Đã đồng bộ bản mã tại thời điểm bấm lưu.", "The code snapshot was synced.")), "success");
     } catch {
       setStatus("error");
+      notify(t(text("Chưa đồng bộ được. Giữ mã hiện tại và tải lại để kiểm tra bản mới.", "Sync failed. Keep your code and reload to check the latest draft.")), "error");
+    } finally {
+      dismiss(noticeId);
+      pending.current = null;
     }
   }
   if (!user || user.isAnonymous) return null;
@@ -144,7 +155,7 @@ export default function CloudDraftControls({
         </button>
       )}
       <span
-        role="status"
+        role={status === "saved" || status === "error" ? undefined : "status"}
         className={
           compact
             ? status === "saved" || status === "error"

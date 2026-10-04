@@ -1,3 +1,4 @@
+import { ToastProvider } from "./hooks/useToastNotice";
 import OneTapController from "./components/OneTapController";
 import { lazy, Suspense, useEffect, useState } from "react";
 import {
@@ -73,6 +74,7 @@ function Shell() {
         <Suspense
           fallback={<p role="status">{t(text("Đang tải…", "Loading…"))}</p>}
         >
+          <div className="page-transition" data-workspace={isCodeWorkspace || undefined}>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/roadmaps" element={<DsaRoadmap />} />
@@ -106,10 +108,11 @@ function Shell() {
             ))}
             <Route path="*" element={<Pending type="404" />} />
           </Routes>
+          </div>
         </Suspense>
       </main>
       {!isCodeWorkspace && <SiteFooter />}
-      {location.pathname === "/" && <Assistant />}
+      {!isCodeWorkspace && <Assistant collapsed={location.pathname !== "/"} routeKey={location.pathname} />}
     </div>
   );
 }
@@ -117,9 +120,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <LanguageProvider>
+        <ToastProvider>
         <SessionProvider>
           <Shell />
         </SessionProvider>
+        </ToastProvider>
       </LanguageProvider>
     </BrowserRouter>
   );

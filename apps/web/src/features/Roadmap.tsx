@@ -1,3 +1,4 @@
+import { useActionNotice } from "../hooks/useToastNotice";
 import GoogleAction from "../components/GoogleAction";
 import { useEffect, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
@@ -15,15 +16,15 @@ export default function Roadmap() {
   const [list, setList] = useState(false);
   const selected =
     dsaNodes.find((n) => n.id === params.get("node")) ?? dsaNodes[0]!;
-  const [status, setStatus] = useState(""),
-    [busy, setBusy] = useState(false);
+  const { status, transient, setStatus } = useActionNotice();
+  const [busy, setBusy] = useState(false);
   useEffect(() => {
     setStatus("");
   }, [locale]);
   const track = tracks.find((x) => x.slug === trackSlug);
   async function enroll() {
     setBusy(true);
-    setStatus("");
+    setStatus(t(text("Đang lưu lộ trình…", "Saving plan…")), "info", true);
     try {
       await httpsCallable(
         functions,
@@ -33,7 +34,7 @@ export default function Roadmap() {
         roadmapVersion: "dsa-v1",
         requestId: crypto.randomUUID(),
       });
-      setStatus(t(text("Đã lưu lộ trình DSA.", "DSA plan saved.")));
+      setStatus(t(text("Đã lưu lộ trình DSA.", "DSA plan saved.")), "success");
     } catch {
       setStatus(
         t(
@@ -42,7 +43,7 @@ export default function Roadmap() {
             "The plan was not saved. Check your connection and try again.",
           ),
         ),
-      );
+       "error");
     } finally {
       setBusy(false);
     }
@@ -87,7 +88,7 @@ export default function Roadmap() {
               {t(text("Xem tiến độ của tôi", "View my progress"))}
             </Link>
           </div>
-          <p role="status">{status}</p>
+          <p role={transient ? undefined : "status"}>{transient ? "" : status}</p>
           <div className="roadmap-toolbar">
             <button onClick={() => setList((x) => !x)}>
               {list

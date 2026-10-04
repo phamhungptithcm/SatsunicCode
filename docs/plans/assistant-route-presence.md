@@ -1,0 +1,2 @@
+# Assistant route presence
+Human direct authorization: Home capsule; persistent circular launcher on every other page; no assistant on code workspace. Scope App.tsx mount condition and Assistant.tsx collapsed prop/route transitions. Preserve backend/auth and animations. On non-home launcher opens dialog, closing returns to launcher. On Home launcher reopens capsule. Route changes cancel motion/timers, dismiss dialog and preserve draft on non-workspace navigation. Workspace unmount cleans all resources. No data/provider changes. Validate route matrix and typecheck.

@@ -1,0 +1,2 @@
+# Page transition
+Human explicitly requests subtle natural route changes. Scope App.tsx route content wrapper inside existing Suspense and scoped CSS. Existing pathname key already remounts main; add animation to content only after lazy content resolves. 180ms opacity/4px vertical entry, no navigation delay or exit retention; header/footer/assistant remain stable. Reduced motion disables animation. No deps, routing/auth/data changes. Check compiler and actual client navigation animation.

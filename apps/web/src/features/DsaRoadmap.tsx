@@ -1,3 +1,4 @@
+import { useActionNotice } from "../hooks/useToastNotice";
 import { useGraphViewport } from "../hooks/useGraphViewport";
 import BookmarkButton from "../components/BookmarkButton";
 import { useEffect, useRef, useState } from "react";
@@ -15,11 +16,11 @@ import { useSession } from "../session";
 export default function DsaRoadmap() {
   const { t, locale } = useLanguage();
   const user = useSession();
+  const { status, transient, setStatus } = useActionNotice();
   const [params, setParams] = useSearchParams();
   const selected = params.get("topic");
   const [set, setSet] = useState<DsaSet>("neetcode150"),
     [sort, setSort] = useState(false),
-    [status, setStatus] = useState(""),
     [month, setMonth] = useState(
       () => new Date(new Date().getFullYear(), new Date().getMonth(), 1),
     );
@@ -40,6 +41,7 @@ export default function DsaRoadmap() {
     if (!selected && dialog.current?.open) dialog.current.close();
   }, [selected]);
   async function enroll() {
+    setStatus(t(text("Đang lưu lộ trình…", "Saving plan…")), "info", true);
     try {
       await httpsCallable(
         functions,
@@ -49,7 +51,7 @@ export default function DsaRoadmap() {
         roadmapVersion: "dsa-v1",
         requestId: crypto.randomUUID(),
       });
-      setStatus(t(text("Đã lưu lộ trình DSA.", "DSA plan saved.")));
+      setStatus(t(text("Đã lưu lộ trình DSA.", "DSA plan saved.")), "success");
     } catch {
       setStatus(
         t(
@@ -58,6 +60,7 @@ export default function DsaRoadmap() {
             "The plan was not saved. Check your connection and try again.",
           ),
         ),
+        "error",
       );
     }
   }
@@ -67,7 +70,7 @@ export default function DsaRoadmap() {
   const days = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
   return (
     <section className="dsa-roadmap">
-      <p role="status">{status}</p>
+      <p role={transient ? undefined : "status"}>{transient ? "" : status}</p>
       <p id="dsa-gesture-help" className="sr-only">
         {t(
           text(
@@ -174,15 +177,15 @@ export default function DsaRoadmap() {
               value={set}
               onChange={(e) => setSet(e.target.value as DsaSet)}
             >
-              <option value="neetcode150">NeetCode 150</option>
-              <option value="blind75">Blind 75</option>
+              <option value="neetcode150">{t(text("Nền tảng 150", "Core 150"))}</option>
+              <option value="blind75">{t(text("Cốt lõi 75", "Essentials 75"))}</option>
               <option value="all">
-                {t(text("Tất cả danh mục tham chiếu", "All reference problems"))} (
+                {t(text("Tất cả bài tập", "All exercises"))} (
                 {problemsFor("all").length})
               </option>
             </select>
             {user && !user.isAnonymous && (
-              <button onClick={() => void enroll()}>{t(text("Theo học DSA", "Start DSA plan"))}</button>
+              <button className="dsa-enroll-button" onClick={() => void enroll()}>{t(text("Bắt đầu lộ trình", "Start learning"))}</button>
             )}
 
           </section>

@@ -47,7 +47,7 @@ test("homepage track destinations, composer draft/minimize, locale and responsiv
     "Giải thích sliding window",
   );
   await page.getByRole("button", { name: "Gửi câu hỏi" }).click();
-  await expect(page.getByRole("status")).toContainText("chưa có câu trả lời hoặc lịch sử được lưu");
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("chưa có câu trả lời hoặc lịch sử được lưu");
   await page.keyboard.press("Escape");
   await expect(page.getByLabel("Hỏi Ask Satsunic")).toBeFocused();
   await page.getByRole("button", { name: "Đổi ngôn ngữ" }).click();
@@ -87,9 +87,9 @@ test("Synthetic emulator identity (not Google OAuth) → enrollment → next act
   await expect(page.getByRole("button", { name: "Tài khoản Google", exact: true })).toBeVisible();
   await page.goto("/roadmaps/dsa");
   await page.getByRole("button", { name: "Theo học DSA" }).click();
-  await expect(page.getByRole("status")).toContainText("Đã lưu lộ trình DSA");
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("Đã lưu lộ trình DSA");
   await page.getByRole("button", { name: "Theo học DSA" }).click();
-  await expect(page.getByRole("status")).toContainText("Đã lưu lộ trình DSA");
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("Đã lưu lộ trình DSA");
   await page.goto("/progress");
   await page.getByRole("link", { name: "Tiếp tục học" }).click();
   await expect(page).toHaveURL(/peak-requests/);
@@ -97,7 +97,7 @@ test("Synthetic emulator identity (not Google OAuth) → enrollment → next act
     .getByLabel("Mã của bạn", { exact: true })
     .fill("// private draft A\nfunction peakRequests(){ return 123; }");
   await page.getByRole("button", { name: "Lưu bản nháp" }).click();
-  await expect(page.getByRole("status")).toContainText("Đã đồng bộ");
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("Đã đồng bộ");
   await page.reload();
   await expect(page.getByLabel("Mã của bạn", { exact: true })).toContainText(
     "private draft A",
@@ -105,7 +105,7 @@ test("Synthetic emulator identity (not Google OAuth) → enrollment → next act
   await page
     .getByRole("button", { name: "Kiểm tra khả năng chấm", exact: true })
     .click();
-  await expect(page.getByRole("status")).toContainText(
+  await expect(page.locator(".satsunic-toast-content p")).toContainText(
     "Mã chưa được chạy hoặc chấm",
   );
   await page.screenshot({
@@ -180,7 +180,7 @@ test("DSA full reference graph, topic drawer, sets and workspace tabs", async ({
     "Đăng nhập để xem bài nộp",
   );
   await page.getByRole("button", { name: "Chạy", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("chưa được chạy");
+  await expect(page.locator(".satsunic-toast-content p")).toContainText("chưa được chạy");
   await page.getByRole("tab", { name: "Đề bài", exact: true }).click();
   await page.screenshot({
     path: "docs/evidence/reference-workspace.png",

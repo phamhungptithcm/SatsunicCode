@@ -1,3 +1,4 @@
+import { useActionNotice } from "../hooks/useToastNotice";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { httpsCallable } from "firebase/functions";
@@ -32,11 +33,11 @@ function Icon({ kind }: { kind: "send" | "close" | "chat" }) {
   );
 }
 
-export default function Assistant() {
+export default function Assistant({ collapsed = false, routeKey = "/" }: { collapsed?: boolean; routeKey?: string }) {
   const { locale, t } = useLanguage();
   const [draft, setDraft] = useState("");
   const [open, setOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(collapsed);
   const [closing, setClosing] = useState(false);
   const [hiding, setHiding] = useState(false);
   const [hint, setHint] = useState(false);
@@ -45,7 +46,7 @@ export default function Assistant() {
   const idleMotion = useRef<Animation | null>(null);
   const mounted = useRef(true);
   const [busy, setBusy] = useState(false);
-  const [status, setStatus] = useState("");
+  const { status, transient, setStatus } = useActionNotice();
   const dialog = useRef<HTMLDialogElement>(null);
   const idleInput = useRef<HTMLTextAreaElement>(null);
   const chatInput = useRef<HTMLTextAreaElement>(null);
@@ -71,6 +72,12 @@ export default function Assistant() {
     setBusy(false);
     setStatus("");
   }, [locale]);
+  useEffect(() => {
+    clearTimeout(timer.current);
+    motion.current?.cancel();idleMotion.current?.cancel();
+    request.current++;pending.current=false;
+    setBusy(false);setOpen(false);setClosing(false);setHiding(false);setHidden(collapsed);
+  }, [collapsed, routeKey]);
   function capsuleMask(element: HTMLDialogElement) {
     const box = element.querySelector("form")!.getBoundingClientRect();
     const panel = element.getBoundingClientRect();
@@ -210,7 +217,7 @@ export default function Assistant() {
     pending.current = true;
     setOpen(true);
     setBusy(true);
-    setStatus(t(text("Đang kết nối…", "Connecting…")));
+    setStatus(t(text("Đang kết nối…", "Connecting…")), "info", true);
     try {
       await authReady;
       if (id !== request.current) return;
@@ -224,7 +231,7 @@ export default function Assistant() {
           t(
             text("Không có nội dung được trả về.", "No response was returned."),
           ),
-        );
+         "warning");
     } catch {
       if (id === request.current)
         setStatus(
@@ -234,7 +241,7 @@ export default function Assistant() {
               "Ask Satsunic is currently unavailable. Your draft is preserved; no answer or history was saved.",
             ),
           ),
-        );
+         "warning");
     } finally {
       if (id === request.current) {
         pending.current = false;
@@ -319,7 +326,7 @@ export default function Assistant() {
           disabled={hiding}
           aria-label={t(text("Mở Ask Satsunic", "Open Ask Satsunic"))}
           title="Ask Satsunic"
-          onClick={() => setHidden(false)}
+          onClick={() => { if (collapsed) setOpen(true); else setHidden(false); }}
         >
           <Icon kind="chat" />
           <span className={styles.hint} aria-hidden="true">
@@ -376,7 +383,7 @@ export default function Assistant() {
               ),
             )}
           </p>
-          <p role="status" aria-live="polite" className={styles.status}>
+          <p role={transient ? undefined : "status"} aria-live={transient ? "off" : "polite"} className={styles.status}>
             {status}
           </p>
         </div>

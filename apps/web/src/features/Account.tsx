@@ -1,3 +1,4 @@
+import { useToastNotice } from "../hooks/useToastNotice";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -35,6 +36,7 @@ export default function Account({
         : location.pathname.endsWith("/submissions")
           ? "submissions"
           : "profile";
+  const { notify } = useToastNotice();
   const [rows, setRows] = useState<{ id: string; data: DocumentData }[]>([]),
     [state, setState] = useState("loading"),
     [filter, setFilter] = useState("");
@@ -139,6 +141,7 @@ export default function Account({
                   setStorageError(false);
                 } catch {
                   setStorageError(true);
+                  notify(t(text("Chưa lưu được tùy chọn. Trình duyệt có thể đang chặn bộ nhớ.", "The preference was not saved. Browser storage may be blocked.")), "error");
                 }
               }}
             >
@@ -149,7 +152,7 @@ export default function Account({
             </select>
           </div>
           {storageError && (
-            <p role="status">
+            <p>
               {t(
                 text(
                   "Chưa lưu được tùy chọn. Trình duyệt có thể đang chặn bộ nhớ.",

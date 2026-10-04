@@ -1,0 +1,7 @@
+# DSA selector completion
+
+Human requested polished layout and selector labels without NeetCode. Scope matches docs/plans/dsa-selector-polish.md. Names now Core 150 / Essentials 75 / All exercises, localized Vietnamese equivalents. Original membership/filter values and source attribution unchanged; names convey group scope, not authored/published/graded status. Enrollment label Start learning / Bắt đầu lộ trình retains existing authenticated enrollment callable. No security/auth/data/provider changes.
+
+Product review: Purpose selects exercise group; Agency preserves selector and action; Responsibility retains metadata/availability semantics; Familiarity uses standard native select; Flexibility VI/EN, keyboard/mobile; Simplicity shorter labels; Craft consistent 12px radii and 12px action gap; Delight restrained blue shadow/hover with reduced-motion. Applicable states focus/default/select/hover tested or source verified; enrollment failure semantics unchanged. No new success claim.
+
+Verification: typecheck and web build passed. Emulator browser test passed (13.3s): all three names, desktop1440/mobile390, focus spacing >=10px, equal widths, viewport bounds, selector mapping, axe summary no violations. Synthetic identity is local only. Fresh review cycle 1 no findings; no production release or live enrollment test performed. Optional repository indexes DEGRADED; formal runtime receipt unavailable. Token/cost unavailable; memory candidates None.

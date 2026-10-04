@@ -1,3 +1,4 @@
+import { useToastNotice } from "../hooks/useToastNotice";
 import { useEffect, useState } from "react";
 import { auth, googleClientId, googleOneTapReady } from "../firebase";
 import { startGoogleOneTap } from "../google-one-tap";
@@ -8,6 +9,7 @@ export default function OneTapController() {
     { ready, failed, promptVersion, suppressed } = useAccountControls(),
     { t } = useLanguage();
   const [error, setError] = useState(false);
+  const { notify } = useToastNotice();
   useEffect(() => {
     setError(false);
     if (
@@ -39,14 +41,8 @@ export default function OneTapController() {
       cleanup?.();
     };
   }, [ready, suppressed, user?.uid, promptVersion]);
-  return error || failed ? (
-    <aside className="one-tap-notice" role="status">
-      {t(
-        text(
-          "Đăng nhập Google chưa hoàn tất. Bạn có thể thử lại khi lưu bài tập.",
-          "Google sign-in did not complete. You can retry when saving a problem.",
-        ),
-      )}
-    </aside>
-  ) : null;
+  useEffect(() => {
+    if (error || failed) notify(t(text("Đăng nhập Google chưa hoàn tất. Bạn có thể thử lại khi lưu bài tập.", "Google sign-in did not complete. You can retry when saving a problem.")), "warning");
+  }, [error, failed, notify, t]);
+  return null;
 }

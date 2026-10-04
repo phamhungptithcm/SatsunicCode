@@ -4,8 +4,8 @@
       "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/node/bin/node",
       "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/.bin/playwright",
       "test",
-      "tests/e2e/workspace-session.spec.ts",
-      "tests/e2e/workspace.spec.ts"
+      "tests/e2e/toast-parity.spec.ts",
+      "--list"
     ],
     "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/playwright.config.ts",
     "rootDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
@@ -18,18 +18,14 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 1
-    },
+    "metadata": {},
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
+        "metadata": {},
         "id": "",
         "name": "",
         "testDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
@@ -71,89 +67,13 @@
   },
   "suites": [
     {
-      "title": "workspace-session.spec.ts",
-      "file": "workspace-session.spec.ts",
+      "title": "toast-parity.spec.ts",
+      "file": "toast-parity.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "workspace shares the application account across navigation, refresh and logout",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 636,
-                  "error": {
-                    "message": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30",
-                    "stack": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/workspace-session.spec.ts:9:14",
-                    "location": {
-                      "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                      "column": 101,
-                      "line": 5
-                    }
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                        "column": 101,
-                        "line": 5
-                      },
-                      "message": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/workspace-session.spec.ts:9:14"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:33.938Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/workspace-session-workspac-e6427-vigation-refresh-and-logout/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/workspace-session-workspac-e6427-vigation-refresh-and-logout/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                    "column": 101,
-                    "line": 5
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "43c30918daa7809ee0c8-4e6f8d1d20b0dce57e8e",
-          "file": "workspace-session.spec.ts",
-          "line": 3,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "workspace.spec.ts",
-      "file": "workspace.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "workspace restores independent drafts and exposes real hints/custom input",
+          "title": "kinds, single replacement, repeated messages and manual dismissal",
           "ok": true,
           "tags": [],
           "tests": [
@@ -163,31 +83,17 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2330,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:35.237Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "b163ed09f68681248ada-9c6e654d6b9732f2e693",
-          "file": "workspace.spec.ts",
-          "line": 9,
+          "id": "fb3a2701807f5520b444-f3bc21a1ddabd2b42d11",
+          "file": "toast-parity.spec.ts",
+          "line": 5,
           "column": 1
         },
         {
-          "title": "workspace handles external-tab conflict without overwriting editor",
+          "title": "pending holds beyond five seconds and stale cleanup preserves success",
           "ok": true,
           "tags": [],
           "tests": [
@@ -197,31 +103,17 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2017,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:37.707Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "b163ed09f68681248ada-c48eb2a672ccef5d1505",
-          "file": "workspace.spec.ts",
-          "line": 73,
+          "id": "fb3a2701807f5520b444-522d420c81b24ba992b8",
+          "file": "toast-parity.spec.ts",
+          "line": 17,
           "column": 1
         },
         {
-          "title": "Monaco loads selected runtimes, fills pane and releases route UI",
+          "title": "focus/hover pause countdown, action and modal portal remain usable",
           "ok": true,
           "tags": [],
           "tests": [
@@ -231,99 +123,17 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3446,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:39.735Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "b163ed09f68681248ada-7d9c559ca86d66013441",
-          "file": "workspace.spec.ts",
-          "line": 112,
+          "id": "fb3a2701807f5520b444-2109d0b3f08fb8b67a5d",
+          "file": "toast-parity.spec.ts",
+          "line": 25,
           "column": 1
         },
         {
-          "title": "emulator-only account sync stores and independently reloads authored draft",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 266,
-                  "error": {
-                    "message": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30",
-                    "stack": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/workspace.spec.ts:144:14",
-                    "location": {
-                      "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                      "column": 101,
-                      "line": 5
-                    }
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                        "column": 101,
-                        "line": 5
-                      },
-                      "message": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/workspace.spec.ts:144:14"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:43.194Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/workspace-emulator-only-ac-685ec-ntly-reloads-authored-draft/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/workspace-emulator-only-ac-685ec-ntly-reloads-authored-draft/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                    "column": 101,
-                    "line": 5
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "b163ed09f68681248ada-0763d604861c8e6f25de",
-          "file": "workspace.spec.ts",
-          "line": 140,
-          "column": 1
-        },
-        {
-          "title": "pane divider supports keyboard and pointer without altering drafts",
+          "title": "mobile VI, reduced motion and accessible toast",
           "ok": true,
           "tags": [],
           "tests": [
@@ -333,167 +143,13 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1134,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:43.901Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "b163ed09f68681248ada-9b3c19696e5723bce531",
-          "file": "workspace.spec.ts",
-          "line": 180,
-          "column": 1
-        },
-        {
-          "title": "50 language switches keep one editor and bounded worker instances (local fixture)",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3087,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "{\"environment\":\"local Vite development / headless Chromium\",\"editorReadyMs\":1761,\"switches\":50,\"workers\":{\"created\":40,\"active\":1}}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:45.155Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b163ed09f68681248ada-e7a1f426ec96e16790cd",
-          "file": "workspace.spec.ts",
-          "line": 198,
-          "column": 1
-        },
-        {
-          "title": "peak-requests local drafts survive refresh and cloud save remains real",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 342,
-                  "error": {
-                    "message": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30",
-                    "stack": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/workspace.spec.ts:255:14",
-                    "location": {
-                      "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                      "column": 101,
-                      "line": 5
-                    }
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                        "column": 101,
-                        "line": 5
-                      },
-                      "message": "Error: page.evaluate: Error: Emulator fixture only\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at Module.createSyntheticIdentity (http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts:5:101)\n    at eval (eval at evaluate (:311:30), <anonymous>:3:19)\n    at async <anonymous>:337:30\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/workspace.spec.ts:255:14"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:48.254Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/workspace-peak-requests-lo-c6eb1-and-cloud-save-remains-real/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/workspace-peak-requests-lo-c6eb1-and-cloud-save-remains-real/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "http://localhost:5173/@fs/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/fixtures/emulator-identity.ts",
-                    "column": 101,
-                    "line": 5
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "b163ed09f68681248ada-269defe73bb1caecd28b",
-          "file": "workspace.spec.ts",
-          "line": 251,
-          "column": 1
-        },
-        {
-          "title": "execution capability reports no configured runner and creates no verdict",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 901,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-04T03:40:49.033Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b163ed09f68681248ada-ae487d3dd9d72240f5ab",
-          "file": "workspace.spec.ts",
-          "line": 277,
+          "id": "fb3a2701807f5520b444-cda47257bcdcc9de50db",
+          "file": "toast-parity.spec.ts",
+          "line": 39,
           "column": 1
         }
       ]
@@ -501,11 +157,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T03:40:33.393Z",
-    "duration": 16707.989,
-    "expected": 6,
-    "skipped": 0,
-    "unexpected": 3,
+    "startTime": "2026-10-04T05:46:39.738Z",
+    "duration": 281.722,
+    "expected": 0,
+    "skipped": 4,
+    "unexpected": 0,
     "flaky": 0
   }
 }

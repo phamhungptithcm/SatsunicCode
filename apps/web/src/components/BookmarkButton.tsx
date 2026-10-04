@@ -1,3 +1,4 @@
+import { useToastNotice } from "../hooks/useToastNotice";
 import WorkspaceIcon from "../features/workspace/WorkspaceIcon";
 import { useEffect, useState } from "react";
 import { doc, onSnapshot, setDoc, serverTimestamp } from "firebase/firestore";
@@ -15,11 +16,10 @@ export default function BookmarkButton({
   const { requestGoogle } = useAccountControls();
   const { t } = useLanguage();
   const [starred, setStarred] = useState(false),
-    [busy, setBusy] = useState(false),
-    [error, setError] = useState(false);
+    [busy, setBusy] = useState(false);
+  const { notify, dismiss } = useToastNotice();
   useEffect(() => {
     setStarred(false);
-    setError(false);
     if (!user || user.isAnonymous) return;
     return onSnapshot(
       doc(db, `users/${user.uid}/bookmarks/${slug}`),
@@ -28,7 +28,7 @@ export default function BookmarkButton({
         if (!s.metadata.hasPendingWrites)
           setStarred(s.exists() && s.data().starred === true);
       },
-      () => setError(true),
+      () => notify(t(text("Chưa đọc được dấu đã lưu.", "Saved bookmarks could not be loaded.")), "error"),
     );
   }, [user?.uid, slug]);
   async function toggle() {
@@ -37,7 +37,7 @@ export default function BookmarkButton({
       return;
     }
     setBusy(true);
-    setError(false);
+    const noticeId = notify(t(text("Đang lưu dấu…", "Saving bookmark…")), "info", { pending: true });
     try {
       await setDoc(doc(db, `users/${user.uid}/bookmarks/${slug}`), {
         problemSlug: slug,
@@ -46,9 +46,11 @@ export default function BookmarkButton({
         changedDate: serverTimestamp(),
         schemaVersion: 1,
       });
+      notify(t(starred ? text("Đã bỏ dấu bài tập.", "Bookmark removed.") : text("Đã lưu dấu bài tập.", "Problem bookmarked.")), "success");
     } catch {
-      setError(true);
+      notify(t(text("Chưa lưu được dấu", "Bookmark not saved")), "error");
     } finally {
+      dismiss(noticeId);
       setBusy(false);
     }
   }
@@ -77,11 +79,7 @@ export default function BookmarkButton({
       >
         {workspace ? <WorkspaceIcon name="star" /> : starred ? "★" : "☆"}
       </button>
-      {error && (
-        <small role="status">
-          {t(text("Chưa lưu được dấu", "Bookmark not saved"))}
-        </small>
-      )}
+
     </span>
   );
 }

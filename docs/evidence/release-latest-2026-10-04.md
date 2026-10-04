@@ -1,0 +1,15 @@
+# Latest local checkpoint release review
+
+Human authorization: release all current work, commit and push to main (2026-10-04). Base: 95d5faae2dad2b4f2520fcecebb2e8a03c77d1e9; origin/main fetched and matched before commit. Scope is all current application/test/design/plan/evidence changes; Firebase cache and Python bytecode excluded. No infrastructure, secrets, auth policies, data migrations or dependency changes included.
+
+Source checkpoint includes HunpeoLabs toast handling, assistant presence on non-workspace routes, DSA selector polish and page-entry motion; community design remains a documented proposal. Existing product readiness limitations remain intact.
+
+Fresh checks: `npm run verify:local` passed TypeScript, 33 unit tests and web/functions builds. `npx vitest run --config vitest.rules.config.ts` passed 10 Rules tests on existing local demo emulators. Initial emulator startup failed due occupied ports; direct test initially hit sandbox EPERM, then authorized local-network rerun passed. No live database writes. Staged diff whitespace check passed; bounded secret-pattern scan found no matches in 41 staged files before this report. This is not an exhaustive security audit.
+
+Repository intelligence DEGRADED (stale indexes/semantic health failure); bounded source/Git/compiler/test evidence used. Review dimensions: scope and compatibility checked; notification lifecycle/error cleanup and existing durable recovery reviewed; no auth/data/backend changes; build and timer/rules tests passed. Prior toast source-review findings were fixed and verified. Browser UI regression, product-language in-context acceptance and provider/production workflows remain unverified. Browser security rejection was not bypassed. Historical UI evidence is not current release certification.
+
+Final review cycle for release: BLOCKED. `node scripts/release-gate.mjs` returns NOT_READY/exit1 because live Gemini, approved runner, multi-user Firebase collaboration, required content, privacy review, restore drill and complete acceptance remain unverified. Repository policy requires current passed final review and required quality gates before production readiness. Do not weaken or skip this gate. Git publication is a source checkpoint, not a production deployment or readiness claim. CI contains a deliberately failing release-readiness job; expect NOT_READY until its criteria are satisfied.
+
+Production rollout: NOT EXECUTED; Firebase Hosting/Functions/Rules unchanged. Remaining work: resolve product release criteria and obtain current allowed UI verification; rerun release gates and final review before deployment. Rollback for a future approved deploy must retain previous Hosting version and use a compensating Git revert rather than force-pushing main. Existing base Hosting release remains the rollback lineage.
+
+Task progress: local validation verified; Git checkpoint publication pending command/readback; production blocked. Token usage, actual billed cost and API-equivalent estimate Unavailable. Memory candidates None. No successful production handoff claimed.

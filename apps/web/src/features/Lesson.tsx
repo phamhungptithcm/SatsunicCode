@@ -1,8 +1,10 @@
+import { useLearningActivity } from "../hooks/useLearningActivity";
 import { Link, useParams } from "react-router-dom";
 import { useLanguage, text } from "../i18n";
 export default function Lesson() {
   const { lessonSlug } = useParams();
   const { t } = useLanguage();
+  useLearningActivity(lessonSlug === "request-window" ? "/learn/request-window" : null);
   if (lessonSlug !== "request-window")
     return <h1>{t(text("Không tìm thấy bài học", "Lesson not found"))}</h1>;
   return (

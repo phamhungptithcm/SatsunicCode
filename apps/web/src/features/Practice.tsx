@@ -1,3 +1,4 @@
+import { useLearningActivity } from "../hooks/useLearningActivity";
 import { useActionNotice } from "../hooks/useToastNotice";
 import GoogleAction from "../components/GoogleAction";
 import { lazy, Suspense, useEffect, useState } from "react";
@@ -22,6 +23,7 @@ import { draftKey } from "./workspace/drafts";
 const CodeEditor = lazy(() => import("./CodeEditor"));
 type Language = Draft["language"];
 function Workspace({ language }: { language: Language }) {
+  useLearningActivity("/practice/peak-requests");
   const user = useSession();
   const { t, locale } = useLanguage();
   const { status, transient, setStatus } = useActionNotice();

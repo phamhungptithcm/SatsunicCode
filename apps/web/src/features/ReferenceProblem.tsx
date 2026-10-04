@@ -1,3 +1,4 @@
+import { useLearningActivity } from "../hooks/useLearningActivity";
 import { useActionNotice } from "../hooks/useToastNotice";
 import WorkspaceIcon from "./workspace/WorkspaceIcon";
 import GoogleAction from "../components/GoogleAction";
@@ -20,6 +21,7 @@ import SubmissionHistory from "./workspace/SubmissionHistory";
 import CloudDraftControls from "./workspace/CloudDraftControls";
 const Editor = lazy(() => import("./CodeEditor"));
 export default function ReferenceProblem({ problem }: { problem: DsaProblem }) {
+  useLearningActivity(`/practice/${problem.slug}`);
   const user = useSession();
   const [language, setLanguage] = useState("python");
   return (

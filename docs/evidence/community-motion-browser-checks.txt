@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+(node:16730) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/community.spec.ts:257:1 › community real UI → company suggestion → moderation → review → compensation → withdraw (28.0s)
+  ✓  2 tests/e2e/community.spec.ts:479:1 › guest company/salary/progress, mobile icons, dark mode and reduced motion (2.8s)
+  ✓  3 tests/e2e/progress.spec.ts:3:1 › self-reported progress persists and resumes real lesson, keyboard/mobile/locale (2.2s)
+  ✓  4 tests/e2e/shared-layout.spec.ts:2:1 › shared chrome on pages, excluded only on code workspace; roadmap copy removed (1.6s)
+  ✓  5 tests/e2e/workspace-session.spec.ts:3:1 › workspace shares the application account across navigation, refresh and logout (2.3s)
+
+  5 passed (38.7s)

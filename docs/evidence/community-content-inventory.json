@@ -1,0 +1,2090 @@
+[
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 38,
+    "vi": "\"Đăng nhập để đóng góp\"",
+    "en": "\"Sign in to contribute\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 41,
+    "vi": "\"Đọc nội dung công khai không cần đăng nhập.\"",
+    "en": "\"You can browse public content without signing in.\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 48,
+    "vi": "\"Đăng nhập bằng Google\"",
+    "en": "\"Sign in with Google\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 87,
+    "vi": "\"Đóng form\"",
+    "en": "\"Close form\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 88,
+    "vi": "\"Đóng form\"",
+    "en": "\"Close form\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 125,
+    "vi": "\"Thử lại\"",
+    "en": "\"Try again\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 174,
+    "vi": "\"Đã lưu thay đổi.\"",
+    "en": "\"Changes saved.\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 196,
+    "vi": "\"Bản nháp\"",
+    "en": "\"Draft\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 197,
+    "vi": "\"Đang chờ duyệt\"",
+    "en": "\"Pending review\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 198,
+    "vi": "\"Đã duyệt\"",
+    "en": "\"Published\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 199,
+    "vi": "\"Không được duyệt\"",
+    "en": "\"Rejected\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 200,
+    "vi": "\"Cần chỉnh sửa\"",
+    "en": "\"Changes requested\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 201,
+    "vi": "\"Đã rút\"",
+    "en": "\"Withdrawn\""
+  },
+  {
+    "file": "apps/web/src/features/community/shared.tsx",
+    "line": 202,
+    "vi": "\"Đang xem xét lại\"",
+    "en": "\"Appeal pending\""
+  },
+  {
+    "file": "apps/web/src/features/community/FormStepper.tsx",
+    "line": 80,
+    "vi": "\"Các bước nhập thông tin\"",
+    "en": "\"Form steps\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 28,
+    "vi": "\"Kỹ sư phần mềm\"",
+    "en": "\"Software engineer\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 29,
+    "vi": "\"Kỹ sư dữ liệu\"",
+    "en": "\"Data engineer\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 30,
+    "vi": "\"Thiết kế\"",
+    "en": "\"Designer\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 33,
+    "vi": "\"Junior\"",
+    "en": "\"Junior\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 34,
+    "vi": "\"Mid-level\"",
+    "en": "\"Mid-level\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 35,
+    "vi": "\"Senior\"",
+    "en": "\"Senior\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 36,
+    "vi": "\"Lead\"",
+    "en": "\"Lead\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 39,
+    "vi": "\"Việt Nam\"",
+    "en": "\"Vietnam\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 40,
+    "vi": "\"Hoa Kỳ\"",
+    "en": "\"United States\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 43,
+    "vi": "\"Toàn thời gian\"",
+    "en": "\"Full-time\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 44,
+    "vi": "\"Hợp đồng\"",
+    "en": "\"Contract\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 76,
+    "vi": "\"Đã gửi đề xuất. Công ty đang chờ duyệt.\"",
+    "en": "\"Suggestion sent. The company is awaiting review.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 92,
+    "vi": "\"Đề xuất công ty\"",
+    "en": "\"Suggest a company\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 99,
+    "vi": "\"Tên công ty\"",
+    "en": "\"Company name\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 114,
+    "vi": "\"Ngành\"",
+    "en": "\"Industry\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 128,
+    "vi": "\"Quốc gia\"",
+    "en": "\"Country\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 144,
+    "vi": "\"Đề xuất được duyệt trước khi xuất hiện trong danh mục.\"",
+    "en": "\"Suggestions are reviewed before appearing in the directory.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 153,
+    "vi": "\"Công ty đã có trong danh mục.\"",
+    "en": "\"This company is already listed.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 159,
+    "vi": "\"Xem công ty\"",
+    "en": "\"View company\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 166,
+    "vi": "\"Nhập tên công ty và ngành nghề.\"",
+    "en": "\"Enter company name and industry.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 177,
+    "vi": "\"Đóng\"",
+    "en": "\"Close\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 181,
+    "vi": "\"Đang gửi…\"",
+    "en": "\"Sending…\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 182,
+    "vi": "\"Gửi đề xuất\"",
+    "en": "\"Send suggestion\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 300,
+    "vi": "\"Đã gửi đánh giá, đang chờ duyệt.\"",
+    "en": "\"Review sent and awaiting moderation.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 331,
+    "vi": "\"Chia sẻ trải nghiệm\"",
+    "en": "\"Share your experience\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 347,
+    "vi": "\"Bối cảnh\"",
+    "en": "\"Context\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 348,
+    "vi": "\"Nội dung\"",
+    "en": "\"Experience\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 349,
+    "vi": "\"Xem lại\"",
+    "en": "\"Review\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 363,
+    "vi": "\"Bối cảnh trải nghiệm\"",
+    "en": "\"Experience context\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 367,
+    "vi": "\"Loại trải nghiệm\"",
+    "en": "\"Experience type\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 385,
+    "vi": "\"Làm việc\"",
+    "en": "\"Employment\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 388,
+    "vi": "\"Phỏng vấn\"",
+    "en": "\"Interview\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 392,
+    "vi": "\"Trạng thái\"",
+    "en": "\"Status\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 404,
+    "vi": "\"Ứng viên\"",
+    "en": "\"Candidate\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 409,
+    "vi": "\"Đang làm việc\"",
+    "en": "\"Current employee\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 412,
+    "vi": "\"Đã nghỉ việc\"",
+    "en": "\"Former employee\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 420,
+    "vi": "\"Nhóm vị trí · Không bắt buộc\"",
+    "en": "\"Role family · Optional\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 435,
+    "vi": "\"Năm trải nghiệm\"",
+    "en": "\"Experience year\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 454,
+    "vi": "\"Điều bạn muốn chia sẻ\"",
+    "en": "\"What you want to share\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 461,
+    "vi": "\"Đánh giá trải nghiệm phỏng vấn\"",
+    "en": "\"Interview experience rating\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 465,
+    "vi": "\"Đánh giá tổng thể\"",
+    "en": "\"Overall rating\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 484,
+    "vi": "\"Văn hóa · Không bắt buộc\"",
+    "en": "\"Culture · Optional\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 488,
+    "vi": "\"Phát triển · Không bắt buộc\"",
+    "en": "\"Growth · Optional\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 503,
+    "vi": "\"Không đánh giá\"",
+    "en": "\"Not rated\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 511,
+    "vi": "\"Một câu tóm tắt\"",
+    "en": "\"Headline\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 523,
+    "vi": "\"Điểm tốt / Trải nghiệm tích cực\"",
+    "en": "\"Positives / Positive experience\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 539,
+    "vi": "\"Điều có thể cải thiện\"",
+    "en": "\"What could improve\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 557,
+    "vi": "\"Làm việc\"",
+    "en": "\"Employment\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 558,
+    "vi": "\"Phỏng vấn\"",
+    "en": "\"Interview\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 568,
+    "vi": "\"Gửi bài sẽ chuyển sang chờ duyệt. Sửa bài đã công khai sẽ gỡ bản cũ cho tới khi duyệt lại.\"",
+    "en": "\"Sending puts the review into moderation. Editing a published review removes the old version until it is reviewed again.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 580,
+    "vi": "\"Tên và email tài khoản không công khai. Nội dung vẫn có thể khiến người khác nhận ra bạn. Tránh tên cá nhân, thông tin liên hệ và tài liệu mật.\"",
+    "en": "\"Your name and email are not public. Your content may still identify you. Avoid personal names, contact details and confidential material.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 596,
+    "vi": "\"Tôi chia sẻ trải nghiệm của mình và tuân thủ hướng dẫn trên.\"",
+    "en": "\"I am sharing my own experience and following the guidance above.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 606,
+    "vi": "\"Kiểm tra nội dung và độ dài các trường.\"",
+    "en": "\"Check your entries and field lengths.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 616,
+    "vi": "\"Đang đọc đánh giá của bạn…\"",
+    "en": "\"Loading your review…\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 622,
+    "vi": "\"Chưa đọc được đánh giá. Đóng và mở lại form để thử lại.\"",
+    "en": "\"Your review could not be loaded. Close and reopen the form to retry.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 636,
+    "vi": "\"Quay lại bước trước\"",
+    "en": "\"Previous step\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 637,
+    "vi": "\"Quay lại bước trước\"",
+    "en": "\"Previous step\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 647,
+    "vi": "\"Đang gửi…\"",
+    "en": "\"Sending…\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 649,
+    "vi": "\"Gửi đánh giá\"",
+    "en": "\"Send review\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 651,
+    "vi": "\"Xem trước\"",
+    "en": "\"Preview\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 652,
+    "vi": "\"Tiếp tục\"",
+    "en": "\"Continue\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 761,
+    "vi": "\"Đã gửi thông tin thu nhập, đang chờ duyệt.\"",
+    "en": "\"Compensation sent and awaiting moderation.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 774,
+    "vi": "\"Chưa đủ thành phần\"",
+    "en": "\"Incomplete components\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 783,
+    "vi": "\"Chia sẻ thu nhập\"",
+    "en": "\"Share compensation\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 799,
+    "vi": "\"Bối cảnh\"",
+    "en": "\"Context\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 800,
+    "vi": "\"Thu nhập\"",
+    "en": "\"Amounts\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 801,
+    "vi": "\"Xem lại\"",
+    "en": "\"Review\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 811,
+    "vi": "\"Nhóm công việc\"",
+    "en": "\"Job context\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 817,
+    "vi": "\"Vị trí\"",
+    "en": "\"Role\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 818,
+    "vi": "\"Cấp bậc\"",
+    "en": "\"Level\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 819,
+    "vi": "\"Quốc gia\"",
+    "en": "\"Country\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 823,
+    "vi": "\"Hình thức làm việc\"",
+    "en": "\"Employment type\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 841,
+    "vi": "\"Kinh nghiệm (năm)\"",
+    "en": "\"Experience (years)\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 857,
+    "vi": "\"Năm dữ liệu\"",
+    "en": "\"Reporting year\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 874,
+    "vi": "\"Lương cơ bản\"",
+    "en": "\"Base salary\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 878,
+    "vi": "\"Số tiền mỗi kỳ\"",
+    "en": "\"Amount per pay period\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 889,
+    "vi": "\"Tiền tệ\"",
+    "en": "\"Currency\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 901,
+    "vi": "\"Kỳ lương\"",
+    "en": "\"Pay period\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 915,
+    "vi": "\"Theo tháng\"",
+    "en": "\"Monthly\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 918,
+    "vi": "\"Theo năm\"",
+    "en": "\"Annual\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 925,
+    "vi": "\"Số kỳ bảo đảm mỗi năm\"",
+    "en": "\"Guaranteed pay periods per year\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 942,
+    "vi": "\"Cách tính\"",
+    "en": "\"Tax basis\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 951,
+    "vi": "\"Trước thuế\"",
+    "en": "\"Gross\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 953,
+    "vi": "\"Sau thuế\"",
+    "en": "\"Net\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 961,
+    "vi": "\"Các khoản bổ sung\"",
+    "en": "\"Additional components\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 964,
+    "vi": "\"Thưởng năm\"",
+    "en": "\"Annual bonus\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 970,
+    "vi": "\"Chưa biết → để trống\"",
+    "en": "\"Unknown → leave blank\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 981,
+    "vi": "\"Loại thưởng\"",
+    "en": "\"Bonus basis\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 989,
+    "vi": "\"Thực nhận\"",
+    "en": "\"Actual\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 992,
+    "vi": "\"Mục tiêu\"",
+    "en": "\"Target\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1000,
+    "vi": "\"Cổ phần nhận trong năm\"",
+    "en": "\"Annual vested equity\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1004,
+    "vi": "\"Thưởng nhận việc · Một lần\"",
+    "en": "\"Sign-on bonus · One-time\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1017,
+    "vi": "\"Chưa biết → để trống\"",
+    "en": "\"Unknown → leave blank\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1033,
+    "vi": "\"Cổ phần chỉ tính phần nhận trong năm, không phải toàn bộ grant. Nhập 0 nếu chắc chắn không có; để trống nếu chưa biết.\"",
+    "en": "\"Equity means the amount vested in the year, not the full grant. Enter 0 if none; leave blank if unknown.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1046,
+    "vi": "\"Sửa đóng góp sẽ chuyển về chờ duyệt; thống kê liên quan có thể tạm ngừng hiển thị.\"",
+    "en": "\"Editing returns your contribution to moderation; related statistics may be withheld.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1054,
+    "vi": "\"Xem trước chuẩn hóa\"",
+    "en": "\"Normalization preview\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1057,
+    "vi": "\"Lương cơ bản năm\"",
+    "en": "\"Annual base\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1060,
+    "vi": "\"Thu nhập định kỳ\"",
+    "en": "\"Recurring compensation\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1064,
+    "vi": "\"Thu nhập năm đầu\"",
+    "en": "\"First-year compensation\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1070,
+    "vi": "\"Thông tin chi tiết được lưu riêng. Chỉ thống kê đủ điều kiện được công khai.\"",
+    "en": "\"Details stay private. Only eligible aggregates are published.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1086,
+    "vi": "\"Tôi đồng ý đóng góp cho thống kê theo nhóm sau khi được duyệt.\"",
+    "en": "\"I agree to contribute to cohort statistics after moderation.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1096,
+    "vi": "\"Kiểm tra số tiền, năm và kỳ lương.\"",
+    "en": "\"Check amounts, year and pay periods.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1111,
+    "vi": "\"Quay lại\"",
+    "en": "\"Back\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1112,
+    "vi": "\"Để sau\"",
+    "en": "\"Later\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1119,
+    "vi": "\"Đang gửi…\"",
+    "en": "\"Sending…\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1121,
+    "vi": "\"Gửi thông tin\"",
+    "en": "\"Send compensation\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1123,
+    "vi": "\"Xem trước\"",
+    "en": "\"Preview\""
+  },
+  {
+    "file": "apps/web/src/features/community/Forms.tsx",
+    "line": 1124,
+    "vi": "\"Tiếp tục\"",
+    "en": "\"Continue\""
+  },
+  {
+    "file": "apps/web/src/features/community/Autocomplete.tsx",
+    "line": 184,
+    "vi": "\"Không có gợi ý. Bạn có thể nhập mới.\"",
+    "en": "\"No suggestions. You can enter a new value.\""
+  },
+  {
+    "file": "apps/web/src/features/community/Autocomplete.tsx",
+    "line": 190,
+    "vi": "\"Không tìm thấy trong danh sách đã tải.\"",
+    "en": "\"No match in the loaded list.\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 42,
+    "vi": "\"Hiểu công ty.\"",
+    "en": "\"Know the company.\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 45,
+    "vi": "\"Chọn nơi phù hợp.\"",
+    "en": "\"Find your fit.\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 50,
+    "vi": "\"Góc nhìn từ người đã làm việc và phỏng vấn. Để quyết định tiếp theo có thêm cơ sở.\"",
+    "en": "\"Experiences from employees and interview candidates, to inform your next decision.\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 62,
+    "vi": "\"Tìm trong công ty đã tải\"",
+    "en": "\"Search loaded companies\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 66,
+    "vi": "\"Tìm trong công ty đã tải…\"",
+    "en": "\"Search loaded companies…\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 74,
+    "vi": "\"Đề xuất công ty\"",
+    "en": "\"Suggest company\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 80,
+    "vi": "\"Đang tải công ty…\"",
+    "en": "\"Loading companies…\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 89,
+    "vi": "\"Không có kết quả trong danh sách đã tải\"",
+    "en": "\"No matches in the loaded list\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 93,
+    "vi": "\"Chưa có công ty trong danh mục\"",
+    "en": "\"No companies in the directory yet\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 101,
+    "vi": "\"Bạn có thể đề xuất công ty để được duyệt.\"",
+    "en": "\"Suggest a company for review.\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 124,
+    "vi": "\"Thông tin từ đề xuất cộng đồng\"",
+    "en": "\"Community-suggested information\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 140,
+    "vi": "\"Tải thêm công ty\"",
+    "en": "\"Load more companies\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 147,
+    "vi": "\"GÓC NHÌN CỦA BẠN\"",
+    "en": "\"YOUR EXPERIENCE\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 149,
+    "vi": "\"Một đóng góp hữu ích\"",
+    "en": "\"A useful contribution\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 153,
+    "vi": "\"Tìm hoặc đề xuất công ty\"",
+    "en": "\"Find or suggest a company\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 158,
+    "vi": "\"Viết trải nghiệm của bạn\"",
+    "en": "\"Write about your experience\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 166,
+    "vi": "\"Xem trước rồi gửi duyệt\"",
+    "en": "\"Preview and submit for moderation\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 177,
+    "vi": "\"Không đưa tên cá nhân hoặc thông tin mật vào bài. Nội dung vẫn có thể nhận diện bạn.\"",
+    "en": "\"Avoid personal names and confidential details. Your content may still identify you.\""
+  },
+  {
+    "file": "apps/web/src/features/Companies.tsx",
+    "line": 187,
+    "vi": "\"Đóng góp của tôi\"",
+    "en": "\"My contributions\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 67,
+    "vi": "\"Danh mục công ty\"",
+    "en": "\"Company directory\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 71,
+    "vi": "\"Đang tải công ty…\"",
+    "en": "\"Loading company…\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 74,
+    "vi": "\"Không tìm thấy công ty\"",
+    "en": "\"Company not found\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 81,
+    "vi": "\"Thông tin từ cộng đồng\"",
+    "en": "\"Community-suggested information\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 91,
+    "vi": "\"Trải nghiệm làm việc\"",
+    "en": "\"Employment reviews\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 95,
+    "vi": "\"Trải nghiệm phỏng vấn\"",
+    "en": "\"Interview reviews\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 106,
+    "vi": "\"Chưa có đánh giá\"",
+    "en": "\"No ratings yet\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 111,
+    "vi": "\"đánh giá đã duyệt\"",
+    "en": "\"published reviews\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 116,
+    "vi": "\"Phân bố đánh giá từ 1 đến 5 sao\"",
+    "en": "\"Rating distribution from 1 to 5 stars\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 140,
+    "vi": "\"Trải nghiệm\"",
+    "en": "\"Experience\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 146,
+    "vi": "\"Tất cả bài đã tải\"",
+    "en": "\"All loaded reviews\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 149,
+    "vi": "\"Làm việc\"",
+    "en": "\"Employment\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 152,
+    "vi": "\"Phỏng vấn\"",
+    "en": "\"Interview\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 158,
+    "vi": "\"Viết đánh giá\"",
+    "en": "\"Write a review\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 163,
+    "vi": "\"Đánh giá tự khai báo, được duyệt nội dung; không đồng nghĩa xác minh việc làm.\"",
+    "en": "\"Reviews are self-reported and content-moderated; employment is not verified.\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 174,
+    "vi": "\"Chưa có đánh giá được công khai\"",
+    "en": "\"No published reviews yet\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 182,
+    "vi": "\"Chia sẻ một trải nghiệm hữu ích.\"",
+    "en": "\"Share a useful experience.\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 200,
+    "vi": "\"Không nêu vị trí\"",
+    "en": "\"Role not shared\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 204,
+    "vi": "\"Phỏng vấn\"",
+    "en": "\"Interview\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 206,
+    "vi": "\"Nhân viên hiện tại\"",
+    "en": "\"Current employee\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 207,
+    "vi": "\"Nhân viên cũ\"",
+    "en": "\"Former employee\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 214,
+    "vi": "\"Điểm tốt\"",
+    "en": "\"Positives\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 216,
+    "vi": "\"Cần cải thiện\"",
+    "en": "\"Could improve\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 221,
+    "vi": "\"Văn hóa\"",
+    "en": "\"Culture\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 223,
+    "vi": "\"Không đánh giá\"",
+    "en": "\"Not rated\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 224,
+    "vi": "\"Phát triển\"",
+    "en": "\"Growth\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 226,
+    "vi": "\"Không đánh giá\"",
+    "en": "\"Not rated\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 243,
+    "vi": "\"Đã ghi nhận bình chọn.\"",
+    "en": "\"Vote recorded.\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 252,
+    "vi": "\"Hữu ích\"",
+    "en": "\"Helpful\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 257,
+    "vi": "\"Đăng nhập để bình chọn\"",
+    "en": "\"Sign in to vote\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 262,
+    "vi": "\"Báo cáo đánh giá\"",
+    "en": "\"Report review\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 264,
+    "vi": "\"Báo cáo đánh giá\"",
+    "en": "\"Report review\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 284,
+    "vi": "\"Tải thêm đánh giá\"",
+    "en": "\"Load more reviews\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 290,
+    "vi": "\"Góc nhìn của bạn\"",
+    "en": "\"Your experience\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 293,
+    "vi": "\"Nhân viên, cựu nhân viên hoặc ứng viên đều có thể đóng góp.\"",
+    "en": "\"Employees, former employees and candidates can contribute.\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 301,
+    "vi": "\"Bối cảnh trải nghiệm\"",
+    "en": "\"Experience context\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 304,
+    "vi": "\"Điểm tốt và góp ý\"",
+    "en": "\"Positives and suggestions\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 306,
+    "vi": "\"Xem trước rồi gửi\"",
+    "en": "\"Preview and send\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 310,
+    "vi": "\"Viết đánh giá\"",
+    "en": "\"Write a review\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 318,
+    "vi": "\"Thu nhập tại công ty\"",
+    "en": "\"Company compensation\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 325,
+    "vi": "\"Đóng góp của tôi\"",
+    "en": "\"My contributions\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 341,
+    "vi": "\"Báo cáo đánh giá\"",
+    "en": "\"Report review\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 360,
+    "vi": "\"Báo cáo đã gửi riêng cho người duyệt.\"",
+    "en": "\"Report sent privately to moderators.\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 369,
+    "vi": "\"Lý do báo cáo\"",
+    "en": "\"Report reason\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 381,
+    "vi": "\"Gửi báo cáo\"",
+    "en": "\"Send report\""
+  },
+  {
+    "file": "apps/web/src/features/CompanyDetail.tsx",
+    "line": 388,
+    "vi": "\"Đăng nhập để báo cáo\"",
+    "en": "\"Sign in to report\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 113,
+    "vi": "\"Hiểu mức thu nhập.\"",
+    "en": "\"Understand compensation.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 116,
+    "vi": "\"So sánh đúng nhóm.\"",
+    "en": "\"Compare like with like.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 121,
+    "vi": "\"Cùng công việc, cùng cách tính. Thống kê từ đóng góp đã được duyệt.\"",
+    "en": "\"The same job context and compensation basis. Statistics from moderated contributions.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 131,
+    "vi": "\"Nhóm bạn muốn so sánh\"",
+    "en": "\"Your comparison cohort\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 134,
+    "vi": "\"Theo năm\"",
+    "en": "\"Annual\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 140,
+    "vi": "\"Công ty\"",
+    "en": "\"Company\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 147,
+    "vi": "\"Vị trí\"",
+    "en": "\"Role\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 148,
+    "vi": "\"Cấp bậc\"",
+    "en": "\"Level\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 149,
+    "vi": "\"Quốc gia\"",
+    "en": "\"Country\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 153,
+    "vi": "\"Hình thức làm việc\"",
+    "en": "\"Employment type\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 172,
+    "vi": "\"Tiền tệ\"",
+    "en": "\"Currency\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 186,
+    "vi": "\"Năm dữ liệu\"",
+    "en": "\"Reporting year\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 201,
+    "vi": "\"Cách tính\"",
+    "en": "\"Tax basis\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 211,
+    "vi": "\"Trước thuế\"",
+    "en": "\"Gross\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 212,
+    "vi": "\"Sau thuế\"",
+    "en": "\"Net\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 232,
+    "vi": "\"Tải thêm công ty\"",
+    "en": "\"Load more companies\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 238,
+    "vi": "\"Đang đọc thống kê…\"",
+    "en": "\"Loading statistics…\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 247,
+    "vi": "\"Chưa đủ dữ liệu để hiển thị\"",
+    "en": "\"Not enough data to display\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 255,
+    "vi": "\"Chỉ hiển thị nhóm đủ người đóng góp và đáp ứng điều kiện bảo vệ thông tin.\"",
+    "en": "\"Only cohorts with enough contributors and safe publication conditions are shown.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 264,
+    "vi": "\"Đóng góp thu nhập\"",
+    "en": "\"Contribute compensation\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 269,
+    "vi": "\"Tìm hoặc đề xuất công ty\"",
+    "en": "\"Find or suggest a company\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 281,
+    "vi": "\"LƯƠNG CƠ BẢN NĂM · TRUNG VỊ\"",
+    "en": "\"ANNUAL BASE · MEDIAN\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 286,
+    "vi": "\"Phân vị 25–75\"",
+    "en": "\"25th–75th percentile\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 292,
+    "vi": "\"Thu nhập định kỳ · Trung vị\"",
+    "en": "\"Recurring compensation · Median\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 300,
+    "vi": "\"Chưa đủ thành phần\"",
+    "en": "\"Incomplete components\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 305,
+    "vi": "\"Số người đóng góp (khoảng)\"",
+    "en": "\"Contributor count (band)\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 315,
+    "vi": "\"Tự khai báo · Làm tròn · Không đại diện đầy đủ cho thị trường. Bản chụp dữ liệu theo tuần; thay đổi có thể chưa được công bố.\"",
+    "en": "\"Self-reported · Rounded · Not representative of the entire market. Weekly snapshots; changes may not yet be published.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 334,
+    "vi": "\"ĐỌC SỐ LIỆU ĐÚNG\"",
+    "en": "\"READ THE NUMBERS\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 338,
+    "vi": "\"Thu nhập gồm những gì?\"",
+    "en": "\"What counts as compensation?\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 344,
+    "vi": "\"Lương cơ bản năm\"",
+    "en": "\"Annual base\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 345,
+    "vi": "\"Lương mỗi kỳ × số kỳ được bảo đảm trong năm.\"",
+    "en": "\"Pay per period × guaranteed annual pay periods.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 352,
+    "vi": "\"Thưởng & cổ phần\"",
+    "en": "\"Bonus & equity\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 353,
+    "vi": "\"Thưởng thực nhận và cổ phần nhận trong năm, không phải toàn bộ grant.\"",
+    "en": "\"Actual annual bonus and vested equity, not the full grant.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 360,
+    "vi": "\"Thưởng nhận việc\"",
+    "en": "\"Sign-on bonus\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 361,
+    "vi": "\"Khoản một lần, tách khỏi thu nhập định kỳ.\"",
+    "en": "\"A one-time amount, separate from recurring compensation.\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 379,
+    "vi": "\"Chia sẻ thu nhập\"",
+    "en": "\"Share compensation\""
+  },
+  {
+    "file": "apps/web/src/features/Salaries.tsx",
+    "line": 383,
+    "vi": "\"Đóng góp của tôi\"",
+    "en": "\"My contributions\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 21,
+    "vi": "\"Chưa bắt đầu\"",
+    "en": "\"Not started\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 22,
+    "vi": "\"Đang học\"",
+    "en": "\"Learning\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 23,
+    "vi": "\"Đã xem lại\"",
+    "en": "\"Reviewed\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 24,
+    "vi": "\"Cần ôn lại\"",
+    "en": "\"Needs review\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 56,
+    "vi": "\"Giữ nhịp học.\"",
+    "en": "\"Keep learning.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 59,
+    "vi": "\"Tiếp tục từng bước.\"",
+    "en": "\"One step at a time.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 64,
+    "vi": "\"Bài đang học, điều cần ôn và bản nháp của bạn. Tập trung vào bước tiếp theo.\"",
+    "en": "\"Your learning topics, review needs and drafts. Focus on your next step.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 74,
+    "vi": "\"Đang đọc tiến độ…\"",
+    "en": "\"Loading progress…\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 84,
+    "vi": "\"DSA · Tự ghi nhận\"",
+    "en": "\"DSA · Self-reported\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 89,
+    "vi": "\"Tiếp tục từ nơi bạn dừng lại\"",
+    "en": "\"Continue where you left off\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 94,
+    "vi": "\"Bắt đầu một bài học\"",
+    "en": "\"Start a lesson\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 98,
+    "vi": "\"Mở bài không đồng nghĩa đã hoàn thành.\"",
+    "en": "\"Opening a lesson does not mean it is completed.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 105,
+    "vi": "\"Mảng\"",
+    "en": "\"Arrays\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 107,
+    "vi": "\"Bảng băm\"",
+    "en": "\"Hashing\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 109,
+    "vi": "\"Hai con trỏ\"",
+    "en": "\"Two pointers\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 120,
+    "vi": "\"Tiếp tục học\"",
+    "en": "\"Continue learning\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 126,
+    "vi": "\"Việc học của tôi\"",
+    "en": "\"My learning\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 128,
+    "vi": "\"Tự ghi nhận\"",
+    "en": "\"Self-reported\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 145,
+    "vi": "\"Trạng thái tự ghi nhận\"",
+    "en": "\"Self-reported status\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 190,
+    "vi": "\"Bạn có thể đổi lại trạng thái. Việc tự ghi nhận không tạo bằng chứng được chấm.\"",
+    "en": "\"You can change a status again. Self-reported learning does not create graded evidence.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 200,
+    "vi": "\"Mở lại nhanh\"",
+    "en": "\"Quick access\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 211,
+    "vi": "\"Bản nháp\"",
+    "en": "\"Draft\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 226,
+    "vi": "\"Bài đã lưu\"",
+    "en": "\"Saved problem\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 234,
+    "vi": "\"Chưa có bản nháp hoặc bài đã lưu.\"",
+    "en": "\"No drafts or saved problems yet.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 242,
+    "vi": "\"Tất cả bài đã lưu\"",
+    "en": "\"All saved problems\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 247,
+    "vi": "\"Kết quả được chấm\"",
+    "en": "\"Graded results\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 251,
+    "vi": "\"Chấm code chưa khả dụng\"",
+    "en": "\"Code grading is unavailable\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 259,
+    "vi": "\"Đọc bài hoặc lưu bản nháp không tạo kết quả đã giải.\"",
+    "en": "\"Reading or saving a draft does not create a solved result.\""
+  },
+  {
+    "file": "apps/web/src/features/Progress.tsx",
+    "line": 268,
+    "vi": "\"Khám phá lộ trình DSA\"",
+    "en": "\"Explore DSA roadmap\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 60,
+    "vi": "\"CỘNG ĐỒNG\"",
+    "en": "\"COMMUNITY\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 61,
+    "vi": "\"Đóng góp của tôi\"",
+    "en": "\"My contributions\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 63,
+    "vi": "\"Bản nháp, nội dung đang chờ duyệt và các bài đã công khai.\"",
+    "en": "\"Your drafts, moderation decisions and published contributions.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 73,
+    "vi": "\"Đang tải đóng góp…\"",
+    "en": "\"Loading contributions…\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 79,
+    "vi": "\"Chưa có đóng góp\"",
+    "en": "\"No contributions yet\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 81,
+    "vi": "\"Khám phá công ty\"",
+    "en": "\"Explore companies\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 93,
+    "vi": "\"Đề xuất công ty\"",
+    "en": "\"Company suggestion\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 95,
+    "vi": "\"Báo cáo nội dung\"",
+    "en": "\"Content report\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 96,
+    "vi": "\"Đóng góp\"",
+    "en": "\"Contribution\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 108,
+    "vi": "\"Thông tin thu nhập · Chi tiết riêng\"",
+    "en": "\"Compensation · Private details\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 119,
+    "vi": "\"Lý do duyệt\"",
+    "en": "\"Moderation reason\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 138,
+    "vi": "\"Sửa\"",
+    "en": "\"Edit\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 145,
+    "vi": "\"Rút đóng góp\"",
+    "en": "\"Withdraw\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 158,
+    "vi": "\"Yêu cầu xem xét lại\"",
+    "en": "\"Appeal decision\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 169,
+    "vi": "\"Tải thêm\"",
+    "en": "\"Load more\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 195,
+    "vi": "\"Rút đóng góp?\"",
+    "en": "\"Withdraw this contribution?\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 200,
+    "vi": "\"Nội dung sẽ ngừng hiển thị công khai và số liệu liên quan được cập nhật. Không thu hồi được bản sao người khác đã giữ.\"",
+    "en": "\"Public access will stop and related statistics will be updated. Copies already retained by others cannot be recalled.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 209,
+    "vi": "\"Giữ lại\"",
+    "en": "\"Keep contribution\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 227,
+    "vi": "\"Rút đóng góp\"",
+    "en": "\"Withdraw contribution\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 235,
+    "vi": "\"Yêu cầu xem xét lại\"",
+    "en": "\"Appeal decision\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 254,
+    "vi": "\"Lý do xem xét lại\"",
+    "en": "\"Appeal reason\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityContributions.tsx",
+    "line": 266,
+    "vi": "\"Gửi yêu cầu\"",
+    "en": "\"Send appeal\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 23,
+    "vi": "\"Tên công ty\"",
+    "en": "\"Company name\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 24,
+    "vi": "\"Ngành\"",
+    "en": "\"Industry\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 25,
+    "vi": "\"Quốc gia\"",
+    "en": "\"Country\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 26,
+    "vi": "\"Công ty (mã)\"",
+    "en": "\"Company reference\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 27,
+    "vi": "\"Loại trải nghiệm\"",
+    "en": "\"Experience type\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 28,
+    "vi": "\"Trạng thái làm việc\"",
+    "en": "\"Employment status\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 29,
+    "vi": "\"Vị trí\"",
+    "en": "\"Role\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 30,
+    "vi": "\"Năm dữ liệu\"",
+    "en": "\"Reporting year\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 31,
+    "vi": "\"Đánh giá tổng thể\"",
+    "en": "\"Overall rating\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 32,
+    "vi": "\"Văn hóa\"",
+    "en": "\"Culture rating\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 33,
+    "vi": "\"Phát triển\"",
+    "en": "\"Growth rating\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 34,
+    "vi": "\"Tiêu đề\"",
+    "en": "\"Headline\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 35,
+    "vi": "\"Điểm tốt\"",
+    "en": "\"Positives\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 36,
+    "vi": "\"Cần cải thiện\"",
+    "en": "\"Could improve\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 37,
+    "vi": "\"Cấp bậc\"",
+    "en": "\"Level\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 38,
+    "vi": "\"Kinh nghiệm (năm)\"",
+    "en": "\"Experience (years)\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 39,
+    "vi": "\"Hình thức làm việc\"",
+    "en": "\"Employment type\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 40,
+    "vi": "\"Tiền tệ\"",
+    "en": "\"Currency\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 41,
+    "vi": "\"Cách tính\"",
+    "en": "\"Tax basis\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 42,
+    "vi": "\"Lương cơ bản mỗi kỳ\"",
+    "en": "\"Base per period\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 43,
+    "vi": "\"Kỳ lương\"",
+    "en": "\"Pay period\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 44,
+    "vi": "\"Số kỳ bảo đảm/năm\"",
+    "en": "\"Guaranteed pay periods/year\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 45,
+    "vi": "\"Thưởng năm\"",
+    "en": "\"Annual bonus\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 46,
+    "vi": "\"Loại thưởng\"",
+    "en": "\"Bonus basis\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 47,
+    "vi": "\"Cổ phần nhận năm\"",
+    "en": "\"Annual equity\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 48,
+    "vi": "\"Cách tính cổ phần\"",
+    "en": "\"Equity basis\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 49,
+    "vi": "\"Thưởng nhận việc\"",
+    "en": "\"Sign-on bonus\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 50,
+    "vi": "\"Đánh giá được báo cáo (mã)\"",
+    "en": "\"Reported review reference\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 51,
+    "vi": "\"Lý do báo cáo\"",
+    "en": "\"Report reason\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 58,
+    "vi": "\"Làm việc\"",
+    "en": "\"Employment\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 59,
+    "vi": "\"Phỏng vấn\"",
+    "en": "\"Interview\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 60,
+    "vi": "\"Nhân viên hiện tại\"",
+    "en": "\"Current employee\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 61,
+    "vi": "\"Nhân viên cũ\"",
+    "en": "\"Former employee\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 62,
+    "vi": "\"Ứng viên\"",
+    "en": "\"Candidate\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 63,
+    "vi": "\"Trước thuế\"",
+    "en": "\"Gross\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 64,
+    "vi": "\"Sau thuế\"",
+    "en": "\"Net\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 65,
+    "vi": "\"Theo tháng\"",
+    "en": "\"Monthly\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 66,
+    "vi": "\"Theo năm\"",
+    "en": "\"Annual\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 67,
+    "vi": "\"Thực nhận\"",
+    "en": "\"Actual\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 68,
+    "vi": "\"Mục tiêu\"",
+    "en": "\"Target\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 69,
+    "vi": "\"Phần nhận trong năm\"",
+    "en": "\"Annual vested amount\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 70,
+    "vi": "\"0–2\"",
+    "en": "\"0–2\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 71,
+    "vi": "\"3–5\"",
+    "en": "\"3–5\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 72,
+    "vi": "\"6–10\"",
+    "en": "\"6–10\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 73,
+    "vi": "\"11+\"",
+    "en": "\"11+\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 76,
+    "vi": "\"Đề xuất công ty\"",
+    "en": "\"Company suggestion\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 77,
+    "vi": "\"Đánh giá\"",
+    "en": "\"Review\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 78,
+    "vi": "\"Thu nhập\"",
+    "en": "\"Compensation\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 79,
+    "vi": "\"Báo cáo nội dung\"",
+    "en": "\"Content report\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 135,
+    "vi": "\"DUYỆT CỘNG ĐỒNG\"",
+    "en": "\"COMMUNITY MODERATION\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 136,
+    "vi": "\"Nội dung đang chờ duyệt\"",
+    "en": "\"Moderation queue\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 138,
+    "vi": "\"Kiểm tra nội dung và quyền riêng tư trước khi công khai.\"",
+    "en": "\"Review content and privacy before publication.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 149,
+    "vi": "\"Đang tải hàng đợi…\"",
+    "en": "\"Loading queue…\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 154,
+    "vi": "\"Trang này chỉ dành cho người duyệt được cấp quyền.\"",
+    "en": "\"This page is restricted to authorized moderators.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 164,
+    "vi": "\"Không có nội dung chờ duyệt.\"",
+    "en": "\"No items awaiting moderation.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 175,
+    "vi": "\"Đóng góp\"",
+    "en": "\"Contribution\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 189,
+    "vi": "\"Chưa biết\"",
+    "en": "\"Unknown\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 208,
+    "vi": "\"Đánh giá hiện không còn công khai. Kiểm tra trạng thái trước khi quyết định.\"",
+    "en": "\"This review is no longer public. Check its status before deciding.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 221,
+    "vi": "\"Lương cơ bản chuẩn hóa theo năm\"",
+    "en": "\"Normalized annual base\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 237,
+    "vi": "\"Kiểm tra số bất thường, đơn vị, kỳ lương và nguồn tự khai báo; không tự loại số cao hoặc thấp. Lý do duyệt được lưu trong lịch sử.\"",
+    "en": "\"Review unusual values, units, pay periods and self-reported provenance. Do not discard high or low values automatically. Decisions are audited.\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 253,
+    "vi": "\"Xem và quyết định\"",
+    "en": "\"Review and decide\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 259,
+    "vi": "\"Tải thêm\"",
+    "en": "\"Load more\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 265,
+    "vi": "\"Quyết định duyệt\"",
+    "en": "\"Moderation decision\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 286,
+    "vi": "\"Quyết định\"",
+    "en": "\"Decision\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 293,
+    "vi": "\"Duyệt / Chấp nhận báo cáo\"",
+    "en": "\"Publish / Uphold report\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 296,
+    "vi": "\"Từ chối\"",
+    "en": "\"Reject\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 298,
+    "vi": "\"Yêu cầu sửa\"",
+    "en": "\"Request changes\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 305,
+    "vi": "\"Lý do · Người đóng góp sẽ đọc được\"",
+    "en": "\"Reason · Visible to the contributor\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 323,
+    "vi": "\"Đang lưu…\"",
+    "en": "\"Saving…\""
+  },
+  {
+    "file": "apps/web/src/features/CommunityModeration.tsx",
+    "line": 324,
+    "vi": "\"Lưu quyết định\"",
+    "en": "\"Save decision\""
+  }
+]

@@ -1,0 +1,20 @@
+[WebServer] (node:24906) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:24975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 1:48:33 AM [vite] (client) [console.warn] [2026-10-04T06:48:33.780Z]  @firebase/firestore: Firestore (12.19.0): WebChannelConnection RPC 'Listen' stream 0x70f35d14 transport errored. Name: undefined Message: undefined
+[WebServer] 1:48:33 AM [vite] (client) [console.error] [2026-10-04T06:48:33.781Z]  @firebase/firestore: Firestore (12.19.0): Could not reach Cloud Firestore backend. Connection failed 1 times. Most recent error: FirebaseError: [code=unavailable]: The operation could not be completed
+[WebServer] This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+  ✓  1 tests/e2e/community.spec.ts:38:1 › community real UI → company suggestion → moderation → review → compensation → withdraw (19.1s)
+  ✓  2 tests/e2e/community.spec.ts:170:1 › guest company/salary/progress, mobile icons, dark mode and reduced motion (4.4s)
+  ✓  3 tests/e2e/progress.spec.ts:3:1 › self-reported progress persists and resumes real lesson, keyboard/mobile/locale (6.1s)
+  ✓  4 tests/e2e/shared-layout.spec.ts:2:1 › shared chrome on pages, excluded only on code workspace; roadmap copy removed (2.7s)
+[WebServer] 1:49:06 AM [vite] (client) [console.warn] [2026-10-04T06:49:06.022Z]  @firebase/firestore: Firestore (12.19.0): WebChannelConnection RPC 'Listen' stream 0x2bfcccbe transport errored. Name: undefined Message: undefined
+[WebServer] 1:49:06 AM [vite] (client) [console.error] [2026-10-04T06:49:06.023Z]  @firebase/firestore: Firestore (12.19.0): Could not reach Cloud Firestore backend. Connection failed 1 times. Most recent error: FirebaseError: [code=unavailable]: The operation could not be completed
+[WebServer] This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+  ✓  5 tests/e2e/workspace-session.spec.ts:3:1 › workspace shares the application account across navigation, refresh and logout (3.8s)
+
+  5 passed (1.2m)

@@ -1,0 +1,9 @@
+
+Running 2 tests using 1 worker
+
+(node:32257) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/community.spec.ts:257:1 › community real UI → company suggestion → moderation → review → compensation → withdraw (28.3s)
+  ✓  2 tests/e2e/community.spec.ts:484:1 › guest company/salary/progress, mobile icons, dark mode and reduced motion (2.9s)
+
+  2 passed (32.4s)

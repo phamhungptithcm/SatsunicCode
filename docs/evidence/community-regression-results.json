@@ -1,0 +1,703 @@
+{
+  "config": {
+    "argv": [
+      "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/node/bin/node",
+      "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "docs/evidence/community-playwright.config.ts",
+      "tests/e2e/community.spec.ts",
+      "tests/e2e/progress.spec.ts",
+      "tests/e2e/shared-layout.spec.ts",
+      "tests/e2e/learning.spec.ts",
+      "tests/e2e/workspace-session.spec.ts"
+    ],
+    "configFile": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/docs/evidence/community-playwright.config.ts",
+    "rootDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/community-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode",
+      "command": "VITE_FIREBASE_ENV=emulator npm run dev -w apps/web -- --port 5183",
+      "url": "http://127.0.0.1:5183",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "community.spec.ts",
+      "file": "community.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "community real UI → company suggestion → moderation → review → compensation → withdraw",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10611,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:33:57.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cf8406558519b2971af-c2ed0d7c11c7512dcadf",
+          "file": "community.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "guest company/salary/progress, mobile icons, dark mode and reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3530,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:34:08.301Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6cf8406558519b2971af-850545002f2840e20cd5",
+          "file": "community.spec.ts",
+          "line": 162,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "learning.spec.ts",
+      "file": "learning.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "homepage track destinations, composer draft/minimize, locale and responsive keyboard",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1812,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Hỏi Ask Satsunic') resolved to 2 elements:\n    1) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka getByRole('textbox', { name: 'Hỏi Ask Satsunic' })\n    2) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka locator('dialog').getByPlaceholder('Hỏi bất cứ điều gì…')\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Hỏi Ask Satsunic')\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByLabel('Hỏi Ask Satsunic') resolved to 2 elements:\n    1) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka getByRole('textbox', { name: 'Hỏi Ask Satsunic' })\n    2) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka locator('dialog').getByPlaceholder('Hỏi bất cứ điều gì…')\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Hỏi Ask Satsunic')\u001b[22m\n\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:43:45",
+                    "location": {
+                      "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                      "column": 45,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   ).toBeVisible();\n  42 |   await page.goto(\"/\");\n> 43 |   await page.getByLabel(\"Hỏi Ask Satsunic\").fill(\"Giải thích sliding window\");\n     |                                             ^\n  44 |   await page.getByRole(\"button\", { name: \"Ẩn Ask Satsunic\" }).click();\n  45 |   await page.getByRole(\"button\", { name: \"Ask Satsunic\", exact: true }).click();\n  46 |   await expect(page.getByLabel(\"Hỏi Ask Satsunic\")).toHaveValue("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                        "column": 45,
+                        "line": 43
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByLabel('Hỏi Ask Satsunic') resolved to 2 elements:\n    1) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka getByRole('textbox', { name: 'Hỏi Ask Satsunic' })\n    2) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka locator('dialog').getByPlaceholder('Hỏi bất cứ điều gì…')\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Hỏi Ask Satsunic')\u001b[22m\n\n\n  41 |   ).toBeVisible();\n  42 |   await page.goto(\"/\");\n> 43 |   await page.getByLabel(\"Hỏi Ask Satsunic\").fill(\"Giải thích sliding window\");\n     |                                             ^\n  44 |   await page.getByRole(\"button\", { name: \"Ẩn Ask Satsunic\" }).click();\n  45 |   await page.getByRole(\"button\", { name: \"Ask Satsunic\", exact: true }).click();\n  46 |   await expect(page.getByLabel(\"Hỏi Ask Satsunic\")).toHaveValue(\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:43:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:34:11.919Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-homepage-track-de-0144b-ale-and-responsive-keyboard/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-homepage-track-de-0144b-ale-and-responsive-keyboard/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                    "column": 45,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-66a92dbefa59421445e6",
+          "file": "learning.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "Synthetic emulator identity (not Google OAuth) → enrollment → next action → save draft → refresh → independent user isolation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60269,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                        "column": 60,
+                        "line": 89
+                      },
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Theo học DSA' })\u001b[22m\n\n\n  87 |   await expect(page.getByRole(\"button\", { name: \"Tài khoản Google\", exact: true })).toBeVisible();\n  88 |   await page.goto(\"/roadmaps/dsa\");\n> 89 |   await page.getByRole(\"button\", { name: \"Theo học DSA\" }).click();\n     |                                                            ^\n  90 |   await expect(page.locator(\".satsunic-toast-content p\")).toContainText(\"Đã lưu lộ trình DSA\");\n  91 |   await page.getByRole(\"button\", { name: \"Theo học DSA\" }).click();\n  92 |   await expect(page.locator(\".satsunic-toast-content p\")).toContainText(\"Đã lưu lộ trình DSA\");\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:89:60"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:34:14.479Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-Synthetic-emulato-bffc8--independent-user-isolation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-Synthetic-emulato-bffc8--independent-user-isolation/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-159b336558953144cf5c",
+          "file": "learning.spec.ts",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "DSA full reference graph, topic drawer, sets and workspace tabs",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6563,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 58\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"description\": \"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\",\u001b[39m\n\u001b[31m+     \"help\": \"Elements must meet minimum color contrast ratio thresholds\",\u001b[39m\n\u001b[31m+     \"helpUrl\": \"https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright\",\u001b[39m\n\u001b[31m+     \"id\": \"color-contrast\",\u001b[39m\n\u001b[31m+     \"impact\": \"serious\",\u001b[39m\n\u001b[31m+     \"nodes\": Array [\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"all\": Array [],\u001b[39m\n\u001b[31m+         \"any\": Array [\u001b[39m\n\u001b[31m+           Object {\u001b[39m\n\u001b[31m+             \"data\": Object {\u001b[39m\n\u001b[31m+               \"bgColor\": \"#ffffff\",\u001b[39m\n\u001b[31m+               \"contrastRatio\": 3.75,\u001b[39m\n\u001b[31m+               \"expectedContrastRatio\": \"4.5:1\",\u001b[39m\n\u001b[31m+               \"fgColor\": \"#7b858e\",\u001b[39m\n\u001b[31m+               \"fontSize\": \"6.8pt (9px)\",\u001b[39m\n\u001b[31m+               \"fontWeight\": \"normal\",\u001b[39m\n\u001b[31m+               \"messageKey\": null,\u001b[39m\n\u001b[31m+             },\u001b[39m\n\u001b[31m+             \"id\": \"color-contrast\",\u001b[39m\n\u001b[31m+             \"impact\": \"serious\",\u001b[39m\n\u001b[31m+             \"message\": \"Element has insufficient color contrast of 3.75 (foreground color: #7b858e, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1\",\u001b[39m\n\u001b[31m+             \"relatedNodes\": Array [\u001b[39m\n\u001b[31m+               Object {\u001b[39m\n\u001b[31m+                 \"html\": \"<div class=\\\"satsunic-toast\\\" data-kind=\\\"warning\\\" data-paused=\\\"false\\\" aria-busy=\\\"false\\\">\",\u001b[39m\n\u001b[31m+                 \"target\": Array [\u001b[39m\n\u001b[31m+                   \".satsunic-toast\",\u001b[39m\n\u001b[31m+                 ],\u001b[39m\n\u001b[31m+               },\u001b[39m\n\u001b[31m+             ],\u001b[39m\n\u001b[31m+           },\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+         \"failureSummary\": \"Fix any of the following:\u001b[39m\n\u001b[31m+   Element has insufficient color contrast of 3.75 (foreground color: #7b858e, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1\",\u001b[39m\n\u001b[31m+         \"html\": \"<span class=\\\"satsunic-toast-time\\\" aria-hidden=\\\"true\\\" title=\\\"Tự ẩn thông báo\\\">5s</span>\",\u001b[39m\n\u001b[31m+         \"impact\": \"serious\",\u001b[39m\n\u001b[31m+         \"none\": Array [],\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \".satsunic-toast-time\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+     \"tags\": Array [\u001b[39m\n\u001b[31m+       \"cat.color\",\u001b[39m\n\u001b[31m+       \"wcag2aa\",\u001b[39m\n\u001b[31m+       \"wcag143\",\u001b[39m\n\u001b[31m+       \"TTv5\",\u001b[39m\n\u001b[31m+       \"TT13.c\",\u001b[39m\n\u001b[31m+       \"EN-301-549\",\u001b[39m\n\u001b[31m+       \"EN-9.1.4.3\",\u001b[39m\n\u001b[31m+       \"ACT\",\u001b[39m\n\u001b[31m+       \"RGAAv4\",\u001b[39m\n\u001b[31m+       \"RGAA-3.2.1\",\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 58\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"description\": \"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\",\u001b[39m\n\u001b[31m+     \"help\": \"Elements must meet minimum color contrast ratio thresholds\",\u001b[39m\n\u001b[31m+     \"helpUrl\": \"https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright\",\u001b[39m\n\u001b[31m+     \"id\": \"color-contrast\",\u001b[39m\n\u001b[31m+     \"impact\": \"serious\",\u001b[39m\n\u001b[31m+     \"nodes\": Array [\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"all\": Array [],\u001b[39m\n\u001b[31m+         \"any\": Array [\u001b[39m\n\u001b[31m+           Object {\u001b[39m\n\u001b[31m+             \"data\": Object {\u001b[39m\n\u001b[31m+               \"bgColor\": \"#ffffff\",\u001b[39m\n\u001b[31m+               \"contrastRatio\": 3.75,\u001b[39m\n\u001b[31m+               \"expectedContrastRatio\": \"4.5:1\",\u001b[39m\n\u001b[31m+               \"fgColor\": \"#7b858e\",\u001b[39m\n\u001b[31m+               \"fontSize\": \"6.8pt (9px)\",\u001b[39m\n\u001b[31m+               \"fontWeight\": \"normal\",\u001b[39m\n\u001b[31m+               \"messageKey\": null,\u001b[39m\n\u001b[31m+             },\u001b[39m\n\u001b[31m+             \"id\": \"color-contrast\",\u001b[39m\n\u001b[31m+             \"impact\": \"serious\",\u001b[39m\n\u001b[31m+             \"message\": \"Element has insufficient color contrast of 3.75 (foreground color: #7b858e, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1\",\u001b[39m\n\u001b[31m+             \"relatedNodes\": Array [\u001b[39m\n\u001b[31m+               Object {\u001b[39m\n\u001b[31m+                 \"html\": \"<div class=\\\"satsunic-toast\\\" data-kind=\\\"warning\\\" data-paused=\\\"false\\\" aria-busy=\\\"false\\\">\",\u001b[39m\n\u001b[31m+                 \"target\": Array [\u001b[39m\n\u001b[31m+                   \".satsunic-toast\",\u001b[39m\n\u001b[31m+                 ],\u001b[39m\n\u001b[31m+               },\u001b[39m\n\u001b[31m+             ],\u001b[39m\n\u001b[31m+           },\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+         \"failureSummary\": \"Fix any of the following:\u001b[39m\n\u001b[31m+   Element has insufficient color contrast of 3.75 (foreground color: #7b858e, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1\",\u001b[39m\n\u001b[31m+         \"html\": \"<span class=\\\"satsunic-toast-time\\\" aria-hidden=\\\"true\\\" title=\\\"Tự ẩn thông báo\\\">5s</span>\",\u001b[39m\n\u001b[31m+         \"impact\": \"serious\",\u001b[39m\n\u001b[31m+         \"none\": Array [],\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \".satsunic-toast-time\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+     \"tags\": Array [\u001b[39m\n\u001b[31m+       \"cat.color\",\u001b[39m\n\u001b[31m+       \"wcag2aa\",\u001b[39m\n\u001b[31m+       \"wcag143\",\u001b[39m\n\u001b[31m+       \"TTv5\",\u001b[39m\n\u001b[31m+       \"TT13.c\",\u001b[39m\n\u001b[31m+       \"EN-301-549\",\u001b[39m\n\u001b[31m+       \"EN-9.1.4.3\",\u001b[39m\n\u001b[31m+       \"ACT\",\u001b[39m\n\u001b[31m+       \"RGAAv4\",\u001b[39m\n\u001b[31m+       \"RGAA-3.2.1\",\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:189:65",
+                    "location": {
+                      "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                      "column": 65,
+                      "line": 189
+                    },
+                    "snippet": "  187 |     fullPage: true,\n  188 |   });\n> 189 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);\n      |                                                                 ^\n  190 |   await page.goto(\"/practice\");\n  191 |   await page.getByLabel(\"Tìm bài tập\").fill(\"không có bài này\");\n  192 |   await expect(page.getByRole(\"status\").first()).toContainText(\"Không có bài tập khớp\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                        "column": 65,
+                        "line": 189
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 58\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"description\": \"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\",\u001b[39m\n\u001b[31m+     \"help\": \"Elements must meet minimum color contrast ratio thresholds\",\u001b[39m\n\u001b[31m+     \"helpUrl\": \"https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright\",\u001b[39m\n\u001b[31m+     \"id\": \"color-contrast\",\u001b[39m\n\u001b[31m+     \"impact\": \"serious\",\u001b[39m\n\u001b[31m+     \"nodes\": Array [\u001b[39m\n\u001b[31m+       Object {\u001b[39m\n\u001b[31m+         \"all\": Array [],\u001b[39m\n\u001b[31m+         \"any\": Array [\u001b[39m\n\u001b[31m+           Object {\u001b[39m\n\u001b[31m+             \"data\": Object {\u001b[39m\n\u001b[31m+               \"bgColor\": \"#ffffff\",\u001b[39m\n\u001b[31m+               \"contrastRatio\": 3.75,\u001b[39m\n\u001b[31m+               \"expectedContrastRatio\": \"4.5:1\",\u001b[39m\n\u001b[31m+               \"fgColor\": \"#7b858e\",\u001b[39m\n\u001b[31m+               \"fontSize\": \"6.8pt (9px)\",\u001b[39m\n\u001b[31m+               \"fontWeight\": \"normal\",\u001b[39m\n\u001b[31m+               \"messageKey\": null,\u001b[39m\n\u001b[31m+             },\u001b[39m\n\u001b[31m+             \"id\": \"color-contrast\",\u001b[39m\n\u001b[31m+             \"impact\": \"serious\",\u001b[39m\n\u001b[31m+             \"message\": \"Element has insufficient color contrast of 3.75 (foreground color: #7b858e, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1\",\u001b[39m\n\u001b[31m+             \"relatedNodes\": Array [\u001b[39m\n\u001b[31m+               Object {\u001b[39m\n\u001b[31m+                 \"html\": \"<div class=\\\"satsunic-toast\\\" data-kind=\\\"warning\\\" data-paused=\\\"false\\\" aria-busy=\\\"false\\\">\",\u001b[39m\n\u001b[31m+                 \"target\": Array [\u001b[39m\n\u001b[31m+                   \".satsunic-toast\",\u001b[39m\n\u001b[31m+                 ],\u001b[39m\n\u001b[31m+               },\u001b[39m\n\u001b[31m+             ],\u001b[39m\n\u001b[31m+           },\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+         \"failureSummary\": \"Fix any of the following:\u001b[39m\n\u001b[31m+   Element has insufficient color contrast of 3.75 (foreground color: #7b858e, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1\",\u001b[39m\n\u001b[31m+         \"html\": \"<span class=\\\"satsunic-toast-time\\\" aria-hidden=\\\"true\\\" title=\\\"Tự ẩn thông báo\\\">5s</span>\",\u001b[39m\n\u001b[31m+         \"impact\": \"serious\",\u001b[39m\n\u001b[31m+         \"none\": Array [],\u001b[39m\n\u001b[31m+         \"target\": Array [\u001b[39m\n\u001b[31m+           \".satsunic-toast-time\",\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+     \"tags\": Array [\u001b[39m\n\u001b[31m+       \"cat.color\",\u001b[39m\n\u001b[31m+       \"wcag2aa\",\u001b[39m\n\u001b[31m+       \"wcag143\",\u001b[39m\n\u001b[31m+       \"TTv5\",\u001b[39m\n\u001b[31m+       \"TT13.c\",\u001b[39m\n\u001b[31m+       \"EN-301-549\",\u001b[39m\n\u001b[31m+       \"EN-9.1.4.3\",\u001b[39m\n\u001b[31m+       \"ACT\",\u001b[39m\n\u001b[31m+       \"RGAAv4\",\u001b[39m\n\u001b[31m+       \"RGAA-3.2.1\",\u001b[39m\n\u001b[31m+     ],\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  187 |     fullPage: true,\n  188 |   });\n> 189 |   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);\n      |                                                                 ^\n  190 |   await page.goto(\"/practice\");\n  191 |   await page.getByLabel(\"Tìm bài tập\").fill(\"không có bài này\");\n  192 |   await expect(page.getByRole(\"status\").first()).toContainText(\"Không có bài tập khớp\");\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:189:65"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:16.801Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-DSA-full-referenc-372c3-wer-sets-and-workspace-tabs/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-DSA-full-referenc-372c3-wer-sets-and-workspace-tabs/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                    "column": 65,
+                    "line": 189
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-c98c26bd2d369e9c3d07",
+          "file": "learning.spec.ts",
+          "line": 137,
+          "column": 1
+        },
+        {
+          "title": "all target viewports and bundled Monaco editor fallback",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 469,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Hỏi Ask Satsunic')\nExpected: visible\nError: strict mode violation: getByLabel('Hỏi Ask Satsunic') resolved to 2 elements:\n    1) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka getByRole('textbox', { name: 'Hỏi Ask Satsunic' })\n    2) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka locator('dialog').getByPlaceholder('Hỏi bất cứ điều gì…')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel('Hỏi Ask Satsunic') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Hỏi Ask Satsunic')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Hỏi Ask Satsunic')\nExpected: visible\nError: strict mode violation: getByLabel('Hỏi Ask Satsunic') resolved to 2 elements:\n    1) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka getByRole('textbox', { name: 'Hỏi Ask Satsunic' })\n    2) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka locator('dialog').getByPlaceholder('Hỏi bất cứ điều gì…')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel('Hỏi Ask Satsunic') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Hỏi Ask Satsunic')\u001b[22m\n\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:221:55",
+                    "location": {
+                      "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                      "column": 55,
+                      "line": 221
+                    },
+                    "snippet": "  219 |       ),\n  220 |     ).toBe(true);\n> 221 |     await expect(page.getByLabel(\"Hỏi Ask Satsunic\")).toBeVisible();\n      |                                                       ^\n  222 |     const scan = await new AxeBuilder({ page }).analyze();\n  223 |     expect(scan.violations).toEqual([]);\n  224 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                        "column": 55,
+                        "line": 221
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Hỏi Ask Satsunic')\nExpected: visible\nError: strict mode violation: getByLabel('Hỏi Ask Satsunic') resolved to 2 elements:\n    1) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka getByRole('textbox', { name: 'Hỏi Ask Satsunic' })\n    2) <textarea rows=\"1\" maxlength=\"8000\" aria-label=\"Hỏi Ask Satsunic\" placeholder=\"Hỏi bất cứ điều gì…\"></textarea> aka locator('dialog').getByPlaceholder('Hỏi bất cứ điều gì…')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel('Hỏi Ask Satsunic') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Hỏi Ask Satsunic')\u001b[22m\n\n\n  219 |       ),\n  220 |     ).toBe(true);\n> 221 |     await expect(page.getByLabel(\"Hỏi Ask Satsunic\")).toBeVisible();\n      |                                                       ^\n  222 |     const scan = await new AxeBuilder({ page }).analyze();\n  223 |     expect(scan.violations).toEqual([]);\n  224 |   }\n    at /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts:221:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:24.031Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-all-target-viewpo-c7328-dled-Monaco-editor-fallback/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/test-results/learning-all-target-viewpo-c7328-dled-Monaco-editor-fallback/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode/tests/e2e/learning.spec.ts",
+                    "column": 55,
+                    "line": 221
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-784c9306e245f0975e16",
+          "file": "learning.spec.ts",
+          "line": 208,
+          "column": 1
+        },
+        {
+          "title": "clean navigation, footer credit and Google-only availability",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1778,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:25.142Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-26c5c098402709d2c20d",
+          "file": "learning.spec.ts",
+          "line": 240,
+          "column": 1
+        },
+        {
+          "title": "track switcher: six real destinations and native keyboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2107,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:27.060Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-02abb89051e978401a51",
+          "file": "learning.spec.ts",
+          "line": 294,
+          "column": 1
+        },
+        {
+          "title": "English default and persistent language without mixed route labels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1083,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:29.178Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-7115b86d422bed3efaad",
+          "file": "learning.spec.ts",
+          "line": 333,
+          "column": 1
+        },
+        {
+          "title": "owner bookmark persists after Firebase ack and stays isolated across users",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:30.268Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-7ea11837f606144f6132",
+          "file": "learning.spec.ts",
+          "line": 365,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "progress.spec.ts",
+      "file": "progress.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "self-reported progress persists and resumes real lesson, keyboard/mobile/locale",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5334,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:33.151Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ca3a771848969cb77bf6-507818d1a8051c1b91cf",
+          "file": "progress.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "shared-layout.spec.ts",
+      "file": "shared-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "shared chrome on pages, excluded only on code workspace; roadmap copy removed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2103,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:38.502Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7eb7fec572d479bccd5f-2fcbe3a73876d49a57cd",
+          "file": "shared-layout.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workspace-session.spec.ts",
+      "file": "workspace-session.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "workspace shares the application account across navigation, refresh and logout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3086,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-04T06:35:40.617Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43c30918daa7809ee0c8-4e6f8d1d20b0dce57e8e",
+          "file": "workspace-session.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-04T06:33:54.911Z",
+    "duration": 108855.412,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

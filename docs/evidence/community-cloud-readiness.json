@@ -1,0 +1,11 @@
+{
+  "checked_date": "2026-10-04",
+  "projectId": "satsuniccode",
+  "billingEnabled": false,
+  "cloudFunctionsApi": "SERVICE_DISABLED",
+  "functions_list": "BLOCKED_BY_DISABLED_API",
+  "mutations_performed": false,
+  "production_readiness": "NOT_READY",
+  "live_auth": "NOT_TESTED_IN_THIS_TASK",
+  "appCheck": "NOT_TESTED_IN_PRODUCTION"
+}

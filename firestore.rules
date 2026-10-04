@@ -4,6 +4,12 @@ service cloud.firestore {
   function owner(uid) { return request.auth != null && request.auth.uid == uid; }
   match /catalog/{version} { allow read: if resource.data.publicationState == 'PUBLISHED'; allow write: if false; }
   match /dsaReferences/{slug} { allow read: if resource.data.contentState == "REFERENCE_ONLY"; allow write: if false; }
+  function moderator() { return request.auth != null && request.auth.token.communityModerator == true; }
+  function bounded() { return request.query.limit != null && request.query.limit <= 50; }
+  match /companies/{id} { allow get: if resource.data.publicationState == 'PUBLISHED'; allow list: if bounded() && resource.data.publicationState == 'PUBLISHED'; allow write: if false; }
+  match /publicReviews/{id} { allow get: if true; allow list: if bounded(); allow write: if false; }
+  match /companyReviewStats/{id} { allow get: if true; allow list, write: if false; }
+  match /salaryAggregates/{id} { allow get: if true; allow list, write: if false; }
   match /users/{uid} {
    allow read: if owner(uid); allow write: if false;
    match /bookmarks/{slug} {
@@ -16,6 +22,8 @@ service cloud.firestore {
     allow delete: if owner(uid);
    }
    match /enrollments/{id} { allow read: if owner(uid); allow write: if false; }
+   match /topicStatuses/{id} { allow read: if owner(uid); allow write: if false; }
+   match /learningActivity/{id} { allow read: if owner(uid); allow write: if false; }
    match /progress/{id} { allow read: if owner(uid); allow write: if false; }
    match /submissions/{id} { allow read: if owner(uid); allow write: if false; }
    match /drafts/{id} {

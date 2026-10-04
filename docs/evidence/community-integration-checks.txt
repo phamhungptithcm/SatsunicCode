@@ -1,0 +1,8 @@
+
+ RUN  v5.0.3 /Users/hunpeo97/Desktop/Workspace/Coder/SatsunicCode
+
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  01:48:27
+   Duration  17.74s (tests 94%, import 6%)

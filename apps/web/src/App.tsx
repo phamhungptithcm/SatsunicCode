@@ -16,6 +16,11 @@ import Roadmap from "./features/Roadmap";
 import Assistant from "./features/Assistant";
 import { SessionProvider } from "./session";
 import { LanguageProvider, useLanguage, text } from "./i18n";
+const Companies=lazy(()=>import("./features/Companies")),
+ CompanyDetail=lazy(()=>import("./features/CompanyDetail")),
+ Salaries=lazy(()=>import("./features/Salaries")),
+ CommunityContributions=lazy(()=>import("./features/CommunityContributions")),
+ CommunityModeration=lazy(()=>import("./features/CommunityModeration"));
 const Practice = lazy(() => import("./features/Practice")),
   Account = lazy(() => import("./features/Account")),
   Progress = lazy(() => import("./features/Progress")),
@@ -96,10 +101,13 @@ function Shell() {
               }
             />
             <Route path="/progress" element={<Progress />} />
+            <Route path="/companies" element={<Companies />} />
+            <Route path="/companies/:companyId" element={<CompanyDetail />} />
+            <Route path="/salaries" element={<Salaries />} />
+            <Route path="/community/contributions" element={<CommunityContributions />} />
+            <Route path="/community/moderation" element={<CommunityModeration />} />
             {[
               "projects",
-              "companies",
-              "salaries",
               "interview-board",
               "org",
               "admin",

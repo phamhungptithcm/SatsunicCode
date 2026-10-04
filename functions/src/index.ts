@@ -148,3 +148,5 @@ export const createRun = onCall(opts, async (request) => {
     "No approved isolated runner is configured. Code was not executed.",
   );
 });
+export { changeCommunity, listCommunityContributions, getOwnCommunityContribution } from "./community";
+export { changeLearningProgress, getLearningProgress } from "./progress";

@@ -2,24 +2,52 @@
   "projectId": "satsuniccode",
   "artifacts": [
     {
-      "path": "assets/Account-CLfKnCzj.js",
-      "sha256": "928fd22795173f812c50d91c73feeaf2cdbe44b6db34d1907ed968dc438a60a9"
+      "path": "assets/Account-BqGLuTiQ.js",
+      "sha256": "0bdb1efe77dc0da654063c7baeaebbfb8cfe8d1c2be2fab634398c20216c94e9"
     },
     {
-      "path": "assets/CodeEditor-CtwiMeRV.js",
-      "sha256": "425379d98688fbd848921c06727200d946922c7f049c3ab7149a1513d217943a"
+      "path": "assets/CodeEditor-Br1EEja2.js",
+      "sha256": "6bf0f0a5bdd5710ff9e3aa8c28eacf4ac7d181defb4a692d055bb6a87bf552ff"
     },
     {
-      "path": "assets/Lesson-C_lm76vl.js",
-      "sha256": "c9171b0d811afa6194b71b00f34ec88ef9b3c81b64d7900406236b1817600d53"
+      "path": "assets/CommunityContributions-MjxEYmZQ.js",
+      "sha256": "aaf71d24bcd5e580eed6ce35f34d2ea7275d6e00e38d9ca56705082f58cd71cb"
     },
     {
-      "path": "assets/Practice-D9JQ2fFi.js",
-      "sha256": "1e622d07b8d10df1e05b8dddb20c836ce52b5a98562e52ba38b8edcd4ef22f26"
+      "path": "assets/CommunityModeration-CIMZwIZE.js",
+      "sha256": "cef09d235d4a211ef8f4042b53cf3fb22551d3bab41f27e8c0d25c7a79d83e09"
     },
     {
-      "path": "assets/Progress-2yxmHKBn.js",
-      "sha256": "dacb9ae47be8a925f2d7e327bd9fa67356c64791c21e72b6463dfc7b7cde1bfa"
+      "path": "assets/Companies-C3EifPyh.js",
+      "sha256": "362d2b75707fa07d0d4f8f918895acceca53023178b16d9256f0d62974a77397"
+    },
+    {
+      "path": "assets/CompanyDetail-DY8XKop_.js",
+      "sha256": "e8f6ac759ab8d50ba77174443b2fa4fe5a1636d2741c19bcbfc0ab459d74f3fa"
+    },
+    {
+      "path": "assets/Forms-DFQ7ollp.js",
+      "sha256": "2d5c066b472ef83104c69a7769fdd8c1387181203a2394d4fe0aa076c3215622"
+    },
+    {
+      "path": "assets/Lesson-BnYltoFc.js",
+      "sha256": "187772cb287ec5e73f08d6028968a48c62d01854adb7f87c6b170f642f2f6b82"
+    },
+    {
+      "path": "assets/Practice-CaebzKBZ.js",
+      "sha256": "77efdfd9ac3e5be7bb85f9d0832dfcb869948cd2a0e6c02e685b920e97ffaeb8"
+    },
+    {
+      "path": "assets/Progress-DhkjgD37.js",
+      "sha256": "ae5b5af19a19a57367882bfba585af8e63a18e592c9b19db6332a4122e85684e"
+    },
+    {
+      "path": "assets/Salaries-yNqjVA2N.js",
+      "sha256": "6a4e37da1f8877d18baceb77688d502c552c65afea1faaa6af10f298cb20a048"
+    },
+    {
+      "path": "assets/api-DokSMFy_.js",
+      "sha256": "e2bdf90d5da4bc3c339fada84277dee4b6c3006136d8f8286259037ae2d7ab64"
     },
     {
       "path": "assets/codicon-ngg6Pgfi.ttf",
@@ -34,8 +62,8 @@
       "sha256": "d7c80f3a58c05d96edcae30e605425ba8a7577b798bd14a782873bfb1836873b"
     },
     {
-      "path": "assets/index-C69YTCgA.js",
-      "sha256": "e6dca76fe91a6a052c61c5eef0cfcf001149cc1eb2c05c591aeaeeb00466e7d2"
+      "path": "assets/index-Buai0g70.js",
+      "sha256": "68fff02a25aef6a9e2a3f98c34dbd133645dbd5325fd5611d4fcdfcd9c02295c"
     },
     {
       "path": "assets/java-BEtHBSE6.js",
@@ -54,6 +82,14 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
+      "path": "assets/shared-BtqMtoHH.css",
+      "sha256": "44f125ae3bb28ca30fb4dfb584313e97968a385baefa50a368cc4253182a31f0"
+    },
+    {
+      "path": "assets/shared-ehAADXVs.js",
+      "sha256": "9eb9bb1979cf0855d8cadd481267e69a12f3a4e0a316ec34dfaec8d55124a4a9"
+    },
+    {
       "path": "assets/toggleHighContrast-D2xogHDo.js",
       "sha256": "bce9b71131cd3c05306aa68c3b73116dfa341573b27d66921128a5284e6e7e2d"
     },
@@ -66,12 +102,16 @@
       "sha256": "14f1e02a189da16b2f22bf4e6d21f6ba23926df5a785d0f91ea8817919d951ae"
     },
     {
-      "path": "assets/tsMode-BWn-zAyI.js",
-      "sha256": "86084b35bf7220cc8cdccd080380e6229edf2ce9f7f3a76fd87aea9106b66f49"
+      "path": "assets/tsMode-D8uH8IVI.js",
+      "sha256": "e8dbf728fd66d050adfa22050ac51a8c4e6374a82b8173fa67e36ada35127fe8"
+    },
+    {
+      "path": "assets/useLearningActivity-CpVcrYgc.js",
+      "sha256": "ae1b2402d33c5781b8aa2d57564018f8be1f46d607565c306f4a4b90f1ac13d6"
     },
     {
       "path": "index.html",
-      "sha256": "07c026ca9207ccac21049d5fd5124b1517bfa5f4de11d5bb3498f9e72f98701e"
+      "sha256": "934026b569763ceb5334f7ee0b0edc82596228aa01c5bb07a9950dd5bbc5ed87"
     },
     {
       "path": "satsunic-mark.svg",

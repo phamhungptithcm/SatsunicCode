@@ -1,0 +1,59 @@
+
+> satsuniccode@0.1.0 typecheck
+> tsc --noEmit && npm run typecheck -w functions
+
+
+> @satsuniccode/functions@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> satsuniccode@0.1.0 build
+> npm run build -w apps/web && npm run build -w functions
+
+
+> @satsuniccode/web@0.1.0 build
+> vite build
+
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 1151 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                     0.72 kB │ gzip:   0.41 kB
+dist/assets/codicon-ngg6Pgfi.ttf                  121.97 kB
+dist/assets/editor.worker-O-CH8JUO.js             280.57 kB
+dist/assets/ts.worker-CmEKzkmF.js               6,905.49 kB
+dist/assets/shared-C06kneEF.css                    15.73 kB │ gzip:   3.49 kB
+dist/assets/index-B36y3tF1.css                     72.97 kB │ gzip:  14.33 kB
+dist/assets/toggleHighContrast-v5rfKcVs.css       145.98 kB │ gzip:  22.62 kB
+dist/assets/useLearningActivity-DiQLb4__.js         0.46 kB │ gzip:   0.31 kB
+dist/assets/rolldown-runtime-hePW80VL.js            0.71 kB │ gzip:   0.42 kB
+dist/assets/api-DjSaQXtc.js                         2.00 kB │ gzip:   0.94 kB
+dist/assets/java-BEtHBSE6.js                        2.90 kB │ gzip:   1.34 kB
+dist/assets/Lesson-CbSqxDI0.js                      3.27 kB │ gzip:   1.67 kB
+dist/assets/python-D8oqgKdH.js                      3.46 kB │ gzip:   1.43 kB
+dist/assets/Companies-D55pgqgr.js                   4.38 kB │ gzip:   1.91 kB
+dist/assets/CommunityContributions-B9_IXTmI.js      5.22 kB │ gzip:   2.13 kB
+dist/assets/shared-BKrYfWdq.js                      5.78 kB │ gzip:   2.56 kB
+dist/assets/Progress-DDvIZ7Xo.js                    5.81 kB │ gzip:   2.37 kB
+dist/assets/Account-Dq8ajYrl.js                     6.31 kB │ gzip:   2.54 kB
+dist/assets/CommunityModeration-B1v5T-zG.js         7.39 kB │ gzip:   3.36 kB
+dist/assets/Salaries-y5ZWlc2T.js                    7.59 kB │ gzip:   3.24 kB
+dist/assets/CompanyDetail-CUu4heLC.js               8.03 kB │ gzip:   3.01 kB
+dist/assets/jsx-runtime-BNakU3Ej.js                 8.24 kB │ gzip:   3.11 kB
+dist/assets/CodeEditor-BOV7ZyyB.js                 20.23 kB │ gzip:   6.88 kB
+dist/assets/tsMode-CUzyeOoQ.js                     22.97 kB │ gzip:   6.51 kB
+dist/assets/Practice-CVHv7BTd.js                   37.73 kB │ gzip:  11.84 kB
+dist/assets/Forms-D9W7YWOc.js                      83.57 kB │ gzip:  21.72 kB
+dist/assets/index-Dakbbfns.js                     983.02 kB │ gzip: 277.89 kB
+dist/assets/toggleHighContrast-D2xogHDo.js      3,624.99 kB │ gzip: 924.32 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.38s
+
+> @satsuniccode/functions@0.1.0 build
+> tsc -p tsconfig.json

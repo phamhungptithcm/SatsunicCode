@@ -76,6 +76,7 @@ export default function Assistant({ collapsed = false, routeKey = "/" }: { colla
     clearTimeout(timer.current);
     motion.current?.cancel();idleMotion.current?.cancel();
     request.current++;pending.current=false;
+    setStatus("");
     setBusy(false);setOpen(false);setClosing(false);setHiding(false);setHidden(collapsed);
   }, [collapsed, routeKey]);
   function capsuleMask(element: HTMLDialogElement) {
